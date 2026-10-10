@@ -1,7 +1,7 @@
 import type { Dict } from "../types";
 
 export const en: Dict = {
-  nav: { services: "Services", shop: "Shop", about: "About", contact: "Contact", home: "Cristina Cristea — home", basket: "Basket", menuOpen: "Open menu", menuClose: "Close menu", skip: "Skip to content", primary: "Primary", mobile: "Mobile" },
+  nav: { services: "Services", about: "About", contact: "Contact", home: "Cristina Cristea — home", basket: "Basket", menuOpen: "Open menu", menuClose: "Close menu", skip: "Skip to content", primary: "Primary", mobile: "Mobile" },
   common: { minutes: "minutes", from: "from", total: "Total", subtotal: "Subtotal", shipping: "Shipping", free: "Free", required: "Required", optional: "optional", email: "Email", back: "Back to", allReadings: "All readings", allProducts: "All products", continueShopping: "Continue shopping", remove: "Remove", quantity: "Quantity", increase: "Increase", decrease: "Decrease", currentStep: "(current step)", completed: "(completed)" },
   home: {
     eyebrow: "Certified Consulting Astrologer",
@@ -29,7 +29,6 @@ export const en: Dict = {
     ],
     quote: "She told me things about my chart I had spent a decade avoiding, and somehow it felt like being handed something rather than told off.",
     quoteBy: "Marta R. — natal chart & forecasting",
-    shopEyebrow: "The shop", shopTitle: "Objects for the study",
   },
   services: {
     pageEyebrow: "Readings", pageTitle: "Services",
@@ -102,9 +101,9 @@ export const en: Dict = {
   },
   cart: {
     title: "Your order", eyebrow: "Basket", empty: "Your basket is empty",
-    emptyLead: "Readings are booked one at a time, with birth details taken before payment. Shop items go straight to checkout.",
-    browse: "Browse readings", visitShop: "Visit the shop", summary: "Summary", checkout: "Checkout",
-    reading: "Reading", shop: "Shop", oneSession: "One session",
+    emptyLead: "Readings are booked one at a time, with birth details taken before payment.",
+    browse: "Browse readings", summary: "Summary", checkout: "Checkout",
+    reading: "Reading", oneSession: "One session",
     name: "Name", born: "Born", timeUnknown: "time unknown", place: "Place",
     secondChart: "Second chart", year: "Year",
   },
@@ -115,19 +114,7 @@ export const en: Dict = {
     chooseSlotBody: "A booking link is in your confirmation email. Pick any time that suits — sessions run Tuesday to Friday.",
     nothing: "Nothing arrived?",
     nothingBody: "Check the spam folder, then write to",
-    backHome: "Back to the site", visitShop: "Visit the shop",
-  },
-  merch: {
-    eyebrow: "The shop", title: "Merch",
-    lead: "Prints, paper and a few objects for the study. Shop items check out directly — no birth details needed, unless you order a custom chart print.",
-    categories: ["All", "Print", "Paper", "Home", "Wear"],
-    shippingEyebrow: "Shipping", shippingTitle: "Sent from Lisbon",
-    shippingBody: "Everything is posted within five working days, tracked, in plastic-free packaging. Europe 2–5 days, rest of world 7–14. Free over €120.",
-    addToBasket: "Add to basket", added: "Added", inBasket: "In your basket.", viewBasket: "View basket",
-    postedNote: "Posted within five working days. Free shipping over €120.",
-    details: "Details", specification: "Specification", more: "More", fromShop: "From the shop",
-    chartPrintNote: "This print is drawn from your chart. After checkout we email a short form for your birth date, time and place.",
-    productCount: "products",
+    backHome: "Back to the site", 
   },
   about: {
     eyebrow: "The astrologer", title: "Cristina Cristea",
@@ -188,7 +175,7 @@ export const en: Dict = {
       { h: "The legal basis", p: ["Birth data is processed on the basis of your explicit consent, given by ticking the consent box on the booking form. You may withdraw that consent at any time. Order and payment records are processed on the basis of contract and, for invoices, legal obligation. The newsletter is sent only on the basis of your separate, optional consent."] },
       { h: "Second parties in a relationship reading", p: ["If you provide another person's birth details, you confirm that you have their permission to do so. If they contact us asking for their data to be erased, we will erase it, and will tell you that we have done so."] },
       { h: "How long it is kept", p: ["Birth data and session notes are kept for 24 months after your reading, so that follow-up work can be built on the same chart, then deleted. Order and invoice records are kept for the period Portuguese tax law requires. Newsletter subscriptions are kept until you unsubscribe."] },
-      { h: "Who it is shared with", p: ["Nobody, other than the processors needed to run the business: the payment provider, the email provider used to send your charts, the scheduling tool used for booking, and the shipping carrier for physical orders. Each acts under a data processing agreement. Your data is never sold, never shared for advertising, and never used to train machine-learning systems."] },
+      { h: "Who it is shared with", p: ["Nobody, other than the processors needed to run the business: the payment provider, the email provider used to send your charts and the scheduling tool used for booking. Each acts under a data processing agreement. Your data is never sold, never shared for advertising, and never used to train machine-learning systems."] },
       { h: "Your rights", p: [
         "Under the GDPR you have the right to access the data held about you, to have it corrected, to have it erased, to restrict or object to its processing, to receive a copy in a portable format, and to withdraw consent at any time without affecting the lawfulness of processing carried out beforehand.",
         "To exercise any of these, write to privacy@cristinacristea.com. We will respond within 30 days. If you are not satisfied, you may complain to the Comissão Nacional de Proteção de Dados (CNPD) or to the supervisory authority in your own country.",
@@ -265,47 +252,6 @@ export const en: Dict = {
       includes: ["90-minute live session over video", "Progressed chart and bi-wheel against your natal chart, PDF", "Audio recording of the session", "Progressed Moon timeline covering the coming years", "Two weeks of follow-up questions by email"],
       goodFor: ["A period of change you cannot trace to an external cause", "Anyone who feels they have become a different person", "Reading alongside a forecasting session for a full picture"],
       delivery: "Live session + recording", turnaround: "Booked within 14 days",
-    },
-  },
-  merchCopy: {
-    mrc_natal_print: {
-      name: "Custom Natal Chart Print",
-      summary: "Your birth chart drawn in fine line and printed on heavy cotton rag. Sent with the birth details you provide at checkout.",
-      description: ["A chart wheel redrawn by hand in a single weight of line — no colour, no clutter, just the geometry of the sky at your birth.", "Printed with pigment inks on 310gsm cotton rag with a soft deckled edge. Unframed, shipped flat in a rigid board mailer."],
-      details: ["310gsm cotton rag", "Pigment ink, archival", "Unframed", "Ships flat in 5–7 days"],
-      variantLabel: "Size", variantOptions: ["A4 — 21 × 29.7cm", "A3 — 29.7 × 42cm", "50 × 70cm"],
-    },
-    mrc_lunar_journal: {
-      name: "The Lunar Journal",
-      summary: "A thirteen-month journal built around the lunar cycle, with space for each new and full Moon.",
-      description: ["Thirteen lunations, each with a spread for the new Moon intention and the full Moon reckoning, plus the sign and degree of every phase.", "Smyth-sewn so it lies flat, printed on uncoated cream stock that takes fountain pen without bleeding."],
-      details: ["208 pages, uncoated cream", "Smyth-sewn, lies flat", "14.8 × 21cm", "Undated — start any month"],
-    },
-    mrc_ephemeris: {
-      name: "Pocket Ephemeris 2026–2030",
-      summary: "Five years of planetary positions in a linen-bound book small enough to carry.",
-      description: ["Noon positions for the Sun through Pluto, plus the Moon's nodes and the major ingresses and retrograde stations for each year.", "Linen over board, ribbon marker, and a fold-out aspect reference in the back cover."],
-      details: ["Linen hardcover", "Ribbon marker", "11 × 17cm", "2026 through 2030"],
-    },
-    mrc_constellation_candle: {
-      name: "Constellation Candle",
-      summary: "Soy and coconut wax in a hand-thrown bone-glaze vessel. Cedar, iris root and a dry smoke.",
-      description: ["Poured in small batches into a stoneware vessel glazed in a chalky bone white, with the vessel foot left raw.", "The scent opens dry and mineral, settles into cedar and iris, and finishes with a faint cold smoke. Around 50 hours of burn."],
-      details: ["Soy–coconut wax blend", "~50 hour burn", "220g", "Refillable stoneware vessel"],
-      variantLabel: "Scent", variantOptions: ["Cedar & Iris", "Smoke & Salt", "Fig Leaf"],
-    },
-    mrc_zodiac_tee: {
-      name: "Zodiac Glyph Tee",
-      summary: "Heavyweight organic cotton in undyed bone, with a single glyph printed small at the chest.",
-      description: ["Cut boxy and slightly cropped at the hem, in a 240gsm organic cotton left undyed so the colour varies faintly between batches.", "The glyph of your sign, printed small and low-contrast at the left chest in a warm grey."],
-      details: ["240gsm organic cotton", "Undyed bone", "Boxy fit — size down for a close fit", "XS–XXL"],
-      variantLabel: "Size", variantOptions: ["XS", "S", "M", "L", "XL", "XXL"],
-    },
-    mrc_card_deck: {
-      name: "Aspect Study Deck",
-      summary: "Seventy-eight cards covering every major aspect between the planets, for learning to read a chart.",
-      description: ["One card per planetary pair and aspect, with the traditional reading on the face and a short modern gloss on the reverse.", "Printed on 350gsm blue-core card with a linen finish, in a rigid two-piece box."],
-      details: ["78 cards, 350gsm", "Linen finish, blue core", "Rigid two-piece box", "Includes a 24-page booklet"],
     },
   },
 };

@@ -5,8 +5,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Booking from "./pages/Booking";
-import Merch from "./pages/Merch";
-import MerchDetail from "./pages/MerchDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Confirmation from "./pages/Confirmation";
@@ -23,8 +21,6 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="services/:slug" element={<ServiceDetail />} />
         <Route path="services/:slug/booking" element={<Booking />} />
-        <Route path="merch" element={<Merch />} />
-        <Route path="merch/:slug" element={<MerchDetail />} />
         <Route path="cart" element={<Cart />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="confirmation" element={<Confirmation />} />

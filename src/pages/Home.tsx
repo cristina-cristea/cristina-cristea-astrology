@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Clock, Quote, Sparkles } from "lucide-react";
 import { services } from "../data/services";
-import { merch } from "../data/merch";
 import { Glyph } from "../components/ui/Glyph";
 import { StarField } from "../components/ui/StarField";
 import { Constellations } from "../components/ui/Constellations";
@@ -139,33 +138,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- merch teaser ---------------- */}
-      <section className="section section--sand">
-        <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <p className="eyebrow">{t.home.shopEyebrow}</p>
-              <h2>{t.home.shopTitle}</h2>
-            </div>
-            <Link to="/merch" className="link-u">
-              {t.common.allProducts} <ArrowRight size={14} strokeWidth={1.4} aria-hidden="true" />
-            </Link>
-          </div>
-
-          <div className="merch-strip">
-            {merch.slice(0, 3).map((m) => (
-              <Link key={m.id} to={`/merch/${m.slug}`} className="merch-card">
-                <span className="merch-card__art" aria-hidden="true">
-                  <Glyph name={m.glyph} />
-                </span>
-                <span className="merch-card__cat">{t.merch.categories[m.categoryIndex]}</span>
-                <h3>{t.merchCopy[m.id].name}</h3>
-                <span className="merch-card__price">{price(m.price)}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

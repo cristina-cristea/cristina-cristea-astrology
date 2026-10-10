@@ -7,7 +7,7 @@ import type { Dict } from "../types";
  * (huitante for 80 is Vaud/Valais/Fribourg only, so it is not used.)
  */
 export const frCH: Dict = {
-  nav: { services: "Prestations", shop: "Boutique", about: "À propos", contact: "Contact", home: "Cristina Cristea — accueil", basket: "Panier", menuOpen: "Ouvrir le menu", menuClose: "Fermer le menu", skip: "Aller au contenu", primary: "Principale", mobile: "Mobile" },
+  nav: { services: "Prestations", about: "À propos", contact: "Contact", home: "Cristina Cristea — accueil", basket: "Panier", menuOpen: "Ouvrir le menu", menuClose: "Fermer le menu", skip: "Aller au contenu", primary: "Principale", mobile: "Mobile" },
   common: { minutes: "minutes", from: "dès", total: "Total", subtotal: "Sous-total", shipping: "Livraison", free: "Offerte", required: "Obligatoire", optional: "facultatif", email: "E-mail", back: "Retour à", allReadings: "Toutes les lectures", allProducts: "Tous les produits", continueShopping: "Poursuivre mes achats", remove: "Retirer", quantity: "Quantité", increase: "Augmenter", decrease: "Diminuer", currentStep: "(étape en cours)", completed: "(terminée)" },
   home: {
     eyebrow: "Astrologue conseil certifiée",
@@ -35,7 +35,6 @@ export const frCH: Dict = {
     ],
     quote: "Elle m'a dit sur mon thème des choses que j'évitais depuis dix ans, et j'ai pourtant eu le sentiment qu'on me tendait quelque chose plutôt qu'on me réprimandait.",
     quoteBy: "Marta R. — thème natal et prévisions",
-    shopEyebrow: "La boutique", shopTitle: "Objets pour l'étude",
   },
   services: {
     pageEyebrow: "Lectures", pageTitle: "Prestations",
@@ -108,9 +107,9 @@ export const frCH: Dict = {
   },
   cart: {
     title: "Votre commande", eyebrow: "Panier", empty: "Votre panier est vide",
-    emptyLead: "Les lectures se réservent une à la fois, les données de naissance étant recueillies avant le paiement. Les articles de la boutique vont directement au paiement.",
-    browse: "Parcourir les lectures", visitShop: "Visiter la boutique", summary: "Récapitulatif", checkout: "Paiement",
-    reading: "Lecture", shop: "Boutique", oneSession: "Une séance",
+    emptyLead: "Les lectures se réservent une à la fois, les données de naissance étant recueillies avant le paiement.",
+    browse: "Parcourir les lectures", summary: "Récapitulatif", checkout: "Paiement",
+    reading: "Lecture", oneSession: "Une séance",
     name: "Nom", born: "Né(e) le", timeUnknown: "heure inconnue", place: "Lieu",
     secondChart: "Second thème", year: "Année",
   },
@@ -121,19 +120,7 @@ export const frCH: Dict = {
     chooseSlotBody: "Un lien de réservation figure dans votre e-mail de confirmation. Choisissez l'horaire qui vous convient — les séances ont lieu du mardi au vendredi.",
     nothing: "Rien reçu ?",
     nothingBody: "Vérifiez les indésirables, puis écrivez à",
-    backHome: "Retour au site", visitShop: "Visiter la boutique",
-  },
-  merch: {
-    eyebrow: "La boutique", title: "Boutique",
-    lead: "Tirages, papeterie et quelques objets pour l'étude. Les articles de la boutique se paient directement — aucune donnée de naissance n'est demandée, sauf pour un tirage de thème personnalisé.",
-    categories: ["Tout", "Tirage", "Papeterie", "Maison", "Vêtement"],
-    shippingEyebrow: "Livraison", shippingTitle: "Expédié depuis Lisbonne",
-    shippingBody: "Tout est posté sous cinq jours ouvrables, suivi, dans un emballage sans plastique. Europe 2–5 jours, reste du monde 7–14. Offerte dès 120 €.",
-    addToBasket: "Ajouter au panier", added: "Ajouté", inBasket: "Dans votre panier.", viewBasket: "Voir le panier",
-    postedNote: "Posté sous cinq jours ouvrables. Livraison offerte dès 120 €.",
-    details: "Détails", specification: "Caractéristiques", more: "Plus", fromShop: "De la boutique",
-    chartPrintNote: "Ce tirage est dressé à partir de votre thème. Après le paiement, nous vous enverrons un court formulaire pour vos date, heure et lieu de naissance.",
-    productCount: "produits",
+    backHome: "Retour au site", 
   },
   about: {
     eyebrow: "L'astrologue", title: "Cristina Cristea",
@@ -194,7 +181,7 @@ export const frCH: Dict = {
       { h: "La base légale", p: ["Les données de naissance sont traitées sur la base de votre consentement explicite, donné en cochant la case du formulaire de réservation. Vous pouvez retirer ce consentement à tout moment. Les commandes et les paiements sont traités sur la base du contrat et, pour les factures, d'une obligation légale. La lettre d'information n'est envoyée que sur la base de votre consentement distinct et facultatif."] },
       { h: "Les tiers dans une lecture de couple", p: ["Si vous fournissez les données de naissance d'une autre personne, vous confirmez avoir son autorisation. Si elle nous contacte pour demander l'effacement de ses données, nous les effacerons et vous en informerons."] },
       { h: "Durée de conservation", p: ["Les données de naissance et les notes de séance sont conservées 24 mois après votre lecture, afin qu'un travail de suivi puisse s'appuyer sur le même thème, puis supprimées. Les commandes et factures sont conservées pour la durée exigée par le droit fiscal portugais. Les abonnements à la lettre d'information sont conservés jusqu'à votre désabonnement."] },
-      { h: "Avec qui elles sont partagées", p: ["Personne, hormis les sous-traitants nécessaires à l'activité : le prestataire de paiement, le service d'e-mail utilisé pour envoyer vos thèmes, l'outil de planification des rendez-vous et le transporteur pour les commandes physiques. Chacun agit sous contrat de sous-traitance. Vos données ne sont jamais vendues, jamais partagées à des fins publicitaires, et jamais utilisées pour entraîner des systèmes d'apprentissage automatique."] },
+      { h: "Avec qui elles sont partagées", p: ["Personne, hormis les sous-traitants nécessaires à l'activité : le prestataire de paiement, le service d'e-mail utilisé pour envoyer vos thèmes et l'outil de planification des rendez-vous. Chacun agit sous contrat de sous-traitance. Vos données ne sont jamais vendues, jamais partagées à des fins publicitaires, et jamais utilisées pour entraîner des systèmes d'apprentissage automatique."] },
       { h: "Vos droits", p: [
         "En vertu du RGPD, vous avez le droit d'accéder aux données vous concernant, de les faire rectifier, de les faire effacer, d'en limiter le traitement ou de vous y opposer, d'en recevoir une copie dans un format portable, et de retirer votre consentement à tout moment sans affecter la licéité du traitement effectué auparavant.",
         "Pour exercer l'un de ces droits, écrivez à privacy@cristinacristea.com. Nous répondrons sous 30 jours. Si vous n'êtes pas satisfait, vous pouvez saisir la Comissão Nacional de Proteção de Dados (CNPD) ou l'autorité de contrôle de votre propre pays.",
@@ -271,47 +258,6 @@ export const frCH: Dict = {
       includes: ["Séance live de 90 minutes en visio", "Thème progressé et double roue avec votre natal, PDF", "Enregistrement audio de la séance", "Chronologie de la Lune progressée pour les années à venir", "Deux semaines de questions de suivi par e-mail"],
       goodFor: ["Une période de changement sans cause extérieure identifiable", "Qui a le sentiment d'être devenu une autre personne", "À lire avec une séance de prévisions pour un tableau complet"],
       delivery: "Séance live + enregistrement", turnaround: "Réservé sous 14 jours",
-    },
-  },
-  merchCopy: {
-    mrc_natal_print: {
-      name: "Tirage de thème natal personnalisé",
-      summary: "Votre thème de naissance dessiné au trait fin et imprimé sur papier chiffon épais. Envoyé avec les données de naissance fournies au paiement.",
-      description: ["Une roue de thème redessinée à la main en un seul poids de trait — pas de couleur, pas d'encombrement, seulement la géométrie du ciel à votre naissance.", "Imprimé à l'encre pigmentaire sur papier chiffon 310 g/m² à bord frangé. Non encadré, expédié à plat dans une pochette rigide."],
-      details: ["Papier chiffon 310 g/m²", "Encre pigmentaire, qualité archive", "Non encadré", "Expédié à plat sous 5–7 jours"],
-      variantLabel: "Format", variantOptions: ["A4 — 21 × 29,7 cm", "A3 — 29,7 × 42 cm", "50 × 70 cm"],
-    },
-    mrc_lunar_journal: {
-      name: "Le carnet lunaire",
-      summary: "Un carnet de treize mois construit autour du cycle lunaire, avec une place pour chaque nouvelle et pleine Lune.",
-      description: ["Treize lunaisons, chacune avec une double page pour l'intention de la nouvelle Lune et le bilan de la pleine Lune, plus le signe et le degré de chaque phase.", "Cousu pour s'ouvrir à plat, imprimé sur un papier crème non couché qui accepte le stylo plume sans baver."],
-      details: ["208 pages, crème non couché", "Cousu, s'ouvre à plat", "14,8 × 21 cm", "Non daté — commencez n'importe quel mois"],
-    },
-    mrc_ephemeris: {
-      name: "Éphémérides de poche 2026–2030",
-      summary: "Cinq ans de positions planétaires dans un ouvrage relié toile, assez petit pour être emporté.",
-      description: ["Positions à midi du Soleil à Pluton, ainsi que les nœuds lunaires et les principales entrées en signe et stations rétrogrades de chaque année.", "Toile sur carton, signet ruban, et un dépliant de référence des aspects en fin d'ouvrage."],
-      details: ["Reliure toile rigide", "Signet ruban", "11 × 17 cm", "De 2026 à 2030"],
-    },
-    mrc_constellation_candle: {
-      name: "Bougie Constellation",
-      summary: "Cire de soja et de coco dans un contenant tourné main à l'émail os. Cèdre, racine d'iris et une fumée sèche.",
-      description: ["Coulée en petites séries dans un contenant en grès émaillé d'un blanc os crayeux, le pied laissé brut.", "Le parfum ouvre sec et minéral, s'installe sur le cèdre et l'iris, et finit sur une faible fumée froide. Environ 50 heures de combustion."],
-      details: ["Mélange cire de soja et coco", "~50 heures de combustion", "220 g", "Contenant en grès rechargeable"],
-      variantLabel: "Parfum", variantOptions: ["Cèdre et iris", "Fumée et sel", "Feuille de figuier"],
-    },
-    mrc_zodiac_tee: {
-      name: "T-shirt glyphe du zodiaque",
-      summary: "Coton biologique épais, écru non teint, avec un seul glyphe imprimé en petit sur la poitrine.",
-      description: ["Coupe carrée et légèrement raccourcie, dans un coton biologique de 240 g/m² laissé non teint, si bien que la couleur varie légèrement d'un lot à l'autre.", "Le glyphe de votre signe, imprimé en petit et en faible contraste sur la poitrine gauche, dans un gris chaud."],
-      details: ["Coton biologique 240 g/m²", "Écru non teint", "Coupe carrée — prenez une taille en dessous pour un ajusté", "XS–XXL"],
-      variantLabel: "Taille", variantOptions: ["XS", "S", "M", "L", "XL", "XXL"],
-    },
-    mrc_card_deck: {
-      name: "Jeu d'étude des aspects",
-      summary: "Septante-huit cartes couvrant chaque aspect majeur entre les planètes, pour apprendre à lire un thème.",
-      description: ["Une carte par paire planétaire et par aspect, avec la lecture traditionnelle au recto et une courte glose moderne au verso.", "Imprimé sur carte 350 g/m² à âme bleue et finition toilée, dans un coffret rigide en deux parties."],
-      details: ["78 cartes, 350 g/m²", "Finition toilée, âme bleue", "Coffret rigide en deux parties", "Livret de 24 pages inclus"],
     },
   },
 };

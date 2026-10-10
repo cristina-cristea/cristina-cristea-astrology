@@ -18,7 +18,6 @@ export default function Confirmation() {
 
   if (!state?.reference) return <Navigate to="/" replace />;
 
-  const hasService = state.lines.some((l) => l.kind === "service");
 
   return (
     <section className="section confirm">
@@ -39,9 +38,8 @@ export default function Confirmation() {
               <li key={i}>
                 <span>
                   {l.name}
-                  {l.qty > 1 && <em> × {l.qty}</em>}
                 </span>
-                <span>{price(l.price * l.qty)}</span>
+                <span>{price(l.price)}</span>
               </li>
             ))}
           </ul>
@@ -53,15 +51,13 @@ export default function Confirmation() {
         </div>
 
         <div className="confirm__next">
-          {hasService && (
-            <div>
+                      <div>
               <CalendarCheck size={18} strokeWidth={1.1} />
               <h3>{t.confirmation.chooseSlot}</h3>
               <p className="muted">
                 {t.confirmation.chooseSlotBody}
               </p>
             </div>
-          )}
           <div>
             <Mail size={18} strokeWidth={1.1} />
             <h3>{t.confirmation.nothing}</h3>
@@ -76,8 +72,7 @@ export default function Confirmation() {
         </div>
 
         <div className="empty__cta">
-          <Link to="/" className="btn btn--ghost">{t.confirmation.backHome}</Link>
-          <Link to="/merch" className="btn">{t.confirmation.visitShop}</Link>
+          <Link to="/" className="btn">{t.confirmation.backHome}</Link>
         </div>
       </div>
     </section>

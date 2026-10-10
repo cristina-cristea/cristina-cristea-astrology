@@ -4,7 +4,6 @@ import { ArrowRight, CreditCard, Lock, ShieldCheck, TriangleAlert } from "lucide
 import { lineKey, useCart } from "../context/CartContext";
 import { orderRef } from "../lib/format";
 import { useI18n } from "../i18n/I18nProvider";
-import { Select } from "../components/ui/Select";
 import { Checkbox } from "../components/ui/Checkbox";
 import { RadioGroup, RadioOption } from "../components/ui/RadioGroup";
 import { createCheckoutSession } from "../lib/checkout";
@@ -17,23 +16,16 @@ export default function Checkout() {
   useDocumentTitle(t.checkout.title);
   const summaryRef = useRef<HTMLDivElement>(null);
 
-  const firstService = lines.find((l) => l.kind === "service");
-  const prefill = firstService?.kind === "service" ? firstService.intake : undefined;
+  const prefill = lines[0]?.intake;
 
   const [email, setEmail] = useState(prefill?.email ?? "");
   const [name, setName] = useState(prefill?.fullName ?? "");
-  const [country, setCountry] = useState("Portugal");
-  const [address, setAddress] = useState("");
-  const [postcode, setPostcode] = useState("");
-  const [city, setCity] = useState("");
   const [method, setMethod] = useState<"card" | "paypal">("card");
   const [terms, setTerms] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState(false);
 
-  const needsShipping = lines.some((l) => l.kind === "merch");
-  const shipping = needsShipping && subtotal < 120 ? 8 : 0;
-  const total = subtotal + shipping;
+  const total = subtotal;
 
   if (!lines.length && !busy) {
     return (
@@ -43,7 +35,6 @@ export default function Checkout() {
           <p className="lead">{t.cart.emptyLead}</p>
           <div className="empty__cta">
             <Link to="/services" className="btn">{t.cart.browse}</Link>
-            <Link to="/merch" className="btn btn--ghost">{t.cart.visitShop}</Link>
           </div>
         </div>
       </section>
@@ -56,11 +47,6 @@ export default function Checkout() {
     const e: Record<string, string> = {};
     if (!name.trim()) e.name = t.errors.nameShort;
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) e.email = t.errors.emailInvalid;
-    if (needsShipping) {
-      if (!address.trim()) e.address = t.errors.address;
-      if (!city.trim()) e.city = t.errors.city;
-      if (!postcode.trim()) e.postcode = t.errors.postcode;
-    }
     if (!terms) e.terms = t.errors.terms;
     setErrors(e);
     if (Object.keys(e).length) {
@@ -99,10 +85,9 @@ export default function Checkout() {
   };
 
   const ANCHORS: Record<string, string> = {
-    name: "co-name", email: "co-email", address: "co-addr",
-    city: "co-city", postcode: "co-post", terms: "co-terms",
+    name: "co-name", email: "co-email", terms: "co-terms",
   };
-  const ORDER = ["name", "email", "address", "city", "postcode", "terms"];
+  const ORDER = ["name", "email", "terms"];
   const errorList = ORDER.filter((k) => errors[k]);
 
   return (
@@ -188,52 +173,6 @@ export default function Checkout() {
               </div>
             </fieldset>
 
-            {needsShipping && (
-              <fieldset className="fs">
-                <legend className="legend">{t.checkout.delivery}</legend>
-                <div className="grid-2">
-                  <div className={`field${err("address") ? " field--error" : ""}`}>
-                    <label htmlFor="co-addr">{t.checkout.street}</label>
-                    <input
-                      id="co-addr" value={address} onChange={(e) => setAddress(e.target.value)}
-                      autoComplete="street-address" required
-                      aria-invalid={err("address") ? true : undefined}
-                      aria-describedby={describedBy(err("address") && "co-addr-error")}
-                    />
-                    {err("address") && <span className="field-error" id="co-addr-error">{err("address")}</span>}
-                  </div>
-                  <div className={`field${err("city") ? " field--error" : ""}`}>
-                    <label htmlFor="co-city">{t.checkout.city}</label>
-                    <input
-                      id="co-city" value={city} onChange={(e) => setCity(e.target.value)}
-                      autoComplete="address-level2" required
-                      aria-invalid={err("city") ? true : undefined}
-                      aria-describedby={describedBy(err("city") && "co-city-error")}
-                    />
-                    {err("city") && <span className="field-error" id="co-city-error">{err("city")}</span>}
-                  </div>
-                  <div className={`field${err("postcode") ? " field--error" : ""}`}>
-                    <label htmlFor="co-post">{t.checkout.postcode}</label>
-                    <input
-                      id="co-post" value={postcode} onChange={(e) => setPostcode(e.target.value)}
-                      autoComplete="postal-code" required
-                      aria-invalid={err("postcode") ? true : undefined}
-                      aria-describedby={describedBy(err("postcode") && "co-post-error")}
-                    />
-                    {err("postcode") && <span className="field-error" id="co-post-error">{err("postcode")}</span>}
-                  </div>
-                  <div className="field">
-                    <label htmlFor="co-country">{t.checkout.country}</label>
-                    <Select
-                      id="co-country"
-                      value={country}
-                      onChange={setCountry}
-                      options={t.checkout.countries}
-                    />
-                  </div>
-                </div>
-              </fieldset>
-            )}
 
             <fieldset className="fs">
               <legend className="legend">{t.checkout.paymentMethod}</legend>
@@ -302,21 +241,14 @@ export default function Checkout() {
               <ul className="summary-card__lines">
                 {lines.map((l) => (
                   <li key={lineKey(l)}>
-                    <span>
-                      {l.name}
-                      {l.kind === "merch" && l.variant && <em> · {l.variant}</em>}
-                      {l.qty > 1 && <em> × {l.qty}</em>}
-                    </span>
-                    <span>{price(l.price * l.qty)}</span>
+                    <span>{l.name}</span>
+                    <span>{price(l.price)}</span>
                   </li>
                 ))}
               </ul>
               <hr className="rule" />
               <dl className="summary-card__dl">
                 <div><dt>{t.common.subtotal}</dt><dd>{price(subtotal)}</dd></div>
-                {needsShipping && (
-                  <div><dt>{t.common.shipping}</dt><dd>{shipping ? price(shipping) : t.common.free}</dd></div>
-                )}
               </dl>
               <hr className="rule" />
               <div className="summary-card__total">

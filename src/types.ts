@@ -21,6 +21,11 @@ export interface IntakeData extends IntakePerson {
   submittedAt: string;
 }
 
-export type CartLine =
-  | { kind: "service"; id: string; slug: string; name: string; price: number; qty: 1; intake: IntakeData }
-  | { kind: "merch"; id: string; slug: string; name: string; price: number; qty: number; variant?: string };
+/** Only readings are sold, so a line is always one booked session. */
+export interface CartLine {
+  id: string;
+  slug: string;
+  name: string;
+  price: number;
+  intake: IntakeData;
+}

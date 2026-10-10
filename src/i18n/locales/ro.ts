@@ -3,7 +3,7 @@ import type { Dict } from "../types";
 /** Romanian. Uses the comma-below diacritics ș and ț (U+0219, U+021B), which
  *  are the correct Romanian letters — not the Turkish cedilla forms ş and ţ. */
 export const ro: Dict = {
-  nav: { services: "Servicii", shop: "Magazin", about: "Despre", contact: "Contact", home: "Cristina Cristea — acasă", basket: "Coș", menuOpen: "Deschide meniul", menuClose: "Închide meniul", skip: "Sari la conținut", primary: "Principal", mobile: "Mobil" },
+  nav: { services: "Servicii", about: "Despre", contact: "Contact", home: "Cristina Cristea — acasă", basket: "Coș", menuOpen: "Deschide meniul", menuClose: "Închide meniul", skip: "Sari la conținut", primary: "Principal", mobile: "Mobil" },
   common: { minutes: "minute", from: "de la", total: "Total", subtotal: "Subtotal", shipping: "Livrare", free: "Gratuită", required: "Obligatoriu", optional: "opțional", email: "E-mail", back: "Înapoi la", allReadings: "Toate consultațiile", allProducts: "Toate produsele", continueShopping: "Continuă cumpărăturile", remove: "Elimină", quantity: "Cantitate", increase: "Crește", decrease: "Scade", currentStep: "(pasul curent)", completed: "(finalizat)" },
   home: {
     eyebrow: "Astrolog consultant certificat",
@@ -31,7 +31,6 @@ export const ro: Dict = {
     ],
     quote: "Mi-a spus despre harta mea lucruri pe care le evitasem un deceniu și totuși am simțit că mi se întinde ceva, nu că sunt certată.",
     quoteBy: "Marta R. — hartă natală și prognoză",
-    shopEyebrow: "Magazinul", shopTitle: "Obiecte pentru studiu",
   },
   services: {
     pageEyebrow: "Consultații", pageTitle: "Servicii",
@@ -104,9 +103,9 @@ export const ro: Dict = {
   },
   cart: {
     title: "Comanda ta", eyebrow: "Coș", empty: "Coșul tău este gol",
-    emptyLead: "Consultațiile se rezervă una câte una, cu datele de naștere luate înainte de plată. Produsele din magazin merg direct la finalizare.",
-    browse: "Vezi consultațiile", visitShop: "Vizitează magazinul", summary: "Sumar", checkout: "Finalizare",
-    reading: "Consultație", shop: "Magazin", oneSession: "O ședință",
+    emptyLead: "Consultațiile se rezervă una câte una, cu datele de naștere luate înainte de plată.",
+    browse: "Vezi consultațiile", summary: "Sumar", checkout: "Finalizare",
+    reading: "Consultație", oneSession: "O ședință",
     name: "Nume", born: "Născut(ă)", timeUnknown: "oră necunoscută", place: "Loc",
     secondChart: "A doua hartă", year: "An",
   },
@@ -117,19 +116,7 @@ export const ro: Dict = {
     chooseSlotBody: "În e-mailul de confirmare găsești un link de rezervare. Alege ora care îți convine — ședințele au loc de marți până vineri.",
     nothing: "Nu a ajuns nimic?",
     nothingBody: "Verifică folderul spam, apoi scrie la",
-    backHome: "Înapoi la site", visitShop: "Vizitează magazinul",
-  },
-  merch: {
-    eyebrow: "Magazinul", title: "Magazin",
-    lead: "Tipărituri, hârtie și câteva obiecte pentru studiu. Produsele se achită direct — nu sunt necesare date de naștere, cu excepția tipăriturii personalizate a hărții.",
-    categories: ["Toate", "Tipăritură", "Hârtie", "Casă", "Îmbrăcăminte"],
-    shippingEyebrow: "Livrare", shippingTitle: "Expediat din Lisabona",
-    shippingBody: "Totul se expediază în cinci zile lucrătoare, cu urmărire, în ambalaj fără plastic. Europa 2–5 zile, restul lumii 7–14. Gratuită peste 120 €.",
-    addToBasket: "Adaugă în coș", added: "Adăugat", inBasket: "În coșul tău.", viewBasket: "Vezi coșul",
-    postedNote: "Expediat în cinci zile lucrătoare. Livrare gratuită peste 120 €.",
-    details: "Detalii", specification: "Specificații", more: "Mai mult", fromShop: "Din magazin",
-    chartPrintNote: "Această tipăritură se face după harta ta. După plată îți trimitem prin e-mail un formular scurt pentru data, ora și locul nașterii.",
-    productCount: "produse",
+    backHome: "Înapoi la site", 
   },
   about: {
     eyebrow: "Astrologul", title: "Cristina Cristea",
@@ -190,7 +177,7 @@ export const ro: Dict = {
       { h: "Temeiul legal", p: ["Datele de naștere sunt prelucrate în temeiul consimțământului tău explicit, dat prin bifarea căsuței din formularul de rezervare. Îți poți retrage consimțământul oricând. Evidențele de comandă și plată se prelucrează în temeiul contractului și, pentru facturi, al obligației legale. Buletinul informativ se trimite doar în temeiul consimțământului tău separat și opțional."] },
       { h: "Terții într-o consultație de relație", p: ["Dacă furnizezi datele de naștere ale altei persoane, confirmi că ai permisiunea ei. Dacă acea persoană ne cere ștergerea datelor sale, le vom șterge și îți vom comunica acest lucru."] },
       { h: "Cât timp se păstrează", p: ["Datele de naștere și notele de ședință se păstrează 24 de luni după consultație, pentru ca lucrările ulterioare să poată porni de la aceeași hartă, apoi se șterg. Evidențele de comandă și facturile se păstrează pe durata cerută de legislația fiscală portugheză. Abonările la buletinul informativ se păstrează până la dezabonare."] },
-      { h: "Cu cine se împărtășesc", p: ["Cu nimeni, în afara împuterniciților necesari funcționării: furnizorul de plăți, serviciul de e-mail prin care îți trimitem hărțile, instrumentul de programare și curierul pentru comenzile fizice. Fiecare acționează în baza unui contract de prelucrare. Datele tale nu sunt niciodată vândute, niciodată împărtășite în scopuri publicitare și niciodată folosite pentru antrenarea sistemelor de învățare automată."] },
+      { h: "Cu cine se împărtășesc", p: ["Cu nimeni, în afara împuterniciților necesari funcționării: furnizorul de plăți, serviciul de e-mail prin care îți trimitem hărțile și instrumentul de programare. Fiecare acționează în baza unui contract de prelucrare. Datele tale nu sunt niciodată vândute, niciodată împărtășite în scopuri publicitare și niciodată folosite pentru antrenarea sistemelor de învățare automată."] },
       { h: "Drepturile tale", p: [
         "Conform GDPR ai dreptul de acces la datele deținute despre tine, de rectificare, de ștergere, de restricționare sau de opoziție la prelucrare, de a primi o copie într-un format portabil și de a-ți retrage consimțământul oricând, fără a afecta legalitatea prelucrării efectuate anterior.",
         "Pentru a exercita oricare dintre acestea, scrie la privacy@cristinacristea.com. Vom răspunde în 30 de zile. Dacă nu ești mulțumit, poți depune plângere la Comissão Nacional de Proteção de Dados (CNPD) sau la autoritatea de supraveghere din țara ta.",
@@ -267,47 +254,6 @@ export const ro: Dict = {
       includes: ["Ședință live de 90 de minute, pe video", "Harta progresată și roata dublă cu natalul, PDF", "Înregistrare audio a ședinței", "Cronologia Lunii progresate pentru anii care vin", "Două săptămâni de întrebări ulterioare pe e-mail"],
       goodFor: ["O perioadă de schimbare fără o cauză exterioară clară", "Oricine simte că a devenit alt om", "De citit împreună cu o prognoză, pentru tabloul complet"],
       delivery: "Ședință live + înregistrare", turnaround: "Programare în 14 zile",
-    },
-  },
-  merchCopy: {
-    mrc_natal_print: {
-      name: "Tipăritură personalizată a hărții natale",
-      summary: "Harta ta de naștere desenată în linie fină și tipărită pe hârtie groasă din bumbac. Trimisă cu datele de naștere furnizate la finalizare.",
-      description: ["O roată a hărții redesenată manual, într-o singură grosime de linie — fără culoare, fără aglomerare, doar geometria cerului la nașterea ta.", "Tipărită cu cerneluri pigmentate pe hârtie din bumbac de 310 g/mp, cu margine moale. Neînrămată, expediată plat într-un plic rigid."],
-      details: ["Hârtie din bumbac, 310 g/mp", "Cerneală pigmentată, de arhivă", "Neînrămată", "Expediere plată în 5–7 zile"],
-      variantLabel: "Dimensiune", variantOptions: ["A4 — 21 × 29,7 cm", "A3 — 29,7 × 42 cm", "50 × 70 cm"],
-    },
-    mrc_lunar_journal: {
-      name: "Jurnalul lunar",
-      summary: "Un jurnal de treisprezece luni construit în jurul ciclului lunar, cu spațiu pentru fiecare Lună nouă și plină.",
-      description: ["Treisprezece lunații, fiecare cu o pagină dublă pentru intenția de Lună nouă și bilanțul de Lună plină, plus semnul și gradul fiecărei faze.", "Cusut, ca să stea deschis plat, tipărit pe hârtie crem necretată, care primește stiloul fără să lase să treacă."],
-      details: ["208 pagini, crem necretat", "Cusut, stă deschis plat", "14,8 × 21 cm", "Nedatat — începe în orice lună"],
-    },
-    mrc_ephemeris: {
-      name: "Efemeridă de buzunar 2026–2030",
-      summary: "Cinci ani de poziții planetare într-o carte legată în pânză, destul de mică pentru a fi purtată.",
-      description: ["Poziții la amiază de la Soare la Pluto, plus nodurile lunare și principalele intrări în semn și stații retrograde ale fiecărui an.", "Pânză pe carton, semn de carte din panglică și o planșă pliantă cu aspectele pe coperta din spate."],
-      details: ["Copertă cartonată în pânză", "Semn de carte din panglică", "11 × 17 cm", "Din 2026 până în 2030"],
-    },
-    mrc_constellation_candle: {
-      name: "Lumânare Constelație",
-      summary: "Ceară de soia și cocos într-un vas modelat manual, cu glazură alb-os. Cedru, rădăcină de iris și un fum uscat.",
-      description: ["Turnată în serii mici într-un vas de gresie glazurat într-un alb-os cretos, cu piciorul lăsat brut.", "Parfumul se deschide uscat și mineral, se așază pe cedru și iris și se încheie cu un fum rece, slab. În jur de 50 de ore de ardere."],
-      details: ["Amestec de ceară de soia și cocos", "~50 de ore de ardere", "220 g", "Vas de gresie reutilizabil"],
-      variantLabel: "Parfum", variantOptions: ["Cedru și iris", "Fum și sare", "Frunză de smochin"],
-    },
-    mrc_zodiac_tee: {
-      name: "Tricou cu glifa zodiacală",
-      summary: "Bumbac organic greu, alb-os nevopsit, cu o singură glifă tipărită mic pe piept.",
-      description: ["Croit drept și ușor scurtat la tiv, din bumbac organic de 240 g/mp lăsat nevopsit, astfel că nuanța variază ușor de la lot la lot.", "Glifa semnului tău, tipărită mic și cu contrast redus pe pieptul stâng, într-un gri cald."],
-      details: ["Bumbac organic, 240 g/mp", "Alb-os nevopsit", "Croi drept — ia o mărime mai mică pentru fit apropiat", "XS–XXL"],
-      variantLabel: "Mărime", variantOptions: ["XS", "S", "M", "L", "XL", "XXL"],
-    },
-    mrc_card_deck: {
-      name: "Set de studiu al aspectelor",
-      summary: "Șaptezeci și opt de cărți acoperind fiecare aspect major dintre planete, pentru a învăța să citești o hartă.",
-      description: ["O carte pentru fiecare pereche planetară și aspect, cu citirea tradițională pe față și o scurtă glosă modernă pe verso.", "Tipărite pe carton de 350 g/mp cu miez albastru și finisaj textil, într-o cutie rigidă din două părți."],
-      details: ["78 de cărți, 350 g/mp", "Finisaj textil, miez albastru", "Cutie rigidă din două părți", "Include un broșură de 24 de pagini"],
     },
   },
 };

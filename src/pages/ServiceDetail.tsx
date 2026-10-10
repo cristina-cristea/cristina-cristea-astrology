@@ -96,13 +96,13 @@ export default function ServiceDetail() {
             </div>
             <Link to="/services" className="link-u">{t.common.allReadings}</Link>
           </div>
-          <div className="merch-strip">
+          <div className="rel-strip">
             {others.map((s) => (
-              <Link key={s.id} to={`/services/${s.slug}`} className="merch-card">
-                <span className="merch-card__art" aria-hidden="true"><Glyph name={s.glyph} /></span>
-                <span className="merch-card__cat">{s.durationMinutes} {t.common.minutes}</span>
+              <Link key={s.id} to={`/services/${s.slug}`} className="rel-card">
+                <span className="rel-card__art" aria-hidden="true"><Glyph name={s.glyph} /></span>
+                <span className="rel-card__cat">{s.durationMinutes} {t.common.minutes}</span>
                 <h3>{t.serviceCopy[s.id].name}</h3>
-                <span className="merch-card__price">{price(s.price)}</span>
+                <span className="rel-card__price">{price(s.price)}</span>
               </Link>
             ))}
           </div>

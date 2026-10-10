@@ -6,7 +6,7 @@ import type { Dict } from "../types";
  * heisst, weiss. A build check greps this file to keep it that way.
  */
 export const deCH: Dict = {
-  nav: { services: "Leistungen", shop: "Shop", about: "Über mich", contact: "Kontakt", home: "Cristina Cristea — Startseite", basket: "Warenkorb", menuOpen: "Menü öffnen", menuClose: "Menü schliessen", skip: "Zum Inhalt springen", primary: "Hauptnavigation", mobile: "Mobil" },
+  nav: { services: "Leistungen", about: "Über mich", contact: "Kontakt", home: "Cristina Cristea — Startseite", basket: "Warenkorb", menuOpen: "Menü öffnen", menuClose: "Menü schliessen", skip: "Zum Inhalt springen", primary: "Hauptnavigation", mobile: "Mobil" },
   common: { minutes: "Minuten", from: "ab", total: "Total", subtotal: "Zwischentotal", shipping: "Versand", free: "Gratis", required: "Pflichtfeld", optional: "optional", email: "E-Mail", back: "Zurück zu", allReadings: "Alle Deutungen", allProducts: "Alle Produkte", continueShopping: "Weiter einkaufen", remove: "Entfernen", quantity: "Anzahl", increase: "Erhöhen", decrease: "Verringern", currentStep: "(aktueller Schritt)", completed: "(abgeschlossen)" },
   home: {
     eyebrow: "Zertifizierte beratende Astrologin",
@@ -34,7 +34,6 @@ export const deCH: Dict = {
     ],
     quote: "Sie sagte mir Dinge über mein Horoskop, denen ich ein Jahrzehnt lang ausgewichen war, und doch fühlte es sich an, als bekäme ich etwas gereicht statt einen Rüffel.",
     quoteBy: "Marta R. — Radix und Prognose",
-    shopEyebrow: "Der Shop", shopTitle: "Objekte für das Studium",
   },
   services: {
     pageEyebrow: "Deutungen", pageTitle: "Leistungen",
@@ -107,9 +106,9 @@ export const deCH: Dict = {
   },
   cart: {
     title: "Ihre Bestellung", eyebrow: "Warenkorb", empty: "Ihr Warenkorb ist leer",
-    emptyLead: "Deutungen werden einzeln gebucht, die Geburtsdaten werden vor der Zahlung erfasst. Shop-Artikel gehen direkt zur Kasse.",
-    browse: "Deutungen ansehen", visitShop: "Zum Shop", summary: "Übersicht", checkout: "Zur Kasse",
-    reading: "Deutung", shop: "Shop", oneSession: "Eine Sitzung",
+    emptyLead: "Deutungen werden einzeln gebucht, die Geburtsdaten werden vor der Zahlung erfasst.",
+    browse: "Deutungen ansehen", summary: "Übersicht", checkout: "Zur Kasse",
+    reading: "Deutung", oneSession: "Eine Sitzung",
     name: "Name", born: "Geboren", timeUnknown: "Zeit unbekannt", place: "Ort",
     secondChart: "Zweites Horoskop", year: "Jahr",
   },
@@ -120,19 +119,7 @@ export const deCH: Dict = {
     chooseSlotBody: "In Ihrer Bestätigungsmail finden Sie einen Buchungslink. Wählen Sie eine passende Zeit — Sitzungen finden von Dienstag bis Freitag statt.",
     nothing: "Nichts angekommen?",
     nothingBody: "Prüfen Sie den Spam-Ordner und schreiben Sie dann an",
-    backHome: "Zurück zur Website", visitShop: "Zum Shop",
-  },
-  merch: {
-    eyebrow: "Der Shop", title: "Shop",
-    lead: "Drucke, Papier und einige Objekte für das Studium. Shop-Artikel gehen direkt zur Kasse — Geburtsdaten sind nicht nötig, ausser bei einem personalisierten Horoskopdruck.",
-    categories: ["Alle", "Druck", "Papier", "Wohnen", "Kleidung"],
-    shippingEyebrow: "Versand", shippingTitle: "Versand ab Lissabon",
-    shippingBody: "Alles wird innert fünf Arbeitstagen versandt, mit Sendungsverfolgung und plastikfrei verpackt. Europa 2–5 Tage, übrige Welt 7–14. Gratis ab 120 €.",
-    addToBasket: "In den Warenkorb", added: "Hinzugefügt", inBasket: "In Ihrem Warenkorb.", viewBasket: "Warenkorb ansehen",
-    postedNote: "Versand innert fünf Arbeitstagen. Gratis Versand ab 120 €.",
-    details: "Details", specification: "Spezifikation", more: "Mehr", fromShop: "Aus dem Shop",
-    chartPrintNote: "Dieser Druck entsteht aus Ihrem Horoskop. Nach dem Kauf senden wir Ihnen ein kurzes Formular für Geburtsdatum, -zeit und -ort.",
-    productCount: "Produkte",
+    backHome: "Zurück zur Website", 
   },
   about: {
     eyebrow: "Die Astrologin", title: "Cristina Cristea",
@@ -193,7 +180,7 @@ export const deCH: Dict = {
       { h: "Die Rechtsgrundlage", p: ["Geburtsdaten werden auf Grundlage Ihrer ausdrücklichen Einwilligung verarbeitet, die Sie mit dem Ankreuzen des Kästchens im Buchungsformular erteilen. Sie können diese Einwilligung jederzeit widerrufen. Bestell- und Zahlungsunterlagen werden auf Grundlage des Vertrags und, bei Rechnungen, einer gesetzlichen Pflicht verarbeitet. Der Newsletter wird nur auf Grundlage Ihrer gesonderten, freiwilligen Einwilligung versandt."] },
       { h: "Dritte bei einer Partnerdeutung", p: ["Wenn Sie die Geburtsdaten einer anderen Person angeben, bestätigen Sie, dass Sie deren Erlaubnis haben. Verlangt diese Person von uns die Löschung ihrer Daten, löschen wir sie und teilen Ihnen das mit."] },
       { h: "Wie lange sie aufbewahrt werden", p: ["Geburtsdaten und Sitzungsnotizen werden 24 Monate nach Ihrer Deutung aufbewahrt, damit Folgearbeiten auf demselben Horoskop aufbauen können, und danach gelöscht. Bestell- und Rechnungsunterlagen werden für die vom portugiesischen Steuerrecht verlangte Dauer aufbewahrt. Newsletter-Anmeldungen bleiben bis zu Ihrer Abmeldung bestehen."] },
-      { h: "Mit wem sie geteilt werden", p: ["Mit niemandem ausser den Auftragsverarbeitern, die für den Betrieb nötig sind: dem Zahlungsanbieter, dem E-Mail-Dienst für den Versand Ihrer Horoskope, dem Terminplanungswerkzeug und dem Versanddienstleister für physische Bestellungen. Alle handeln unter einem Auftragsverarbeitungsvertrag. Ihre Daten werden nie verkauft, nie für Werbung weitergegeben und nie zum Trainieren von Systemen des maschinellen Lernens verwendet."] },
+      { h: "Mit wem sie geteilt werden", p: ["Mit niemandem ausser den Auftragsverarbeitern, die für den Betrieb nötig sind: dem Zahlungsanbieter, dem E-Mail-Dienst für den Versand Ihrer Horoskope und dem Terminplanungswerkzeug. Alle handeln unter einem Auftragsverarbeitungsvertrag. Ihre Daten werden nie verkauft, nie für Werbung weitergegeben und nie zum Trainieren von Systemen des maschinellen Lernens verwendet."] },
       { h: "Ihre Rechte", p: [
         "Nach der DSGVO haben Sie das Recht, Auskunft über die zu Ihnen gespeicherten Daten zu erhalten, sie berichtigen oder löschen zu lassen, ihre Verarbeitung einzuschränken oder ihr zu widersprechen, eine Kopie in einem übertragbaren Format zu erhalten und Ihre Einwilligung jederzeit zu widerrufen, ohne dass die Rechtmässigkeit der zuvor erfolgten Verarbeitung berührt wird.",
         "Um eines dieser Rechte auszuüben, schreiben Sie an privacy@cristinacristea.com. Wir antworten innert 30 Tagen. Sind Sie nicht zufrieden, können Sie sich bei der Comissão Nacional de Proteção de Dados (CNPD) oder bei der Aufsichtsbehörde Ihres eigenen Landes beschweren.",
@@ -270,47 +257,6 @@ export const deCH: Dict = {
       includes: ["90-minütige Live-Sitzung per Video", "Progressionshoroskop und Doppelrad mit Ihrem Radix als PDF", "Audioaufnahme der Sitzung", "Zeitachse des progressiven Mondes für die kommenden Jahre", "Zwei Wochen Rückfragen per E-Mail"],
       goodFor: ["Eine Phase der Veränderung ohne erkennbaren äusseren Anlass", "Alle, die das Gefühl haben, ein anderer Mensch geworden zu sein", "Zusammen mit einer Prognose für das vollständige Bild"],
       delivery: "Live-Sitzung + Aufnahme", turnaround: "Buchung innert 14 Tagen",
-    },
-  },
-  merchCopy: {
-    mrc_natal_print: {
-      name: "Personalisierter Radix-Druck",
-      summary: "Ihr Geburtshoroskop in feiner Linie gezeichnet und auf schwerem Hadernpapier gedruckt. Versand mit den beim Kauf angegebenen Geburtsdaten.",
-      description: ["Eine von Hand neu gezeichnete Horoskopgrafik in einer einzigen Linienstärke — keine Farbe, kein Beiwerk, nur die Geometrie des Himmels bei Ihrer Geburt.", "Gedruckt mit Pigmenttinte auf 310-g-Hadernpapier mit weichem Büttenrand. Ungerahmt, flach im stabilen Kartonversand."],
-      details: ["310 g Hadernpapier", "Pigmenttinte, alterungsbeständig", "Ungerahmt", "Flacher Versand in 5–7 Tagen"],
-      variantLabel: "Grösse", variantOptions: ["A4 — 21 × 29,7 cm", "A3 — 29,7 × 42 cm", "50 × 70 cm"],
-    },
-    mrc_lunar_journal: {
-      name: "Das Mondtagebuch",
-      summary: "Ein Tagebuch über dreizehn Monate rund um den Mondzyklus, mit Platz für jeden Neu- und Vollmond.",
-      description: ["Dreizehn Lunationen, jede mit einer Doppelseite für die Neumond-Absicht und die Vollmond-Bilanz, dazu Zeichen und Grad jeder Phase.", "Fadengeheftet, damit es flach liegt, gedruckt auf ungestrichenem cremefarbenem Papier, das Füllfederhalter ohne Durchschlagen annimmt."],
-      details: ["208 Seiten, ungestrichen creme", "Fadengeheftet, liegt flach", "14,8 × 21 cm", "Undatiert — Start in jedem Monat"],
-    },
-    mrc_ephemeris: {
-      name: "Taschen-Ephemeride 2026–2030",
-      summary: "Fünf Jahre Planetenstände in einem leinengebundenen Buch, klein genug zum Mitnehmen.",
-      description: ["Mittagsstände von Sonne bis Pluto, dazu die Mondknoten sowie die wichtigsten Zeichenwechsel und Rückläufigkeitsstationen jedes Jahres.", "Leinen über Pappe, Lesebändchen und eine ausklappbare Aspektübersicht im hinteren Deckel."],
-      details: ["Leinen-Hardcover", "Lesebändchen", "11 × 17 cm", "2026 bis 2030"],
-    },
-    mrc_constellation_candle: {
-      name: "Konstellationskerze",
-      summary: "Soja- und Kokoswachs in einem handgedrehten Gefäss mit Knochenglasur. Zeder, Iriswurzel und ein trockener Rauch.",
-      description: ["In kleinen Chargen in ein Steinzeuggefäss gegossen, glasiert in kreidigem Knochenweiss, der Fuss roh belassen.", "Der Duft öffnet trocken und mineralisch, legt sich auf Zeder und Iris und endet in schwachem kaltem Rauch. Rund 50 Stunden Brenndauer."],
-      details: ["Soja-Kokos-Wachsmischung", "~50 Stunden Brenndauer", "220 g", "Nachfüllbares Steinzeuggefäss"],
-      variantLabel: "Duft", variantOptions: ["Zeder & Iris", "Rauch & Salz", "Feigenblatt"],
-    },
-    mrc_zodiac_tee: {
-      name: "Tierkreiszeichen-Shirt",
-      summary: "Schwere Biobaumwolle in ungefärbtem Knochenweiss, mit einem einzelnen Glyphen klein auf der Brust.",
-      description: ["Kastig geschnitten und am Saum leicht gekürzt, aus 240-g-Biobaumwolle, ungefärbt belassen, sodass die Farbe zwischen den Chargen leicht variiert.", "Der Glyph Ihres Zeichens, klein und kontrastarm in warmem Grau auf die linke Brust gedruckt."],
-      details: ["240 g Biobaumwolle", "Ungefärbtes Knochenweiss", "Kastiger Schnitt — für enge Passform eine Grösse kleiner", "XS–XXL"],
-      variantLabel: "Grösse", variantOptions: ["XS", "S", "M", "L", "XL", "XXL"],
-    },
-    mrc_card_deck: {
-      name: "Aspekt-Lernkarten",
-      summary: "Achtundsiebzig Karten zu jedem Hauptaspekt zwischen den Planeten, um das Deuten eines Horoskops zu lernen.",
-      description: ["Eine Karte je Planetenpaar und Aspekt, mit der traditionellen Deutung auf der Vorder- und einer kurzen modernen Lesart auf der Rückseite.", "Gedruckt auf 350-g-Karton mit blauem Kern und Leinenstruktur, in einer stabilen zweiteiligen Schachtel."],
-      details: ["78 Karten, 350 g", "Leinenstruktur, blauer Kern", "Stabile zweiteilige Schachtel", "Inklusive 24-seitigem Booklet"],
     },
   },
 };

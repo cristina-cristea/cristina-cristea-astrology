@@ -9,10 +9,11 @@ import {
 import type { ReactNode } from "react";
 import type { CartLine, IntakeData } from "../types";
 
+const STORAGE_KEY = "cs.cart.v1";
+
 /**
- * The cart stores the product name as it was shown when added, so a basket
- * built in one language keeps its labels if the visitor switches. Callers
- * pass the already-localised name rather than a data record.
+ * Callers pass the already-localised name, so a basket built in one language
+ * keeps its labels if the visitor switches.
  */
 interface LineSeed {
   id: string;
@@ -21,24 +22,22 @@ interface LineSeed {
   price: number;
 }
 
-const STORAGE_KEY = "cs.cart.v1";
-
 interface CartValue {
   lines: CartLine[];
   count: number;
   subtotal: number;
   addService: (service: LineSeed, intake: IntakeData) => void;
-  addMerch: (item: LineSeed, variant?: string, qty?: number) => void;
-  setQty: (key: string, qty: number) => void;
   remove: (key: string) => void;
   clear: () => void;
 }
 
 const CartContext = createContext<CartValue | null>(null);
 
-/** Stable identity for a line: merch of the same variant stacks, services never do. */
-export const lineKey = (l: CartLine) =>
-  l.kind === "service" ? `${l.id}:${l.intake.submittedAt}` : `${l.id}:${l.variant ?? "-"}`;
+/**
+ * Two bookings of the same reading are distinct lines — they carry different
+ * birth data — so the submission timestamp disambiguates them.
+ */
+export const lineKey = (l: CartLine) => `${l.id}:${l.intake.submittedAt}`;
 
 const read = (): CartLine[] => {
   try {
@@ -61,46 +60,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [lines]);
 
   const addService = useCallback((service: LineSeed, intake: IntakeData) => {
-    setLines((prev) => [
-      ...prev,
-      {
-        kind: "service",
-        id: service.id,
-        slug: service.slug,
-        name: service.name,
-        price: service.price,
-        qty: 1,
-        intake,
-      },
-    ]);
-  }, []);
-
-  const addMerch = useCallback((item: LineSeed, variant?: string, qty = 1) => {
-    setLines((prev) => {
-      const i = prev.findIndex(
-        (l) => l.kind === "merch" && l.id === item.id && l.variant === variant
-      );
-      if (i > -1) {
-        const next = [...prev];
-        const line = next[i];
-        if (line.kind === "merch") next[i] = { ...line, qty: line.qty + qty };
-        return next;
-      }
-      return [
-        ...prev,
-        { kind: "merch", id: item.id, slug: item.slug, name: item.name, price: item.price, qty, variant },
-      ];
-    });
-  }, []);
-
-  const setQty = useCallback((key: string, qty: number) => {
-    setLines((prev) =>
-      prev.flatMap((l) => {
-        if (lineKey(l) !== key) return [l];
-        if (qty < 1) return [];
-        return l.kind === "merch" ? [{ ...l, qty }] : [l];
-      })
-    );
+    setLines((prev) => [...prev, { ...service, intake }]);
   }, []);
 
   const remove = useCallback((key: string) => {
@@ -109,11 +69,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const clear = useCallback(() => setLines([]), []);
 
-  const value = useMemo<CartValue>(() => {
-    const count = lines.reduce((n, l) => n + l.qty, 0);
-    const subtotal = lines.reduce((n, l) => n + l.price * l.qty, 0);
-    return { lines, count, subtotal, addService, addMerch, setQty, remove, clear };
-  }, [lines, addService, addMerch, setQty, remove, clear]);
+  const value = useMemo<CartValue>(() => ({
+    lines,
+    count: lines.length,
+    subtotal: lines.reduce((n, l) => n + l.price, 0),
+    addService,
+    remove,
+    clear,
+  }), [lines, addService, remove, clear]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

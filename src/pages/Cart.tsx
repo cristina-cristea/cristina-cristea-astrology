@@ -1,28 +1,23 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Minus, Plus, ShoppingBag, Trash } from "lucide-react";
+import { ArrowRight, ShoppingBag, Trash } from "lucide-react";
 import { lineKey, useCart } from "../context/CartContext";
-import { useI18n } from "../i18n/I18nProvider";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
+import { useI18n } from "../i18n/I18nProvider";
 
 export default function Cart() {
   const { t, price } = useI18n();
   useDocumentTitle(t.cart.title);
-  const { lines, subtotal, setQty, remove } = useCart();
-
-  const shipping = lines.some((l) => l.kind === "merch") && subtotal < 120 ? 8 : 0;
+  const { lines, subtotal, remove } = useCart();
 
   if (!lines.length) {
     return (
       <section className="section empty">
         <div className="wrap wrap--narrow center">
-          <ShoppingBag size={30} strokeWidth={0.9} className="empty__icon" />
+          <ShoppingBag size={30} strokeWidth={0.9} className="empty__icon" aria-hidden="true" />
           <h1>{t.cart.empty}</h1>
-          <p className="lead">
-            {t.cart.emptyLead}
-          </p>
+          <p className="lead">{t.cart.emptyLead}</p>
           <div className="empty__cta">
             <Link to="/services" className="btn">{t.cart.browse}</Link>
-            <Link to="/merch" className="btn btn--ghost">{t.cart.visitShop}</Link>
           </div>
         </div>
       </section>
@@ -45,54 +40,31 @@ export default function Cart() {
                 <article key={key} className="cline">
                   <div className="cline__main">
                     <div>
-                      <span className="cline__kind">
-                        {l.kind === "service" ? t.cart.reading : t.cart.shop}
-                      </span>
-                      <h3>
-                        <Link to={l.kind === "service" ? `/services/${l.slug}` : `/merch/${l.slug}`}>
-                          {l.name}
-                        </Link>
-                      </h3>
-                      {l.kind === "merch" && l.variant && (
-                        <p className="muted cline__variant">{l.variant}</p>
-                      )}
-                      {l.kind === "service" && (
-                        <dl className="cline__intake">
-                          <div><dt>{t.cart.name}</dt><dd>{l.intake.fullName}</dd></div>
-                          <div>
-                            <dt>{t.cart.born}</dt>
-                            <dd>
-                              {l.intake.birthDate}
-                              {l.intake.timeUnknown ? ` · ${t.cart.timeUnknown}` : ` · ${l.intake.birthTime}`}
-                            </dd>
-                          </div>
-                          <div><dt>{t.cart.place}</dt><dd>{l.intake.birthPlace}</dd></div>
-                          {l.intake.partner?.fullName && (
-                            <div><dt>{t.cart.secondChart}</dt><dd>{l.intake.partner.fullName}</dd></div>
-                          )}
-                          {l.intake.targetYear && (
-                            <div><dt>{t.cart.year}</dt><dd>{l.intake.targetYear}</dd></div>
-                          )}
-                        </dl>
-                      )}
+                      <span className="cline__kind">{t.cart.reading}</span>
+                      <h3><Link to={`/services/${l.slug}`}>{l.name}</Link></h3>
+                      <dl className="cline__intake">
+                        <div><dt>{t.cart.name}</dt><dd>{l.intake.fullName}</dd></div>
+                        <div>
+                          <dt>{t.cart.born}</dt>
+                          <dd>
+                            {l.intake.birthDate}
+                            {l.intake.timeUnknown ? ` · ${t.cart.timeUnknown}` : ` · ${l.intake.birthTime}`}
+                          </dd>
+                        </div>
+                        <div><dt>{t.cart.place}</dt><dd>{l.intake.birthPlace}</dd></div>
+                        {l.intake.partner?.fullName && (
+                          <div><dt>{t.cart.secondChart}</dt><dd>{l.intake.partner.fullName}</dd></div>
+                        )}
+                        {l.intake.targetYear && (
+                          <div><dt>{t.cart.year}</dt><dd>{l.intake.targetYear}</dd></div>
+                        )}
+                      </dl>
                     </div>
-                    <span className="cline__price">{price(l.price * l.qty)}</span>
+                    <span className="cline__price">{price(l.price)}</span>
                   </div>
 
                   <div className="cline__foot">
-                    {l.kind === "merch" ? (
-                      <div className="qty qty--sm" role="group" aria-label={`${t.common.quantity} — ${l.name}`}>
-                        <button onClick={() => setQty(key, l.qty - 1)} aria-label={t.common.decrease}>
-                          <Minus size={13} strokeWidth={1.4} />
-                        </button>
-                        <span aria-live="polite">{l.qty}</span>
-                        <button onClick={() => setQty(key, l.qty + 1)} aria-label={t.common.increase}>
-                          <Plus size={13} strokeWidth={1.4} />
-                        </button>
-                      </div>
-                    ) : (
-                      <span className="muted cline__single">{t.cart.oneSession}</span>
-                    )}
+                    <span className="muted cline__single">{t.cart.oneSession}</span>
                     <button className="cline__rm" onClick={() => remove(key)}>
                       <Trash size={13} strokeWidth={1.3} aria-hidden="true" /> {t.common.remove}
                     </button>
@@ -107,20 +79,16 @@ export default function Cart() {
               <h2 className="eyebrow">{t.cart.summary}</h2>
               <dl className="summary-card__dl">
                 <div><dt>{t.common.subtotal}</dt><dd>{price(subtotal)}</dd></div>
-                <div>
-                  <dt>{t.common.shipping}</dt>
-                  <dd>{shipping ? price(shipping) : t.common.free}</dd>
-                </div>
               </dl>
               <hr className="rule" />
               <div className="summary-card__total">
                 <span>{t.common.total}</span>
-                <strong>{price(subtotal + shipping)}</strong>
+                <strong>{price(subtotal)}</strong>
               </div>
               <Link to="/checkout" className="btn btn--full" style={{ marginTop: "1.5rem" }}>
-                {t.cart.checkout} <ArrowRight size={15} strokeWidth={1.4} />
+                {t.cart.checkout} <ArrowRight size={15} strokeWidth={1.4} aria-hidden="true" />
               </Link>
-              <Link to="/merch" className="link-u cart__cont">{t.common.continueShopping}</Link>
+              <Link to="/services" className="link-u cart__cont">{t.common.allReadings}</Link>
             </div>
           </aside>
         </div>

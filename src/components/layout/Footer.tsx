@@ -36,7 +36,6 @@ export function Footer() {
           <div className="ftr__col">
             <h4>{t.footer.studio}</h4>
             <Link to="/about">{t.nav.about}</Link>
-            <Link to="/merch">{t.nav.shop}</Link>
             <Link to="/contact">{t.nav.contact}</Link>
             <Link to="/privacy">{t.footer.privacy}</Link>
           </div>
