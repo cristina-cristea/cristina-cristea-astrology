@@ -3,14 +3,14 @@
 Marketing and booking site for a certified astrologer. React + TypeScript +
 Vite, client-side routed, no backend.
 
-**Live:** https://dianadaminescu05-del.github.io/cristina-cristea-astrology/
+**Live:** https://cristina-cristea.github.io/cristina-cristea-astrology/
 
 ## Getting started on a new machine
 
 You need [Node.js](https://nodejs.org) 20 or newer and [git](https://git-scm.com).
 
 ```bash
-git clone https://github.com/dianadaminescu05-del/cristina-cristea-astrology.git
+git clone https://github.com/cristina-cristea/cristina-cristea-astrology.git
 cd cristina-cristea-astrology
 npm install
 npm run dev      # http://localhost:5173
