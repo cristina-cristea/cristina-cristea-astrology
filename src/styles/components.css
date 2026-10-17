@@ -793,8 +793,14 @@
   position: sticky;
   top: calc(var(--nav-h) + 2rem);
 }
-.pd__art svg { stroke-width: 1.1; width: 72%; height: 72%; animation: slowSpin 200s linear infinite; }
+.pd__art svg { stroke-width: 1.1; width: 72%; height: 72%; animation: revolve 200s linear infinite; }
 .pd__art--product svg { animation: none; width: 62%; height: 62%; }
+/* The forecasting bi-wheel: the transit ring turns over the natal chart. */
+.pd__art .glyph__transits {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  animation: revolve 90s linear infinite reverse;
+}
 
 .pd__head h1 { margin-bottom: 0.75rem; }
 .pd__tag {
@@ -1224,36 +1230,24 @@
 }
 .about-hero__lead { margin-top: 1.75rem; max-width: 48ch; }
 .about-hero__portrait {
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  color: var(--taupe);
-  border: 1px solid var(--line);
-  background: var(--paper);
+  justify-self: center;
+  width: 100%;
+  max-width: 440px;
 }
-.about-hero__portrait svg { stroke-width: 1.1; width: 74%; height: 74%; animation: slowSpin 240s linear infinite; }
+/* The photo carries its own gold ring; the circular crop drops the white
+   corners so it sits directly on the hero background. */
+.about-hero__portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 @media (max-width: 800px) {
   .about-hero__inner { grid-template-columns: 1fr; }
   .about-hero__portrait { max-width: 260px; }
-}
-
-.tl__title { margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
-.tl { list-style: none; margin: 0; padding: 0; }
-.tl li {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 2rem;
-  padding-block: 2rem;
-  border-top: 1px solid var(--line);
-}
-.tl li:last-child { border-bottom: 1px solid var(--line); }
-.tl__year { font-family: var(--display); font-size: 1.7rem; color: var(--gold); }
-.tl h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-.tl p { font-size: 0.92rem; line-height: 1.75; max-width: 62ch; }
-
-@media (max-width: 640px) {
-  .tl li { grid-template-columns: 1fr; gap: 0.75rem; }
 }
 
 .values {
@@ -1434,8 +1428,7 @@ fieldset { min-width: 0; }
 .about-hero__inner > *,
 .grid-2 > *,
 .sec-head > *,
-.ftr__top > *,
-.tl li > * {
+.ftr__top > * {
   min-width: 0;
 }
 

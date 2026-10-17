@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
-import { Glyph } from "../components/ui/Glyph";
 import { StarField } from "../components/ui/StarField";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
+import portrait from "../assets/cristina-portrait.webp";
 
 const VALUE_ICONS = [GraduationCap, Users, BookOpen, Award];
 
@@ -21,8 +21,8 @@ export default function About() {
             <h1>{t.about.title}</h1>
             <p className="lead about-hero__lead">{t.about.lead}</p>
           </div>
-          <div className="about-hero__portrait" aria-hidden="true">
-            <Glyph name="saturn" />
+          <div className="about-hero__portrait">
+            <img src={portrait} alt={t.about.portraitAlt} width={880} height={880} />
           </div>
         </div>
       </section>
@@ -51,23 +51,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--sand">
-        <div className="wrap">
-          <p className="eyebrow">{t.about.backgroundEyebrow}</p>
-          <h2 className="tl__title">{t.about.backgroundTitle}</h2>
-          <ol className="tl">
-            {t.about.timeline.map(([year, title, body]) => (
-              <li key={year}>
-                <span className="tl__year">{year}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p className="muted">{body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
 
       <section className="section">
         <div className="wrap">

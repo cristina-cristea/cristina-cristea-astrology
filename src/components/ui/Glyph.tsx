@@ -57,6 +57,26 @@ const spokes = (inner: number, outer: number) =>
     );
   });
 
+/** Point on a circle about the centre; 0° at the left (the Ascendant). */
+const polar = (r: number, deg: number): [number, number] => {
+  const a = Math.PI - (deg * Math.PI) / 180;
+  return [100 + r * Math.cos(a), 100 - r * Math.sin(a)];
+};
+
+/** Natal placements (degrees of the wheel) and the aspect web between them. */
+const natal: [number][] = [[18], [104], [141], [226], [262], [318]];
+const aspectWeb = [[0, 2], [2, 4], [4, 0], [1, 3], [3, 5]]
+  .map(([a, b]) => {
+    const [x1, y1] = polar(30, natal[a][0]);
+    const [x2, y2] = polar(30, natal[b][0]);
+    return `M${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)}`;
+  })
+  .join(" ");
+
+/** Transit placements on the outer wheel, and which natal points they touch. */
+const transit = [62, 176, 238, 300, 344];
+const contacts: [number, number][] = [[0, 0], [2, 3], [4, 5]];
+
 const figures: Record<GlyphName, ReactElement> = {
   /* Natal chart — a full wheel with houses and an aspect web */
   chart: (
@@ -74,17 +94,42 @@ const figures: Record<GlyphName, ReactElement> = {
     </g>
   ),
 
-  /* Forecasting — orbital paths crossing a fixed point */
-  orbit: (
+  /* Forecasting — a bi-wheel: the transit wheel laid over the natal chart.
+     The outer group carries a class so the detail page can turn it on its
+     own, the way transits move across a fixed birth chart. */
+  transits: (
     <g>
-      <ellipse cx="100" cy="100" rx="76" ry="30" />
-      <ellipse cx="100" cy="100" rx="76" ry="30" transform="rotate(60 100 100)" opacity={0.7} />
-      <ellipse cx="100" cy="100" rx="76" ry="30" transform="rotate(120 100 100)" opacity={0.45} />
-      {ring(12, "core")}
-      {dot(100, 100, 3.4, "sun")}
-      {dot(176, 100, 2.4, "p1")}
-      {dot(62, 34, 2, "p2")}
-      {dot(138, 166, 2, "p3")}
+      {/* natal chart, inner */}
+      {ring(64, "n-out")}
+      {ring(50, "n-in")}
+      {ring(30, "n-core")}
+      {spokes(50, 64)}
+      {natal.map(([deg], i) => {
+        const [x, y] = polar(57, deg);
+        return dot(x, y, 2, `n${i}`);
+      })}
+      <path d={aspectWeb} opacity={0.55} />
+
+      {/* transit wheel, outer */}
+      <g className="glyph__transits">
+        {ring(90, "t-out")}
+        {ring(74, "t-in")}
+        {Array.from({ length: 12 }, (_, i) => {
+          const [x1, y1] = polar(74, i * 30 + 15);
+          const [x2, y2] = polar(90, i * 30 + 15);
+          return <line key={`t${i}`} x1={x1} y1={y1} x2={x2} y2={y2} opacity={0.6} />;
+        })}
+        {transit.map((deg, i) => {
+          const [x, y] = polar(82, deg);
+          return <circle key={`tp${i}`} cx={x} cy={y} r={2.6} />;
+        })}
+        {/* transit-to-natal contacts, dashed */}
+        {contacts.map(([t, n], i) => {
+          const [x1, y1] = polar(74, transit[t]);
+          const [x2, y2] = polar(30, natal[n][0]);
+          return <line key={`c${i}`} x1={x1} y1={y1} x2={x2} y2={y2} strokeDasharray="2 3" opacity={0.5} />;
+        })}
+      </g>
     </g>
   ),
 

@@ -1,6 +1,6 @@
 export type Glyph =
   | "sun" | "moon" | "rising" | "venus" | "saturn"
-  | "chart" | "orbit" | "star" | "comet" | "eclipse";
+  | "chart" | "transits" | "star" | "comet" | "eclipse";
 
 /** Birth data captured before checkout for any chart service. */
 export interface IntakePerson {

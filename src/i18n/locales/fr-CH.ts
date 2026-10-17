@@ -125,6 +125,7 @@ export const frCH: Dict = {
   about: {
     eyebrow: "L'astrologue", title: "Cristina Cristea",
     lead: "Je lis des thèmes depuis quinze ans, et je pense toujours que ce que l'astrologie fait de plus utile, c'est de donner aux gens un langage juste pour quelque chose qu'ils soupçonnaient déjà d'eux-mêmes.",
+    portraitAlt: "Cristina Cristea tenant un thème natal imprimé",
     wordsEyebrow: "En ses mots",
     words: [
       "Je suis venue à l'astrologie de biais. J'étais archiviste, je passais mes journées avec des documents qui ne prenaient sens qu'une fois que l'on savait quand ils avaient été écrits et qui se trouvait dans la pièce. Un thème fonctionne de la même manière — c'est le document d'un instant, et il ne signifie rien tant qu'on ne peut pas le situer.",
@@ -136,14 +137,6 @@ export const frCH: Dict = {
     credentialsList: ["Diplôme, Faculty of Astrological Studies (2011)", "Membre, Astrological Association of Great Britain", "Signataire du code éthique ISAR", "Master en archivistique, Bologne"],
     practice: "Pratique",
     practiceList: ["Lectures en anglais, français, allemand et roumain", "En ligne dans le monde entier, du mardi au vendredi", "Méthodes traditionnelles et psychologiques", "Maisons en signes entiers ou Placidus sur demande"],
-    backgroundEyebrow: "Parcours", backgroundTitle: "Comment la pratique s'est construite",
-    timeline: [
-      ["2008", "Premières études", "Début de l'étude auprès d'un astrologue traditionnel à Bologne, en travaillant Lilly et Morin aux côtés de l'astrologie psychologique moderne."],
-      ["2011", "Diplôme FAS", "Certifiée par la Faculty of Astrological Studies, avec un mémoire sur les cycles de lunaison progressée et le calendrier des changements de vocation."],
-      ["2014", "Pratique à plein temps", "Après dix ans de recherche en archives, passage à la lecture de thèmes à plein temps. L'entraînement à lire attentivement de vieux documents s'est révélé être la même compétence."],
-      ["2019", "Enseignement", "Début d'un petit séminaire annuel sur les révolutions solaires et la relocalisation, désormais donné deux fois par an à un groupe de douze."],
-      ["2024", "Ce cabinet", "Installation de la pratique à Lisbonne. Les lectures se poursuivent en ligne, dans le monde entier, comme depuis le début."],
-    ],
     values: [
       ["Formée, pas intuitive", "Chaque affirmation d'une lecture peut être rattachée à une technique. Si je suppose, je le dis."],
       ["Votre thème, votre décision", "Je décris. Je ne prescris pas, et je ne vous dis pas à quoi ressemble une bonne vie."],
@@ -165,7 +158,7 @@ export const frCH: Dict = {
     sentLead: "Une réponse arrivera sous deux jours ouvrables à",
     direct: "Direct", emailLabel: "E-mail", sessions: "Séances",
     sessionsValue: "Mardi – vendredi, 10h00 – 18h00 (WET)",
-    location: "Lieu", locationValue: "Lisbonne, Portugal — lectures en ligne dans le monde entier",
+    location: "Lieu", locationValue: "Timisoara, Roumanie — lectures en ligne dans le monde entier",
     dataNote: "Pour tout ce qui concerne vos données de naissance conservées — accès, rectification ou effacement — écrivez à",
   },
   privacy: {

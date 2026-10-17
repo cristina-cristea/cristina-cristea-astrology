@@ -121,6 +121,7 @@ export const ro: Dict = {
   about: {
     eyebrow: "Astrologul", title: "Cristina Cristea",
     lead: "Citesc hărți de cincisprezece ani și încă sunt de părere că cel mai folositor lucru pe care îl face astrologia este să le dea oamenilor un limbaj exact pentru ceva ce bănuiau deja despre ei înșiși.",
+    portraitAlt: "Cristina Cristea ținând o hartă natală tipărită",
     wordsEyebrow: "În cuvintele ei",
     words: [
       "Am ajuns la astrologie pieziș. Eram arhivară și îmi petreceam zilele cu documente care căpătau sens abia când știai când fuseseră scrise și cine se afla în încăpere. O hartă funcționează la fel — este documentul unui moment și nu înseamnă nimic până nu îl poți situa.",
@@ -132,14 +133,6 @@ export const ro: Dict = {
     credentialsList: ["Diplomă, Faculty of Astrological Studies (2011)", "Membră, Astrological Association of Great Britain", "Semnatară a codului etic ISAR", "Master în arhivistică, Bologna"],
     practice: "Practică",
     practiceList: ["Consultații în engleză, franceză, germană și română", "Online în toată lumea, de marți până vineri", "Metode tradiționale și psihologice", "Case în semne întregi sau Placidus, la cerere"],
-    backgroundEyebrow: "Parcurs", backgroundTitle: "Cum s-a construit practica",
-    timeline: [
-      ["2008", "Primele studii", "A început studiul pe lângă un astrolog tradițional la Bologna, parcurgând Lilly și Morin alături de astrologia psihologică modernă."],
-      ["2011", "Diploma FAS", "Certificată de Faculty of Astrological Studies, cu o lucrare despre ciclurile de lunație progresată și momentul schimbărilor vocaționale."],
-      ["2014", "Practică cu normă întreagă", "După un deceniu de cercetare în arhive, a trecut integral la citirea hărților. Antrenamentul de a citi atent documente vechi s-a dovedit a fi aceeași deprindere."],
-      ["2019", "Predare", "A început un mic seminar anual despre revoluții solare și relocare, ținut acum de două ori pe an pentru un grup de doisprezece."],
-      ["2024", "Acest studio", "A mutat practica la Lisabona. Consultațiile continuă online, în toată lumea, așa cum au făcut-o de la început."],
-    ],
     values: [
       ["Formată, nu intuitivă", "Orice afirmație dintr-o consultație poate fi urmărită până la o tehnică. Dacă presupun, spun asta."],
       ["Harta ta, decizia ta", "Eu descriu. Nu dau instrucțiuni și nu îți spun cum arată o viață bună."],
@@ -161,7 +154,7 @@ export const ro: Dict = {
     sentLead: "Un răspuns va veni în două zile lucrătoare la",
     direct: "Direct", emailLabel: "E-mail", sessions: "Ședințe",
     sessionsValue: "Marți – vineri, 10:00 – 18:00 (WET)",
-    location: "Locație", locationValue: "Lisabona, Portugalia — consultații online în toată lumea",
+    location: "Locație", locationValue: "Timișoara, România — consultații online în toată lumea",
     dataNote: "Pentru orice privește datele tale de naștere stocate — acces, rectificare sau ștergere — scrie la",
   },
   privacy: {

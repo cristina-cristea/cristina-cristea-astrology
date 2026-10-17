@@ -124,6 +124,7 @@ export const deCH: Dict = {
   about: {
     eyebrow: "Die Astrologin", title: "Cristina Cristea",
     lead: "Ich deute seit fünfzehn Jahren Horoskope, und ich halte es nach wie vor für das Nützlichste an der Astrologie, dass sie Menschen eine genaue Sprache für etwas gibt, das sie über sich selbst ohnehin schon vermuteten.",
+    portraitAlt: "Cristina Cristea mit einem gedruckten Geburtshoroskop",
     wordsEyebrow: "In ihren Worten",
     words: [
       "Ich kam seitwärts zur Astrologie. Ich war Archivarin und verbrachte meine Tage mit Dokumenten, die erst Sinn ergaben, wenn man wusste, wann sie geschrieben wurden und wer im Raum war. Ein Horoskop funktioniert genauso — es ist das Dokument eines Augenblicks und bedeutet nichts, solange man es nicht einordnen kann.",
@@ -135,14 +136,6 @@ export const deCH: Dict = {
     credentialsList: ["Diplom, Faculty of Astrological Studies (2011)", "Mitglied, Astrological Association of Great Britain", "Unterzeichnerin des ISAR-Ethikkodex", "MA Archivwissenschaft, Bologna"],
     practice: "Praxis",
     practiceList: ["Deutungen auf Englisch, Französisch, Deutsch und Rumänisch", "Online weltweit, Dienstag bis Freitag", "Traditionelle und psychologische Methoden", "Ganzzeichen- oder Placidus-Häuser auf Wunsch"],
-    backgroundEyebrow: "Werdegang", backgroundTitle: "Wie die Praxis entstanden ist",
-    timeline: [
-      ["2008", "Erste Studien", "Beginn des Studiums bei einem traditionellen Astrologen in Bologna, mit Lilly und Morin neben moderner psychologischer Astrologie."],
-      ["2011", "FAS-Diplom", "Zertifiziert durch die Faculty of Astrological Studies, mit einer Arbeit über progressive Lunationszyklen und das Timing beruflicher Wechsel."],
-      ["2014", "Vollzeitpraxis", "Nach einem Jahrzehnt in der Archivforschung ganz zur Horoskopdeutung gewechselt. Die Übung, alte Dokumente sorgfältig zu lesen, erwies sich als dieselbe Fähigkeit."],
-      ["2019", "Lehre", "Beginn eines kleinen jährlichen Seminars über Solarhoroskope und Relokation, heute zweimal jährlich für eine Gruppe von zwölf Personen."],
-      ["2024", "Dieses Studio", "Verlegung der Praxis nach Lissabon. Die Deutungen finden weiterhin online und weltweit statt, wie von Anfang an."],
-    ],
     values: [
       ["Ausgebildet, nicht intuitiv", "Jede Aussage einer Deutung lässt sich auf eine Technik zurückführen. Wenn ich rate, sage ich es."],
       ["Ihr Horoskop, Ihre Entscheidung", "Ich beschreibe. Ich weise nicht an und sage Ihnen nicht, wie ein gutes Leben auszusehen hat."],
@@ -164,7 +157,7 @@ export const deCH: Dict = {
     sentLead: "Eine Antwort kommt innert zwei Arbeitstagen an",
     direct: "Direkt", emailLabel: "E-Mail", sessions: "Sitzungen",
     sessionsValue: "Dienstag – Freitag, 10:00 – 18:00 Uhr (WET)",
-    location: "Standort", locationValue: "Lissabon, Portugal — Deutungen online weltweit",
+    location: "Standort", locationValue: "Timisoara, Rumänien — Deutungen online weltweit",
     dataNote: "Für alles, was Ihre gespeicherten Geburtsdaten betrifft — Auskunft, Berichtigung oder Löschung — schreiben Sie an",
   },
   privacy: {

@@ -119,6 +119,7 @@ export const en: Dict = {
   about: {
     eyebrow: "The astrologer", title: "Cristina Cristea",
     lead: "I have been reading charts for fifteen years, and I still think the most useful thing astrology does is give people accurate language for something they already suspected about themselves.",
+    portraitAlt: "Cristina Cristea holding a printed birth chart",
     wordsEyebrow: "In her words",
     words: [
       "I came to astrology sideways. I was an archivist, spending my days with documents that only made sense once you knew when they were written and who was in the room. A chart works the same way — it is a document of a moment, and it means nothing until you can place it.",
@@ -130,14 +131,6 @@ export const en: Dict = {
     credentialsList: ["Diploma, Faculty of Astrological Studies (2011)", "Member, Astrological Association of Great Britain", "ISAR ethics code signatory", "MA Archival Studies, Bologna"],
     practice: "Practice",
     practiceList: ["Readings in English, French, German and Romanian", "Online worldwide, Tuesday to Friday", "Traditional and psychological methods", "Whole sign and Placidus houses on request"],
-    backgroundEyebrow: "Background", backgroundTitle: "How the practice was built",
-    timeline: [
-      ["2008", "First studies", "Began studying under a traditional astrologer in Bologna, working through Lilly and Morin alongside modern psychological astrology."],
-      ["2011", "FAS Diploma", "Certified by the Faculty of Astrological Studies, with a dissertation on progressed lunation cycles and the timing of vocational change."],
-      ["2014", "Full-time practice", "Left a decade in archival research to read charts full time. The training in reading old documents carefully turned out to be the same skill."],
-      ["2019", "Teaching", "Began teaching a small annual seminar on solar returns and relocation, now run twice a year for a group of twelve."],
-      ["2024", "This studio", "Moved the practice to Lisbon. Readings continue online, worldwide, as they have since the beginning."],
-    ],
     values: [
       ["Trained, not intuitive", "Every claim in a reading can be traced back to a technique. If I am guessing, I say so."],
       ["Your chart, your call", "I describe. I do not instruct, and I do not tell you what a good life looks like."],
@@ -159,7 +152,7 @@ export const en: Dict = {
     sentLead: "A reply will come within two working days to",
     direct: "Direct", emailLabel: "Email", sessions: "Sessions",
     sessionsValue: "Tuesday – Friday, 10:00 – 18:00 WET",
-    location: "Location", locationValue: "Lisbon, Portugal — readings online worldwide",
+    location: "Location", locationValue: "Timisoara, Romania — readings online worldwide",
     dataNote: "For anything concerning your stored birth data — access, correction or erasure — write to",
   },
   privacy: {

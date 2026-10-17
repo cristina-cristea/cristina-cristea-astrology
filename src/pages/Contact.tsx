@@ -191,7 +191,7 @@ export default function Contact() {
                   <Mail size={15} strokeWidth={1.2} />
                   <div>
                     <strong>{t.contact.emailLabel}</strong>
-                    <a href="mailto:hello@cristinacristea.com">hello@cristinacristea.com</a>
+                    <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>
                   </div>
                 </li>
                 <li>
