@@ -148,7 +148,7 @@ export const en: Dict = {
     subjects: ["A question about a reading", "Booking or rescheduling", "A gift reading", "Shop order or shipping", "Press or teaching", "Something else"],
     message: "Message", messagePlaceholder: "How can Cristina help?",
     consent: "I consent to my name and email being stored for the purpose of replying to this message, as set out in the",
-    send: "Send message", sent: "Message sent",
+    send: "Send message", sending: "Sending…", sendFailed: "The message could not be sent. Please try again in a moment, or write directly to", sent: "Message sent",
     sentLead: "A reply will come within two working days to",
     direct: "Direct", emailLabel: "Email", sessions: "Sessions",
     sessionsValue: "Tuesday – Friday, 10:00 – 18:00 WET",

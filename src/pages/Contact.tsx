@@ -5,6 +5,7 @@ import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
 import { Select } from "../components/ui/Select";
 import { Checkbox } from "../components/ui/Checkbox";
+import { sendContactMessage } from "../lib/contact";
 
 export default function Contact() {
   const { t } = useI18n();
@@ -12,6 +13,9 @@ export default function Contact() {
   useDocumentTitle(t.contact.title);
   const summaryRef = useRef<HTMLDivElement>(null);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendFailed, setSendFailed] = useState(false);
+  const [botcheck, setBotcheck] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -34,7 +38,7 @@ export default function Contact() {
   };
   const ORDER = ["name", "email", "message", "consent"];
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     const err: Record<string, string> = {};
     if (!form.name.trim()) err.name = t.errors.nameShort;
@@ -50,7 +54,22 @@ export default function Contact() {
       });
       return;
     }
-    setSent(true);
+    setSending(true);
+    setSendFailed(false);
+    try {
+      await sendContactMessage({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        subject: form.subject,
+        message: form.message.trim(),
+        botcheck,
+      });
+      setSent(true);
+    } catch {
+      setSendFailed(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -177,8 +196,32 @@ export default function Contact() {
                 )}
               </fieldset>
 
-              <button type="submit" className="btn btn--full">
-                {t.contact.send} <Send size={15} strokeWidth={1.3} />
+              {/* Honeypot: hidden from people and assistive tech, left for bots. */}
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hp"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                checked={botcheck}
+                onChange={(e) => setBotcheck(e.target.checked)}
+              />
+
+              <div role="alert">
+                {sendFailed && (
+                  <p className="send-error">
+                    <TriangleAlert size={16} strokeWidth={1.4} aria-hidden="true" />
+                    <span>
+                      {t.contact.sendFailed}{" "}
+                      <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>.
+                    </span>
+                  </p>
+                )}
+              </div>
+
+              <button type="submit" className="btn btn--full" disabled={sending} aria-busy={sending || undefined}>
+                {sending ? t.contact.sending : t.contact.send} <Send size={15} strokeWidth={1.3} aria-hidden="true" />
               </button>
             </form>
           )}

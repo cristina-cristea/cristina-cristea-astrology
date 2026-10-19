@@ -97,11 +97,19 @@ Pages serves a project site from `/<repo>/`, so the workflow sets
 workflow also copies `index.html` to `404.html` so deep links resolve. If the
 repository is renamed, `VITE_BASE` must be updated to match.
 
+## Contact form
+
+`src/lib/contact.ts` posts the contact form to Web3Forms, which emails it to
+cristina.cristea17@gmail.com (the address the access key was issued for).
+The key is public by design. The visitor's email is sent as `email`, so
+replying to the notification replies to the visitor. A hidden `botcheck`
+honeypot filters basic spam. Messages pass through Web3Forms, so the privacy
+notice should name them as a processor.
+
 ## Known stubs — not bugs
 
 - `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
   is walkable. No payment is taken. The file documents the real wiring.
-- The contact form only sets local state. Nothing is sent anywhere.
 - The biography, credentials, testimonial, statistics and the operator details
   in the privacy notice are **invented placeholder copy** and are publicly
   visible. They need replacing with real information before launch.

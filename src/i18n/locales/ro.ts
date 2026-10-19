@@ -150,7 +150,7 @@ export const ro: Dict = {
     subjects: ["O întrebare despre o consultație", "Rezervare sau reprogramare", "O consultație cadou", "Comandă sau livrare", "Presă sau predare", "Altceva"],
     message: "Mesaj", messagePlaceholder: "Cu ce te poate ajuta Cristina?",
     consent: "Sunt de acord ca numele și adresa mea de e-mail să fie păstrate pentru a răspunde acestui mesaj, conform",
-    send: "Trimite mesajul", sent: "Mesaj trimis",
+    send: "Trimite mesajul", sending: "Se trimite…", sendFailed: "Mesajul nu a putut fi trimis. Încearcă din nou peste câteva momente sau scrie direct la", sent: "Mesaj trimis",
     sentLead: "Un răspuns va veni în două zile lucrătoare la",
     direct: "Direct", emailLabel: "E-mail", sessions: "Ședințe",
     sessionsValue: "Marți – vineri, 10:00 – 18:00 (WET)",

@@ -154,7 +154,7 @@ export const frCH: Dict = {
     subjects: ["Une question sur une lecture", "Réservation ou report", "Une lecture à offrir", "Commande ou livraison", "Presse ou enseignement", "Autre chose"],
     message: "Message", messagePlaceholder: "Comment Cristina peut-elle vous aider ?",
     consent: "Je consens à ce que mon nom et mon e-mail soient conservés afin de répondre à ce message, comme indiqué dans la",
-    send: "Envoyer le message", sent: "Message envoyé",
+    send: "Envoyer le message", sending: "Envoi en cours…", sendFailed: "Le message n'a pas pu être envoyé. Réessayez dans un instant, ou écrivez directement à", sent: "Message envoyé",
     sentLead: "Une réponse arrivera sous deux jours ouvrables à",
     direct: "Direct", emailLabel: "E-mail", sessions: "Séances",
     sessionsValue: "Mardi – vendredi, 10h00 – 18h00 (WET)",

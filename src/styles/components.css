@@ -1369,6 +1369,30 @@
   .ftr__top { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
+/* ---------------- contact form sending ---------------- */
+
+/* Honeypot field: off-screen and inert for people, still in the DOM for bots. */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+.send-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--error);
+  background: var(--paper);
+  color: var(--error);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.send-error svg { flex: none; margin-top: 0.25rem; }
+.send-error a { color: inherit; text-decoration: underline; }
+
+.btn[disabled] { cursor: progress; opacity: 0.75; }
+.btn[disabled]:hover { background: var(--ink); color: var(--paper); }
+
 /* ---------------- form error summary ---------------- */
 
 .err-summary-wrap:focus { outline: none; }

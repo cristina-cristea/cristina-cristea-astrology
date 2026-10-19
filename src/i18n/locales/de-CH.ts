@@ -153,7 +153,7 @@ export const deCH: Dict = {
     subjects: ["Eine Frage zu einer Deutung", "Buchung oder Verschiebung", "Eine Deutung verschenken", "Bestellung oder Versand", "Presse oder Lehre", "Etwas anderes"],
     message: "Nachricht", messagePlaceholder: "Wie kann Cristina helfen?",
     consent: "Ich willige ein, dass mein Name und meine E-Mail-Adresse zur Beantwortung dieser Nachricht gespeichert werden, wie in der",
-    send: "Nachricht senden", sent: "Nachricht gesendet",
+    send: "Nachricht senden", sending: "Wird gesendet…", sendFailed: "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es gleich nochmals oder schreiben Sie direkt an", sent: "Nachricht gesendet",
     sentLead: "Eine Antwort kommt innert zwei Arbeitstagen an",
     direct: "Direkt", emailLabel: "E-Mail", sessions: "Sitzungen",
     sessionsValue: "Dienstag – Freitag, 10:00 – 18:00 Uhr (WET)",
