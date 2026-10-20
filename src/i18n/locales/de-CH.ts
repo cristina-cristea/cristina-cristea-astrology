@@ -63,8 +63,8 @@ export const deCH: Dict = {
     solarYear: "Jahr des Solarhoroskops", forecastYear: "Prognosejahr",
     solarYearHint: "Der Geburtstag, der das zu deutende Jahr eröffnet.",
     forecastYearHint: "Die zwölf Monate, die Sie kartiert haben möchten.",
-    focusLabel: "Worauf möchten Sie schauen? (optional)",
-    focusPlaceholder: "Eine Frage, eine Entscheidung, eine Zeit, die Sie verstehen möchten — oder lassen Sie das Feld leer, dann beginnen wir beim Horoskop.",
+    focusLabel: "Worauf möchten Sie schauen?",
+    focusPlaceholder: "Eine Frage, eine Entscheidung, eine Zeit, die Sie verstehen möchten — was Sie zur Deutung führt.",
     gdprConsent: "Ich willige ein, dass Cristina Cristea die obigen Geburtsdaten und Kontaktangaben speichert und verarbeitet, um meine Deutung vorzubereiten und zu liefern, wie in der",
     privacyNotice: "Datenschutzerklärung",
     marketingOptIn: "Senden Sie mir den Neumond-Brief — der Himmel der kommenden Wochen, einmal im Monat. Optional, Abmeldung mit einem Klick.",
@@ -77,6 +77,7 @@ export const deCH: Dict = {
     steps: ["Ihre Angaben", "Zahlung", "Bestätigung"],
   },
   errors: {
+    focus: "Schreiben Sie Cristina kurz, worauf Sie in der Deutung schauen möchten.",
     name: "bitte den vollständigen Namen gemäss Geburtsurkunde angeben.", date: "ein Geburtsdatum ist erforderlich.",
     futureDate: "das Geburtsdatum kann nicht in der Zukunft liegen.",
     time: "Geburtszeit angeben oder «unbekannt» ankreuzen.",

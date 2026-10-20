@@ -64,8 +64,8 @@ export const frCH: Dict = {
     solarYear: "Année de révolution solaire", forecastYear: "Année de prévision",
     solarYearHint: "L'anniversaire qui ouvre l'année que vous souhaitez faire lire.",
     forecastYearHint: "Les douze mois que vous souhaitez cartographier.",
-    focusLabel: "Que souhaitez-vous explorer ? (facultatif)",
-    focusPlaceholder: "Une question, une décision, une période à comprendre — ou laissez vide et nous partirons du thème.",
+    focusLabel: "Que souhaitez-vous explorer ?",
+    focusPlaceholder: "Une question, une décision, une période à comprendre — ce qui vous amène à la consultation.",
     gdprConsent: "Je consens à ce que Cristina Cristea conserve et traite les données de naissance et coordonnées ci-dessus afin de préparer et de livrer ma lecture, comme décrit dans la",
     privacyNotice: "notice de confidentialité",
     marketingOptIn: "Envoyez-moi la lettre de nouvelle Lune — le ciel à venir, une fois par mois. Facultatif, désabonnement en un clic.",
@@ -78,6 +78,7 @@ export const frCH: Dict = {
     steps: ["Vos données", "Paiement", "Confirmation"],
   },
   errors: {
+    focus: "Indiquez brièvement à Cristina ce que vous souhaitez explorer pendant la consultation.",
     name: "indiquez le nom complet tel qu'il figure à l'état civil.", date: "une date de naissance est requise.",
     futureDate: "la date de naissance ne peut pas être dans le futur.",
     time: "indiquez l'heure de naissance, ou cochez qu'elle est inconnue.",

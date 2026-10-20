@@ -24,7 +24,7 @@ const blankPerson = (): IntakePerson => ({
 const FIELD_ORDER = [
   "youName", "youPlace", "youDate", "youTime",
   "partnerName", "partnerPlace", "partnerDate", "partnerTime",
-  "email", "gdpr",
+  "email", "focus", "gdpr",
 ] as const;
 
 /** The element each validation key labels and scrolls to. */
@@ -38,6 +38,7 @@ const FIELD_ANCHORS: Record<string, string> = {
   partnerDate: "partner-date",
   partnerTime: "partner-time",
   email: "email",
+  focus: "focus",
   gdpr: "gdpr-consent",
 };
 
@@ -90,6 +91,7 @@ export default function Booking() {
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim()))
       e.email = t.errors.emailInvalid;
     if (service.requiresPartner) validatePerson(partner, "partner", t.booking.secondChart, e);
+    if (focus.trim().length < 10) e.focus = t.errors.focus;
     if (!gdpr) e.gdpr = t.errors.gdpr;
     return e;
   };
@@ -370,14 +372,18 @@ export default function Booking() {
                 )}
               </div>
 
-              <div className="field" style={{ marginTop: "1.75rem" }}>
+              <div className={`field${err("focus") ? " field--error" : ""}`} style={{ marginTop: "1.75rem" }}>
                 <label htmlFor="focus">{t.booking.focusLabel}</label>
                 <textarea
                   id="focus"
                   value={focus}
                   onChange={(e) => setFocus(e.target.value)}
                   placeholder={t.booking.focusPlaceholder}
+                  required
+                  aria-invalid={err("focus") ? true : undefined}
+                  aria-describedby={describedBy(err("focus") && "focus-error")}
                 />
+                {err("focus") && <span className="field-error" id="focus-error">{err("focus")}</span>}
               </div>
             </fieldset>
 

@@ -60,8 +60,8 @@ export const ro: Dict = {
     solarYear: "Anul revoluției solare", forecastYear: "Anul prognozei",
     solarYearHint: "Ziua de naștere care deschide anul pe care vrei să-l citim.",
     forecastYearHint: "Cele douăsprezece luni pe care vrei să le cartografiem.",
-    focusLabel: "La ce ai vrea să ne uităm? (opțional)",
-    focusPlaceholder: "O întrebare, o decizie, o perioadă pe care vrei s-o înțelegi — sau lasă gol și pornim de la hartă.",
+    focusLabel: "La ce ai vrea să ne uităm?",
+    focusPlaceholder: "O întrebare, o decizie, o perioadă pe care vrei s-o înțelegi — ce te aduce la consultație.",
     gdprConsent: "Sunt de acord ca Cristina Cristea să stocheze și să prelucreze datele de naștere și datele de contact de mai sus pentru a pregăti și livra consultația mea, conform",
     privacyNotice: "notei de confidențialitate",
     marketingOptIn: "Trimite-mi scrisoarea de Lună nouă — cerul care urmează, o dată pe lună. Opțional, dezabonare dintr-un clic.",
@@ -74,6 +74,7 @@ export const ro: Dict = {
     steps: ["Datele tale", "Plată", "Confirmare"],
   },
   errors: {
+    focus: "Spune-i pe scurt Cristinei la ce ai vrea să vă uitați în consultație.",
     name: "dă numele complet așa cum apare în certificatul de naștere.", date: "data nașterii este obligatorie.",
     futureDate: "data nașterii nu poate fi în viitor.",
     time: "dă ora nașterii sau bifează că este necunoscută.",

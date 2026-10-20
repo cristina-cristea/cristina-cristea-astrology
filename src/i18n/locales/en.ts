@@ -58,8 +58,8 @@ export const en: Dict = {
     solarYear: "Solar return year", forecastYear: "Year to be read",
     solarYearHint: "The birthday that opens the year you want read.",
     forecastYearHint: "The twelve months you would like mapped.",
-    focusLabel: "What would you like to look at? (optional)",
-    focusPlaceholder: "A question, a decision, a period you want to understand — or leave this blank and we will start from the chart.",
+    focusLabel: "What would you like to look at?",
+    focusPlaceholder: "A question, a decision, a period you want to understand — whatever brings you to the reading.",
     gdprConsent: "I consent to Cristina Cristea storing and processing the birth data and contact details above for the purpose of preparing and delivering my reading, as described in the",
     privacyNotice: "privacy notice",
     marketingOptIn: "Send me the new-Moon letter — the sky ahead, once a month. Optional, and unsubscribed in one click.",
@@ -72,6 +72,7 @@ export const en: Dict = {
     steps: ["Your details", "Payment", "Confirmation"],
   },
   errors: {
+    focus: "Tell Cristina briefly what you would like to look at in the reading.",
     name: "give the full name as on the birth record.", date: "a birth date is required.",
     futureDate: "the birth date cannot be in the future.",
     time: "give the birth time, or tick that it is unknown.",
