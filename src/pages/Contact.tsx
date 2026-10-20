@@ -210,13 +210,13 @@ export default function Contact() {
 
               <div role="alert">
                 {sendFailed && (
-                  <p className="send-error">
+                  <div className="send-error">
                     <TriangleAlert size={16} strokeWidth={1.4} aria-hidden="true" />
                     <span>
                       {t.contact.sendFailed}{" "}
                       <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>.
                     </span>
-                  </p>
+                  </div>
                 )}
               </div>
 
