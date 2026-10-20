@@ -6,7 +6,7 @@ export const en: Dict = {
   home: {
     eyebrow: "Certified Consulting Astrologer",
     titleA: "The sky at the hour", titleB: "you began",
-    lead: "Cristina Cristea reads birth charts the old way — slowly, in conversation, and with the whole chart in view. Natal work, forecasting, relationship charts, solar returns and progressions.",
+    lead: "Cristina Cristea reads birth charts the old way — slowly, in conversation, and with the whole chart in view. Natal work, predictive astrology, relationship charts, solar returns and progressions.",
     bookCta: "Book a reading", meetCta: "Meet Cristina",
     practiceEyebrow: "The practice",
     practiceTitle: "A chart is not a verdict. It is a description.",
@@ -18,7 +18,7 @@ export const en: Dict = {
     readingsEyebrow: "Readings", readingsTitle: "Five ways to read a life",
     readingsNote: "Each reading is booked as its own session. You will be asked for your birth date, time and place before checkout — the chart cannot be drawn without them.",
     notSure: "Not sure which?",
-    notSureBody: "Most people begin with the natal chart. If you already know yours, forecasting is the usual next step.",
+    notSureBody: "Most people begin with the natal chart. If you already know yours, a predictive reading is the usual next step.",
     askCristina: "Ask Cristina",
     stepsEyebrow: "How it works", stepsTitle: "Four steps, no guesswork",
     steps: [
@@ -28,7 +28,7 @@ export const en: Dict = {
       ["Meet, and receive", "We talk live. Charts, notes and the recording arrive within 48 hours."],
     ],
     quote: "She told me things about my chart I had spent a decade avoiding, and somehow it felt like being handed something rather than told off.",
-    quoteBy: "Marta R. — natal chart & forecasting",
+    quoteBy: "Marta R. — natal chart & predictive astrology",
   },
   services: {
     pageEyebrow: "Readings", pageTitle: "Services",
@@ -55,7 +55,7 @@ export const en: Dict = {
     timeHint: "As written on the birth certificate. Minutes matter — they set the Ascendant.",
     timeUnknown: "Birth time unknown — read the chart without houses",
     emailLabel: "Email address", emailHint: "Charts, the recording and your booking link are sent here.",
-    solarYear: "Solar return year", forecastYear: "Forecast year",
+    solarYear: "Solar return year", forecastYear: "Year to be read",
     solarYearHint: "The birthday that opens the year you want read.",
     forecastYearHint: "The twelve months you would like mapped.",
     focusLabel: "What would you like to look at? (optional)",
@@ -190,7 +190,7 @@ export const en: Dict = {
       name: "Natal Chart Reading", tagline: "The map you were born with",
       summary: "A full reading of your birth chart — the sky exactly as it stood at your first breath, and what it says about the shape of your life.",
       description: [
-        "The natal chart is the foundation of everything else in this practice. It is a snapshot of the heavens at the moment and place you were born, and it does not change. Everything that follows — a forecast, a solar return, a synastry chart — is read against it.",
+        "The natal chart is the foundation of everything else in this practice. It is a snapshot of the heavens at the moment and place you were born, and it does not change. Everything that follows — a predictive reading, a solar return, a synastry chart — is read against it.",
         "We begin with the three pillars: Sun, Moon and Ascendant. From there we move through the elemental balance of the chart, the condition of your personal planets, the houses that carry the most weight, and the aspect patterns that keep repeating themselves in your life.",
         "This is not a list of traits. It is a conversation about how you are built, where the friction lives, and what your chart keeps asking of you.",
       ],
@@ -199,10 +199,10 @@ export const en: Dict = {
       delivery: "Live session + recording", turnaround: "Booked within 10 days",
     },
     svc_forecast: {
-      name: "Previsional Forecasting", tagline: "The weather ahead",
-      summary: "A twelve-month forecast built from transits and progressions — the timing of what is opening, what is closing, and when.",
+      name: "Predictive Astrology", tagline: "The weather ahead",
+      summary: "A twelve-month predictive reading built from transits and progressions — the timing of what is opening, what is closing, and when.",
       description: [
-        "Forecasting reads the moving sky against your fixed chart. Where a slow planet touches a sensitive point in your natal placements, a season of your life changes shape.",
+        "Predictive astrology reads the moving sky against your fixed chart. Where a slow planet touches a sensitive point in your natal placements, a season of your life changes shape.",
         "We map the coming twelve months: the outer-planet transits that set the tone, the Saturn and Jupiter contacts that mark structure and expansion, the eclipses that fall in your houses, and the shorter passages that colour individual months.",
         "You leave with a timeline — dated, specific, and honest about what is supported and what is better left until later.",
       ],
@@ -243,7 +243,7 @@ export const en: Dict = {
         "This reading is for understanding where you are in the long arc — which chapter closed, which one you are in, and roughly when the next begins.",
       ],
       includes: ["90-minute live session over video", "Progressed chart and bi-wheel against your natal chart, PDF", "Audio recording of the session", "Progressed Moon timeline covering the coming years", "Two weeks of follow-up questions by email"],
-      goodFor: ["A period of change you cannot trace to an external cause", "Anyone who feels they have become a different person", "Reading alongside a forecasting session for a full picture"],
+      goodFor: ["A period of change you cannot trace to an external cause", "Anyone who feels they have become a different person", "Reading alongside a predictive astrology session for a full picture"],
       delivery: "Live session + recording", turnaround: "Booked within 14 days",
     },
   },
