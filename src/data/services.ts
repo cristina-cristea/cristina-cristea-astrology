@@ -20,8 +20,8 @@ export interface Service {
 export const services: Service[] = [
   { id: "svc_natal",      slug: "natal-chart",            price: 180, durationMinutes: 90,  glyph: "chart" },
   { id: "svc_forecast",   slug: "previsional-forecasting", price: 210, durationMinutes: 90,  glyph: "transits", requiresYear: true },
-  { id: "svc_synastry",   slug: "relationship-chart",      price: 240, durationMinutes: 105, glyph: "venus",  requiresPartner: true },
-  { id: "svc_solar",      slug: "solar-return",            price: 165, durationMinutes: 75,  glyph: "sun",    requiresYear: true },
+  { id: "svc_synastry",   slug: "relationship-chart",      price: 240, durationMinutes: 90,  glyph: "venus",  requiresPartner: true },
+  { id: "svc_solar",      slug: "solar-return",            price: 165, durationMinutes: 90,  glyph: "sun",    requiresYear: true },
   { id: "svc_progressed", slug: "progressed-chart",        price: 190, durationMinutes: 90,  glyph: "moon" },
 ];
 
