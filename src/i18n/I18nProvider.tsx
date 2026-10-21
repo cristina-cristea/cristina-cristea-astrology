@@ -18,6 +18,8 @@ interface I18nValue {
   price: (n: number) => string;
   /** Plain number, locale-grouped (Swiss locales use an apostrophe). */
   num: (n: number) => string;
+  /** Date and time of an ISO timestamp, in the visitor's own time zone. */
+  dateTime: (iso: string) => string;
 }
 
 const I18nContext = createContext<I18nValue | null>(null);
@@ -73,6 +75,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
           maximumFractionDigits: 0,
         }).format(n),
       num: (n: number) => new Intl.NumberFormat(intl).format(n),
+      dateTime: (iso: string) =>
+        new Intl.DateTimeFormat(intl, {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          hour: "2-digit",
+          minute: "2-digit",
+        }).format(new Date(iso)),
     };
   }, [locale, setLocale]);
 

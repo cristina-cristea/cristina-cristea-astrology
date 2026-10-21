@@ -16,6 +16,8 @@ export interface IntakeData extends IntakePerson {
   partner?: IntakePerson;
   targetYear?: string;
   focus: string;
+  /** The session time booked through Cal.com, as ISO timestamps. */
+  slot?: { start: string; end: string; uid?: string };
   gdprConsent: boolean;
   marketingOptIn: boolean;
   submittedAt: string;

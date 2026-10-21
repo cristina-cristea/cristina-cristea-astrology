@@ -1369,6 +1369,15 @@
   .ftr__top { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
+/* ---------------- booking: date & time step ---------------- */
+
+.booking__edit { margin-bottom: 2rem; }
+/* Cal.com renders its own iframe; give it room so the month view never
+   collapses while it loads, and let it use the full form column. */
+.cal-embed { width: 100%; min-height: 640px; overflow: auto; }
+.booking__time h1:focus { outline: none; }
+.confirm__slot { display: block; font-size: 0.85rem; margin-top: 0.25rem; }
+
 /* ---------------- contact form sending ---------------- */
 
 /* Honeypot field: off-screen and inert for people, still in the DOM for bots. */

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
 import { getService } from "../data/services";
@@ -7,6 +7,8 @@ import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
 import { Select } from "../components/ui/Select";
 import { Checkbox } from "../components/ui/Checkbox";
+import { CalBooking } from "../components/CalBooking";
+import type { BookedSlot } from "../components/CalBooking";
 import type { IntakeData, IntakePerson } from "../types";
 import NotFound from "./NotFound";
 
@@ -63,6 +65,17 @@ export default function Booking() {
   const [marketing, setMarketing] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const summaryRef = useRef<HTMLDivElement>(null);
+  /** Set once the details are valid; the page then shows the calendar. */
+  const [pending, setPending] = useState<IntakeData | null>(null);
+  const timeHeadingRef = useRef<HTMLHeadingElement>(null);
+
+  // Moving between the two steps happens without a route change, so focus
+  // and scroll are handled here (useDocumentTitle only covers navigation).
+  useEffect(() => {
+    if (!pending) return;
+    window.scrollTo({ top: 0 });
+    timeHeadingRef.current?.focus({ preventScroll: true });
+  }, [pending]);
 
   if (!service || !copy) return <NotFound />;
 
@@ -124,7 +137,31 @@ export default function Booking() {
       submittedAt: new Date().toISOString(),
     };
 
-    addService({ id: service.id, slug: service.slug, name: copy.name, price: service.price }, intake);
+    setPending(intake);
+  };
+
+  /** Everything Cristina needs before the session, attached to the Cal.com booking. */
+  const bookingNotes = (i: IntakeData) => {
+    const person = (p: typeof i | NonNullable<typeof i.partner>) => [
+      `${p.fullName}`,
+      `${t.booking.dateOfBirth}: ${p.birthDate}`,
+      `${t.booking.timeOfBirth}: ${p.timeUnknown ? "—" : p.birthTime}`,
+      `${t.booking.placeOfBirth}: ${p.birthPlace}`,
+    ];
+    const lines = [copy.name, "", ...person(i)];
+    if (i.partner) lines.push("", `${t.booking.secondChart}:`, ...person(i.partner));
+    if (i.targetYear)
+      lines.push("", `${service.slug === "solar-return" ? t.booking.solarYear : t.booking.forecastYear}: ${i.targetYear}`);
+    lines.push("", `${t.booking.focusLabel}`, i.focus);
+    return lines.join("\n");
+  };
+
+  const onBooked = (slot: BookedSlot) => {
+    if (!pending) return;
+    addService(
+      { id: service.id, slug: service.slug, name: copy.name, price: service.price },
+      { ...pending, slot },
+    );
     navigate("/checkout");
   };
 
@@ -256,16 +293,38 @@ export default function Booking() {
           <ArrowLeft size={14} strokeWidth={1.4} /> {t.common.back} {copy.name}
         </Link>
 
-        <ol className="progress" aria-label={t.booking.steps[0]}>
-          <li className="is-current">
+        <ol className="progress" aria-label={t.booking.steps[pending ? 1 : 0]}>
+          <li className={pending ? "is-done" : "is-current"}>
             <span aria-hidden="true">01</span> {t.booking.steps[0]}
-            <span className="sr-only">{t.common.currentStep}</span>
+            <span className="sr-only">{pending ? t.common.completed : t.common.currentStep}</span>
           </li>
-          <li><span aria-hidden="true">02</span> {t.booking.steps[1]}</li>
+          <li className={pending ? "is-current" : undefined}>
+            <span aria-hidden="true">02</span> {t.booking.steps[1]}
+            {pending && <span className="sr-only">{t.common.currentStep}</span>}
+          </li>
           <li><span aria-hidden="true">03</span> {t.booking.steps[2]}</li>
+          <li><span aria-hidden="true">04</span> {t.booking.steps[3]}</li>
         </ol>
 
         <div className="booking__grid">
+          {pending ? (
+            <div className="booking__form booking__time">
+              <header className="booking__head">
+                <p className="eyebrow">{t.booking.timeStep}</p>
+                <h1 ref={timeHeadingRef} tabIndex={-1}>{t.booking.timeTitle}</h1>
+                <p className="lead">{t.booking.timeLead}</p>
+              </header>
+              <button type="button" className="btn btn--line booking__edit" onClick={() => setPending(null)}>
+                <ArrowLeft size={14} strokeWidth={1.4} aria-hidden="true" /> {t.booking.editDetails}
+              </button>
+              <CalBooking
+                name={pending.fullName}
+                email={pending.email}
+                notes={bookingNotes(pending)}
+                onBooked={onBooked}
+              />
+            </div>
+          ) : (
           <form className="booking__form" onSubmit={onSubmit} noValidate>
             <header className="booking__head">
               <p className="eyebrow">{t.booking.step}</p>
@@ -425,6 +484,7 @@ export default function Booking() {
               <Lock size={12} strokeWidth={1.3} aria-hidden="true" /> {t.booking.reviewNote}
             </p>
           </form>
+          )}
 
           <aside className="booking__aside">
             <div className="summary-card">

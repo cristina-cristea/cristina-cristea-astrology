@@ -93,16 +93,20 @@ export default function Checkout() {
   return (
     <section className="section--tight">
       <div className="wrap">
-        <ol className="progress" aria-label={t.booking.steps[1]}>
+        <ol className="progress" aria-label={t.booking.steps[2]}>
           <li className="is-done">
             <span aria-hidden="true">01</span> {t.booking.steps[0]}
             <span className="sr-only">{t.common.completed}</span>
           </li>
-          <li className="is-current">
+          <li className="is-done">
             <span aria-hidden="true">02</span> {t.booking.steps[1]}
+            <span className="sr-only">{t.common.completed}</span>
+          </li>
+          <li className="is-current">
+            <span aria-hidden="true">03</span> {t.booking.steps[2]}
             <span className="sr-only">{t.common.currentStep}</span>
           </li>
-          <li><span aria-hidden="true">03</span> {t.booking.steps[2]}</li>
+          <li><span aria-hidden="true">04</span> {t.booking.steps[3]}</li>
         </ol>
 
         <div className="booking__grid">

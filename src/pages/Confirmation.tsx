@@ -12,7 +12,8 @@ interface State {
 }
 
 export default function Confirmation() {
-  const { t, price } = useI18n();
+  const { t, price, dateTime } = useI18n();
+
   const { state } = useLocation() as { state: State | null };
   useDocumentTitle(t.confirmation.thanks);
 
@@ -38,6 +39,9 @@ export default function Confirmation() {
               <li key={i}>
                 <span>
                   {l.name}
+                  {l.intake.slot && (
+                    <span className="muted confirm__slot">{dateTime(l.intake.slot.start)}</span>
+                  )}
                 </span>
                 <span>{price(l.price)}</span>
               </li>
@@ -51,20 +55,20 @@ export default function Confirmation() {
         </div>
 
         <div className="confirm__next">
-                      <div>
-              <CalendarCheck size={18} strokeWidth={1.1} />
-              <h3>{t.confirmation.chooseSlot}</h3>
-              <p className="muted">
-                {t.confirmation.chooseSlotBody}
-              </p>
-            </div>
+          <div>
+            <CalendarCheck size={18} strokeWidth={1.1} />
+            <h3>{t.confirmation.chooseSlot}</h3>
+            <p className="muted">
+              {t.confirmation.chooseSlotBody}
+            </p>
+          </div>
           <div>
             <Mail size={18} strokeWidth={1.1} />
             <h3>{t.confirmation.nothing}</h3>
             <p className="muted">
               {t.confirmation.nothingBody}{" "}
-              <a href="mailto:hello@cristinacristea.com" className="ftr-link">
-                hello@cristinacristea.com
+              <a href="mailto:cristina.cristea17@gmail.com" className="ftr-link">
+                cristina.cristea17@gmail.com
               </a>{" "}
               quoting {state.reference}.
             </p>

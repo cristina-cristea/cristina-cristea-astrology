@@ -106,6 +106,23 @@ replying to the notification replies to the visitor. A hidden `botcheck`
 honeypot filters basic spam. Messages pass through Web3Forms, so the privacy
 notice should name them as a processor.
 
+## Booking and scheduling
+
+Booking is two steps on one page (`src/pages/Booking.tsx`): birth details,
+then a Cal.com calendar (`src/components/CalBooking.tsx`, link
+`cristina-cristea/consultatie`) prefilled with name, email and a notes block
+holding the birth data and the client's question. When Cal.com reports
+`bookingSuccessfulV2`, the slot is stored on the cart line (`intake.slot`) and
+the visitor goes to checkout; the confirmation page shows the booked time.
+
+Availability (Tuesday–Friday 10:00–18:00 Europe/Bucharest), the 90-minute
+length, the 30-minute buffer after each session, minimum notice and the
+booking horizon live in Cal.com settings, not in this code. Every reading is
+90 minutes. Birth data now also passes through Cal.com, so the privacy notice
+should name it as a processor.
+
+Because checkout is still a stub, a client can book a time without paying.
+
 ## Known stubs — not bugs
 
 - `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
