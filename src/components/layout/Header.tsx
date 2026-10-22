@@ -41,8 +41,8 @@ export function Header() {
             </svg>
           </span>
           <span className="hdr__name">
-            Cristina Cristea
-            <em>{BRAND}</em>
+            {BRAND}
+            <em>Cristina Cristea</em>
           </span>
         </Link>
 
