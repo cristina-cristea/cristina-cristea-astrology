@@ -123,6 +123,17 @@ should name it as a processor.
 
 Because checkout is still a stub, a client can book a time without paying.
 
+## Brand and social links
+
+The public brand is **Astro Kat** (`src/lib/brand.ts`), with Cristina's name
+shown smaller beneath it. It matches the Stripe statement descriptor.
+
+Footer social links (`src/components/layout/Footer.tsx`): Instagram
+`astrokat.official`, TikTok `@astrokat.official`. That TikTok is Cristina's
+**Romanian-language** profile. When she creates an English TikTok, the
+Romanian locale should keep this link and en / fr-CH / de-CH should point to
+the English profile.
+
 ## Known stubs — not bugs
 
 - `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
