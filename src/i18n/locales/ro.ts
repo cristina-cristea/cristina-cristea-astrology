@@ -190,6 +190,7 @@ export const ro: Dict = {
     privacy: "Confidențialitate și GDPR",
     disclaimer: "Consultațiile sunt oferite pentru reflecție și orientare. Ele nu înlocuiesc sfatul medical, juridic sau financiar.",
     instagram: "Instagram",
+    tiktok: "TikTok",
   },
   serviceCopy: {
     svc_natal: {

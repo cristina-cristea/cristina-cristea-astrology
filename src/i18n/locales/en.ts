@@ -188,6 +188,7 @@ export const en: Dict = {
     privacy: "Privacy & GDPR",
     disclaimer: "Readings are offered for reflection and guidance. They are not a substitute for medical, legal or financial advice.",
     instagram: "Instagram",
+    tiktok: "TikTok",
   },
   serviceCopy: {
     svc_natal: {

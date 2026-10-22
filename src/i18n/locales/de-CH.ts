@@ -193,6 +193,7 @@ export const deCH: Dict = {
     privacy: "Datenschutz und DSGVO",
     disclaimer: "Deutungen dienen der Reflexion und Orientierung. Sie ersetzen keine medizinische, rechtliche oder finanzielle Beratung.",
     instagram: "Instagram",
+    tiktok: "TikTok",
   },
   serviceCopy: {
     svc_natal: {

@@ -194,6 +194,7 @@ export const frCH: Dict = {
     privacy: "Confidentialité et RGPD",
     disclaimer: "Les lectures sont proposées à des fins de réflexion et d'orientation. Elles ne remplacent pas un avis médical, juridique ou financier.",
     instagram: "Instagram",
+    tiktok: "TikTok",
   },
   serviceCopy: {
     svc_natal: {

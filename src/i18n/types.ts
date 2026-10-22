@@ -48,6 +48,6 @@ export interface Dict {
   contact: { eyebrow: string; title: string; lead: string; yourMessage: string; name: string; subject: string; subjects: string[]; message: string; messagePlaceholder: string; consent: string; send: string; sending: string; sendFailed: string; sent: string; sentLead: string; direct: string; emailLabel: string; sessions: string; sessionsValue: string; location: string; locationValue: string; dataNote: string };
   privacy: { eyebrow: string; title: string; lead: string; sections: { h: string; p: string[] }[]; updated: string; ask: string };
   notFound: { eyebrow: string; title: string; lead: string; home: string; browse: string };
-  footer: { tagline: string; readings: string; studio: string; privacy: string; disclaimer: string; instagram: string };
+  footer: { tagline: string; readings: string; studio: string; privacy: string; disclaimer: string; instagram: string; tiktok: string };
   serviceCopy: Record<string, ServiceCopy>;
 }

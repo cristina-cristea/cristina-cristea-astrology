@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AtSign, Mail, Moon } from "lucide-react";
+import { AtSign, Mail, Moon, Music2 } from "lucide-react";
 import { services } from "../../data/services";
 import { useI18n } from "../../i18n/I18nProvider";
 import { BRAND } from "../../lib/brand";
@@ -17,11 +17,14 @@ export function Footer() {
             <p className="ftr__owner">Cristina Cristea</p>
             <p className="muted">{t.footer.tagline}</p>
             <div className="ftr__social">
-              <a href="https://instagram.com" aria-label={t.footer.instagram} target="_blank" rel="noreferrer noopener">
-                <AtSign size={16} strokeWidth={1.2} />
+              <a href="https://www.instagram.com/astrokat.official/" aria-label={t.footer.instagram} target="_blank" rel="noreferrer noopener">
+                <AtSign size={16} strokeWidth={1.2} aria-hidden="true" />
               </a>
-              <a href="mailto:hello@cristinacristea.com" aria-label={t.common.email}>
-                <Mail size={16} strokeWidth={1.2} />
+              <a href="https://www.tiktok.com/@astrokat.official" aria-label={t.footer.tiktok} target="_blank" rel="noreferrer noopener">
+                <Music2 size={16} strokeWidth={1.2} aria-hidden="true" />
+              </a>
+              <a href="mailto:cristina.cristea17@gmail.com" aria-label={t.common.email}>
+                <Mail size={16} strokeWidth={1.2} aria-hidden="true" />
               </a>
             </div>
           </div>
