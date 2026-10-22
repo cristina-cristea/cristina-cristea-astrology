@@ -1,14 +1,9 @@
 import { useEffect } from "react";
 import { useI18n } from "../i18n/I18nProvider";
-import type { Locale } from "../i18n/types";
+import { BRAND } from "./brand";
 
-/** The name is a proper noun and never translates; the descriptor does. */
-const SUFFIX: Record<Locale, string> = {
-  en: "Cristina Cristea — Astrology",
-  "fr-CH": "Cristina Cristea — Astrologie",
-  "de-CH": "Cristina Cristea — Astrologie",
-  ro: "Cristina Cristea — Astrologie",
-};
+/** Brand and name are proper nouns, so the suffix is the same in every locale. */
+const SUFFIX = `${BRAND} — Cristina Cristea`;
 
 /**
  * Sets the document title for a route. A single-page app keeps one HTML
@@ -19,7 +14,6 @@ export function useDocumentTitle(title?: string) {
   const { locale } = useI18n();
 
   useEffect(() => {
-    const suffix = SUFFIX[locale];
-    document.title = title ? `${title} — ${suffix}` : suffix;
+    document.title = title ? `${title} — ${SUFFIX}` : SUFFIX;
   }, [title, locale]);
 }

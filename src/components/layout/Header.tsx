@@ -5,6 +5,7 @@ import { Menu, ShoppingBag, X } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import { useI18n } from "../../i18n/I18nProvider";
 import { LanguageSwitcher } from "../ui/LanguageSwitcher";
+import { BRAND } from "../../lib/brand";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -41,7 +42,7 @@ export function Header() {
           </span>
           <span className="hdr__name">
             Cristina Cristea
-            <em>Astrologer</em>
+            <em>{BRAND}</em>
           </span>
         </Link>
 

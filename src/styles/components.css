@@ -1311,7 +1311,8 @@
 }
 
 .ftr__brand svg { color: var(--gold); margin-bottom: 1rem; }
-.ftr__brand h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.ftr__brand h3 { font-size: 1.5rem; margin-bottom: 0.2rem; }
+.ftr__brand .ftr__owner { font-family: var(--display); font-size: 1.05rem; color: var(--ink-muted); margin-bottom: 0.75rem; }
 .ftr__brand p { font-size: 0.88rem; line-height: 1.75; max-width: 30ch; }
 
 .ftr__social { display: flex; gap: 0.6rem; margin-top: 1.5rem; }
