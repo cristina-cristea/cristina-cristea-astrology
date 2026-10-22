@@ -3,4 +3,4 @@
  * locale, and it matches the statement descriptor clients see on their bank
  * statement after paying through Stripe.
  */
-export const BRAND = "Kat Astrology";
+export const BRAND = "Astro Kat";
