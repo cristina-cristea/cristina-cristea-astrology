@@ -1373,6 +1373,18 @@
 /* ---------------- booking: date & time step ---------------- */
 
 .booking__edit { margin-bottom: 2rem; }
+.booking__lang {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--line-strong);
+  background: var(--paper-warm);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+.booking__lang svg { flex: none; color: var(--gold); }
 /* Cal.com renders its own iframe; give it room so the month view never
    collapses while it loads, and let it use the full form column. */
 .cal-embed { width: 100%; min-height: 640px; overflow: auto; }

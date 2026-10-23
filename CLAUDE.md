@@ -173,7 +173,10 @@ the English profile.
   credentials, statistics or client reviews she has not supplied.**
 - Cristina reads **only in Romanian and English** (she does not speak French
   or German); the fr-CH and de-CH versions of the site exist for visitors,
-  not as session languages. Still unconfirmed: the four About "values". The operator details in the privacy notice
+  not as session languages. This is stated on every service page, in the
+  booking summary and as a highlighted note on the date-and-time step.
+- Every client receives the session recording automatically (not "on
+  request"), and she works with both Whole sign and Placidus houses. Still unconfirmed: the four About "values". The operator details in the privacy notice
   are still **invented placeholder copy** (Lisbon, Portugal).
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.

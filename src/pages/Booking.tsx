@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
+import { ArrowLeft, ArrowRight, Languages, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
 import { getService } from "../data/services";
 import { useCart } from "../context/CartContext";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
@@ -312,6 +312,10 @@ export default function Booking() {
                 <p className="eyebrow">{t.booking.timeStep}</p>
                 <h1 ref={timeHeadingRef} tabIndex={-1}>{t.booking.timeTitle}</h1>
                 <p className="lead">{t.booking.timeLead}</p>
+                <p className="booking__lang">
+                  <Languages size={16} strokeWidth={1.3} aria-hidden="true" />
+                  <strong>{t.booking.languageNote}</strong>
+                </p>
               </header>
               <button type="button" className="btn btn--line booking__edit" onClick={() => setPending(null)}>
                 <ArrowLeft size={14} strokeWidth={1.4} aria-hidden="true" /> {t.booking.editDetails}
@@ -492,6 +496,7 @@ export default function Booking() {
                 <div><dt>{t.services.session}</dt><dd>{service.durationMinutes} {t.common.minutes}</dd></div>
                 <div><dt>{t.services.deliveryLabel}</dt><dd>{copy.delivery}</dd></div>
                 <div><dt>{t.services.availability}</dt><dd>{copy.turnaround}</dd></div>
+                <div><dt>{t.services.languageLabel}</dt><dd>{t.services.languageValue}</dd></div>
               </dl>
               <hr className="rule" />
               <div className="summary-card__total">

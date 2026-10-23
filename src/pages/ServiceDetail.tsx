@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Check, Clock, FileText, Package } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Clock, FileText, Languages, Package } from "lucide-react";
 import { getService, services } from "../data/services";
 import { Glyph } from "../components/ui/Glyph";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
@@ -46,6 +46,10 @@ export default function ServiceDetail() {
                 <div>
                   <dt><FileText size={14} strokeWidth={1.2} aria-hidden="true" /> {t.services.availability}</dt>
                   <dd>{c.turnaround}</dd>
+                </div>
+                <div>
+                  <dt><Languages size={14} strokeWidth={1.2} aria-hidden="true" /> {t.services.languageLabel}</dt>
+                  <dd>{t.services.languageValue}</dd>
                 </div>
               </dl>
 
