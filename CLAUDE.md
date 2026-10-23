@@ -168,7 +168,9 @@ the English profile.
   is walkable. No payment is taken. The file documents the real wiring.
 - Real copy from Cristina: the About biography ("In her words") and her one
   qualification, shown as "Graduate, Școala de Științe Spirituale, Bucharest,
-  Romania" (she prefers plain "Graduate", without "in astrology").
+  Romania" (she prefers plain "Graduate", without "in astrology"). The school name is
+  translated per locale: School of Spiritual Sciences / École des sciences
+  spirituelles / Schule für spirituelle Wissenschaften.
   The invented FAS diploma, memberships, "fifteen years", chart counts and
   the "Marta R." testimonial were removed on 23 Oct 2026. **Never add
   credentials, statistics or client reviews she has not supplied.**
