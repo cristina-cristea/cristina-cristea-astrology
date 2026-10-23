@@ -16,11 +16,9 @@ export const frCH: Dict = {
     bookCta: "Réserver une lecture", meetCta: "Rencontrer Cristina",
     practiceEyebrow: "La pratique",
     practiceTitle: "Un thème n'est pas un verdict. C'est une description.",
-    practiceBodyA: "Quinze ans de pratique et un diplôme de la Faculty of Astrological Studies se tiennent derrière chaque lecture. Ce que cela vous apporte, c'est de la retenue : pas de divination, pas de flatterie, et aucun conseil déguisé en destin.",
+    practiceBodyA: "Chaque lecture s'appuie sur une formation en astrologie suivie à la Școala de Științe Spirituale. Ce que cela vous apporte, c'est de la retenue : pas de divination, pas de flatterie, et aucun conseil déguisé en destin.",
     practiceBodyB: "Nous travaillons à partir de vos données de naissance exactes, en séance live, avec l'enregistrement et les thèmes envoyés ensuite. Les questions difficiles sont les bienvenues.",
-    statCertified: "Certifiée FAS", statCertifiedSub: "Diplôme, 2011",
-    statCharts: "1400+", statChartsSub: "Thèmes lus",
-    statYears: "15 ans", statYearsSub: "De pratique",
+    statCertified: "Diplômée en astrologie", statCertifiedSub: "Școala de Științe Spirituale",
     readingsEyebrow: "Lectures", readingsTitle: "Cinq façons de lire une vie",
     readingsNote: "Chaque lecture se réserve comme une séance à part entière. Votre date, heure et lieu de naissance vous seront demandés avant le paiement — sans eux, le thème ne peut pas être dressé.",
     notSure: "Vous hésitez ?",
@@ -33,8 +31,6 @@ export const frCH: Dict = {
       ["Choisissez l'heure et payez", "Choisissez une date et une heure libres dans le calendrier, puis finalisez. Vous recevez une confirmation avec votre lien vidéo."],
       ["Rencontre et remise", "Nous échangeons en direct. Thèmes, notes et enregistrement arrivent sous 48 heures."],
     ],
-    quote: "Elle m'a dit sur mon thème des choses que j'évitais depuis dix ans, et j'ai pourtant eu le sentiment qu'on me tendait quelque chose plutôt qu'on me réprimandait.",
-    quoteBy: "Marta R. — thème natal et prévisions",
   },
   services: {
     pageEyebrow: "Lectures", pageTitle: "Prestations",
@@ -127,7 +123,7 @@ export const frCH: Dict = {
   },
   about: {
     eyebrow: "L'astrologue", title: "Cristina Cristea",
-    lead: "Je lis des thèmes depuis quinze ans, et je pense toujours que ce que l'astrologie fait de plus utile, c'est de donner aux gens un langage juste pour quelque chose qu'ils soupçonnaient déjà d'eux-mêmes.",
+    lead: "Astrologue occidentale. Thèmes natals et astrologie prévisionnelle, en séances en direct et en ligne, pour une clientèle du monde entier.",
     portraitAlt: "Cristina Cristea tenant un thème natal imprimé",
     wordsEyebrow: "En ses mots",
     words: [
@@ -138,7 +134,7 @@ export const frCH: Dict = {
       "Je souhaite que chaque rencontre soit un espace d'exploration sincère, où l'astrologie devient un outil de compréhension et de connaissance de soi.",
     ],
     credentials: "Qualifications",
-    credentialsList: ["Diplôme, Faculty of Astrological Studies (2011)", "Membre, Astrological Association of Great Britain", "Signataire du code éthique ISAR", "Master en archivistique, Bologne"],
+    credentialsList: ["Diplômée en astrologie, Școala de Științe Spirituale (École des sciences spirituelles)"],
     practice: "Pratique",
     practiceList: ["Lectures en anglais, français, allemand et roumain", "En ligne dans le monde entier, du mardi au vendredi", "Méthodes traditionnelles et psychologiques", "Maisons en signes entiers ou Placidus sur demande"],
     values: [

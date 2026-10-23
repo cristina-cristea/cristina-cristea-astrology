@@ -10,11 +10,9 @@ export const en: Dict = {
     bookCta: "Book a reading", meetCta: "Meet Cristina",
     practiceEyebrow: "The practice",
     practiceTitle: "A chart is not a verdict. It is a description.",
-    practiceBodyA: "Fifteen years of practice and a certification from the Faculty of Astrological Studies sit behind every reading. What that buys you is restraint: no fortune-telling, no flattery, and no advice dressed up as fate.",
+    practiceBodyA: "Every reading draws on Cristina's training in astrology at Școala de Științe Spirituale. What that buys you is restraint: no fortune-telling, no flattery, and no advice dressed up as fate.",
     practiceBodyB: "We work from your exact birth data, in a live session, with the recording and the charts sent to you afterwards. You are welcome to ask hard questions.",
-    statCertified: "FAS Certified", statCertifiedSub: "Diploma, 2011",
-    statCharts: "1,400+", statChartsSub: "Charts read",
-    statYears: "15 years", statYearsSub: "In practice",
+    statCertified: "Astrology graduate", statCertifiedSub: "Școala de Științe Spirituale",
     readingsEyebrow: "Readings", readingsTitle: "Five ways to read a life",
     readingsNote: "Each reading is booked as its own session. You will be asked for your birth date, time and place before checkout — the chart cannot be drawn without them.",
     notSure: "Not sure which?",
@@ -27,8 +25,6 @@ export const en: Dict = {
       ["Pick a time and pay", "Choose a free date and time in the calendar, then check out. You receive a confirmation with your video link."],
       ["Meet, and receive", "We talk live. Charts, notes and the recording arrive within 48 hours."],
     ],
-    quote: "She told me things about my chart I had spent a decade avoiding, and somehow it felt like being handed something rather than told off.",
-    quoteBy: "Marta R. — natal chart & predictive astrology",
   },
   services: {
     pageEyebrow: "Readings", pageTitle: "Services",
@@ -121,7 +117,7 @@ export const en: Dict = {
   },
   about: {
     eyebrow: "The astrologer", title: "Cristina Cristea",
-    lead: "I have been reading charts for fifteen years, and I still think the most useful thing astrology does is give people accurate language for something they already suspected about themselves.",
+    lead: "Western astrologer. Natal charts and predictive astrology, read live and online for clients worldwide.",
     portraitAlt: "Cristina Cristea holding a printed birth chart",
     wordsEyebrow: "In her words",
     words: [
@@ -132,7 +128,7 @@ export const en: Dict = {
       "I want every meeting to be a space for honest exploration, where astrology becomes a tool for understanding and self-knowledge.",
     ],
     credentials: "Credentials",
-    credentialsList: ["Diploma, Faculty of Astrological Studies (2011)", "Member, Astrological Association of Great Britain", "ISAR ethics code signatory", "MA Archival Studies, Bologna"],
+    credentialsList: ["Graduate in astrology, Școala de Științe Spirituale (School of Spiritual Sciences)"],
     practice: "Practice",
     practiceList: ["Readings in English, French, German and Romanian", "Online worldwide, Tuesday to Friday", "Traditional and psychological methods", "Whole sign and Placidus houses on request"],
     values: [

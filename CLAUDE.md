@@ -166,9 +166,14 @@ the English profile.
 
 - `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
   is walkable. No payment is taken. The file documents the real wiring.
-- The biography, credentials, testimonial, statistics and the operator details
-  in the privacy notice are **invented placeholder copy** and are publicly
-  visible. They need replacing with real information before launch.
+- Real copy from Cristina: the About biography ("In her words") and her one
+  qualification, a graduate in astrology from Școala de Științe Spirituale.
+  The invented FAS diploma, memberships, "fifteen years", chart counts and
+  the "Marta R." testimonial were removed on 23 Oct 2026. **Never add
+  credentials, statistics or client reviews she has not supplied.**
+- Still unconfirmed: the About "Practice" list (which languages she reads in)
+  and the four About "values". The operator details in the privacy notice
+  are still **invented placeholder copy** (Lisbon, Portugal).
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.
 - The newsletter opt-in was removed from booking (there is no newsletter).

@@ -12,11 +12,9 @@ export const ro: Dict = {
     bookCta: "Programează o consultație", meetCta: "Cunoaște-o pe Cristina",
     practiceEyebrow: "Practica",
     practiceTitle: "O hartă nu este o sentință. Este o descriere.",
-    practiceBodyA: "În spatele fiecărei consultații stau cincisprezece ani de practică și o diplomă a Faculty of Astrological Studies. Ce îți aduce asta este reținerea: fără ghicit, fără măgulire și fără sfaturi deghizate în destin.",
+    practiceBodyA: "În spatele fiecărei consultații stă formarea în astrologie de la Școala de Științe Spirituale. Ce îți aduce asta este reținerea: fără ghicit, fără măgulire și fără sfaturi deghizate în destin.",
     practiceBodyB: "Lucrăm cu datele tale exacte de naștere, într-o ședință live, iar înregistrarea și hărțile îți sunt trimise după aceea. Întrebările dificile sunt binevenite.",
-    statCertified: "Certificat FAS", statCertifiedSub: "Diplomă, 2011",
-    statCharts: "1.400+", statChartsSub: "Hărți citite",
-    statYears: "15 ani", statYearsSub: "De practică",
+    statCertified: "Absolventă de astrologie", statCertifiedSub: "Școala de Științe Spirituale",
     readingsEyebrow: "Consultații", readingsTitle: "Cinci feluri de a citi o viață",
     readingsNote: "Fiecare consultație se rezervă ca ședință separată. Înainte de plată îți vom cere data, ora și locul nașterii — fără ele harta nu poate fi întocmită.",
     notSure: "Nu știi care?",
@@ -29,8 +27,6 @@ export const ro: Dict = {
       ["Alege ora și plătește", "Alegi o dată și o oră libere din calendar, apoi finalizezi comanda. Primești o confirmare cu linkul video."],
       ["Ne vedem și primești", "Vorbim live. Hărțile, notele și înregistrarea ajung în 48 de ore."],
     ],
-    quote: "Mi-a spus despre harta mea lucruri pe care le evitasem un deceniu și totuși am simțit că mi se întinde ceva, nu că sunt certată.",
-    quoteBy: "Marta R. — hartă natală și prognoză",
   },
   services: {
     pageEyebrow: "Consultații", pageTitle: "Servicii",
@@ -123,7 +119,7 @@ export const ro: Dict = {
   },
   about: {
     eyebrow: "Astrologul", title: "Cristina Cristea",
-    lead: "Citesc hărți de cincisprezece ani și încă sunt de părere că cel mai folositor lucru pe care îl face astrologia este să le dea oamenilor un limbaj exact pentru ceva ce bănuiau deja despre ei înșiși.",
+    lead: "Astrolog occidental. Hărți natale și astrologie previzională, în consultații live, online, pentru clienți din toată lumea.",
     portraitAlt: "Cristina Cristea ținând o hartă natală tipărită",
     wordsEyebrow: "În cuvintele ei",
     words: [
@@ -134,7 +130,7 @@ export const ro: Dict = {
       "Îmi doresc ca fiecare întâlnire să fie un spațiu de explorare sinceră, în care astrologia să devină un instrument de înțelegere și autocunoaștere.",
     ],
     credentials: "Calificări",
-    credentialsList: ["Diplomă, Faculty of Astrological Studies (2011)", "Membră, Astrological Association of Great Britain", "Semnatară a codului etic ISAR", "Master în arhivistică, Bologna"],
+    credentialsList: ["Absolventă de astrologie, Școala de Științe Spirituale"],
     practice: "Practică",
     practiceList: ["Consultații în engleză, franceză, germană și română", "Online în toată lumea, de marți până vineri", "Metode tradiționale și psihologice", "Case în semne întregi sau Placidus, la cerere"],
     values: [

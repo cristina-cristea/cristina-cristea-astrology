@@ -15,11 +15,9 @@ export const deCH: Dict = {
     bookCta: "Deutung buchen", meetCta: "Cristina kennenlernen",
     practiceEyebrow: "Die Praxis",
     practiceTitle: "Ein Horoskop ist kein Urteil. Es ist eine Beschreibung.",
-    practiceBodyA: "Hinter jeder Deutung stehen fünfzehn Jahre Praxis und ein Diplom der Faculty of Astrological Studies. Was Ihnen das bringt, ist Zurückhaltung: keine Wahrsagerei, keine Schmeichelei und kein Rat, der als Schicksal verkleidet ist.",
+    practiceBodyA: "Hinter jeder Deutung steht eine Ausbildung in Astrologie an der Școala de Științe Spirituale. Was Ihnen das bringt, ist Zurückhaltung: keine Wahrsagerei, keine Schmeichelei und kein Rat, der als Schicksal verkleidet ist.",
     practiceBodyB: "Wir arbeiten mit Ihren exakten Geburtsdaten, in einer Live-Sitzung; Aufnahme und Horoskope werden Ihnen danach zugestellt. Schwierige Fragen sind ausdrücklich willkommen.",
-    statCertified: "FAS-zertifiziert", statCertifiedSub: "Diplom, 2011",
-    statCharts: "1400+", statChartsSub: "Gedeutete Horoskope",
-    statYears: "15 Jahre", statYearsSub: "In der Praxis",
+    statCertified: "Abschluss in Astrologie", statCertifiedSub: "Școala de Științe Spirituale",
     readingsEyebrow: "Deutungen", readingsTitle: "Fünf Arten, ein Leben zu lesen",
     readingsNote: "Jede Deutung wird als eigene Sitzung gebucht. Vor der Bezahlung werden Geburtsdatum, -zeit und -ort erfragt — ohne sie lässt sich kein Horoskop erstellen.",
     notSure: "Unsicher, welche?",
@@ -32,8 +30,6 @@ export const deCH: Dict = {
       ["Zeit wählen und bezahlen", "Wählen Sie im Kalender ein freies Datum und eine Uhrzeit und schliessen Sie dann ab. Sie erhalten eine Bestätigung mit Ihrem Videolink."],
       ["Treffen und erhalten", "Wir sprechen live. Horoskope, Notizen und Aufnahme treffen innert 48 Stunden ein."],
     ],
-    quote: "Sie sagte mir Dinge über mein Horoskop, denen ich ein Jahrzehnt lang ausgewichen war, und doch fühlte es sich an, als bekäme ich etwas gereicht statt einen Rüffel.",
-    quoteBy: "Marta R. — Radix und Prognose",
   },
   services: {
     pageEyebrow: "Deutungen", pageTitle: "Leistungen",
@@ -126,7 +122,7 @@ export const deCH: Dict = {
   },
   about: {
     eyebrow: "Die Astrologin", title: "Cristina Cristea",
-    lead: "Ich deute seit fünfzehn Jahren Horoskope, und ich halte es nach wie vor für das Nützlichste an der Astrologie, dass sie Menschen eine genaue Sprache für etwas gibt, das sie über sich selbst ohnehin schon vermuteten.",
+    lead: "Westliche Astrologin. Geburtshoroskope und prognostische Astrologie, live und online, für Klientinnen und Klienten weltweit.",
     portraitAlt: "Cristina Cristea mit einem gedruckten Geburtshoroskop",
     wordsEyebrow: "In ihren Worten",
     words: [
@@ -137,7 +133,7 @@ export const deCH: Dict = {
       "Ich wünsche mir, dass jede Begegnung ein Raum ehrlicher Erkundung ist, in dem die Astrologie zu einem Werkzeug des Verstehens und der Selbsterkenntnis wird.",
     ],
     credentials: "Qualifikationen",
-    credentialsList: ["Diplom, Faculty of Astrological Studies (2011)", "Mitglied, Astrological Association of Great Britain", "Unterzeichnerin des ISAR-Ethikkodex", "MA Archivwissenschaft, Bologna"],
+    credentialsList: ["Abschluss in Astrologie, Școala de Științe Spirituale (Schule für spirituelle Wissenschaften)"],
     practice: "Praxis",
     practiceList: ["Deutungen auf Englisch, Französisch, Deutsch und Rumänisch", "Online weltweit, Dienstag bis Freitag", "Traditionelle und psychologische Methoden", "Ganzzeichen- oder Placidus-Häuser auf Wunsch"],
     values: [

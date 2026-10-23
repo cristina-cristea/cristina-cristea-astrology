@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Clock, Quote, Sparkles } from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 import { services } from "../data/services";
 import { Glyph } from "../components/ui/Glyph";
 import { StarField } from "../components/ui/StarField";
@@ -56,16 +56,6 @@ export default function Home() {
                 <Award size={18} strokeWidth={1.1} aria-hidden="true" />
                 <strong>{t.home.statCertified}</strong>
                 <span>{t.home.statCertifiedSub}</span>
-              </div>
-              <div>
-                <Sparkles size={18} strokeWidth={1.1} aria-hidden="true" />
-                <strong>{t.home.statCharts}</strong>
-                <span>{t.home.statChartsSub}</span>
-              </div>
-              <div>
-                <Clock size={18} strokeWidth={1.1} aria-hidden="true" />
-                <strong>{t.home.statYears}</strong>
-                <span>{t.home.statYearsSub}</span>
               </div>
             </div>
           </div>
@@ -125,15 +115,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      {/* ---------------- testimonial ---------------- */}
-      <section className="section quote-sec">
-        <div className="wrap wrap--narrow center">
-          <Quote size={26} strokeWidth={0.9} className="quote-sec__icon" aria-hidden="true" />
-          <blockquote>{t.home.quote}</blockquote>
-          <p className="quote-sec__by">{t.home.quoteBy}</p>
         </div>
       </section>
 
