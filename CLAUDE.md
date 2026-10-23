@@ -137,6 +137,20 @@ checkout, but **not on the home page** (it shows only "90 minutes").
 They are duplicates with the same schedule, buffer and 48-hour notice; each
 gets its own price in Cal.com once Stripe is connected.
 
+## Cancellation and refund policy (agreed, not yet live)
+
+Cristina chose this policy on 23 Oct 2026; apply it when payments go live,
+both in each Cal.com link's Stripe refund setting and as text on the booking
+page (all four locales), visible before the client pays:
+
+- Cancels 48 hours or more before: full refund, or free rescheduling
+- Cancels less than 48 hours before: no refund, may reschedule once
+- No-show: no refund
+- Cristina cancels: full refund, always
+
+She may revise it after checking the EU 14-day withdrawal right with Solo or
+her accountant.
+
 ## Brand and social links
 
 The public brand is **Astro Kat** (`src/lib/brand.ts`), with Cristina's name
