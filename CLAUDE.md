@@ -171,5 +171,6 @@ the English profile.
   visible. They need replacing with real information before launch.
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.
-- The booking form's marketing opt-in offers a newsletter that has no signup
-  form any more.
+- The newsletter opt-in was removed from booking (there is no newsletter).
+  The privacy notice still mentions a newsletter; drop that when the notice
+  is rewritten with Cristina's real details.

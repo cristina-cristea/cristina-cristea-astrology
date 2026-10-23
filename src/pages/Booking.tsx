@@ -63,7 +63,6 @@ export default function Booking() {
   const [targetYear, setTargetYear] = useState(String(thisYear));
   const [focus, setFocus] = useState("");
   const [gdpr, setGdpr] = useState(false);
-  const [marketing, setMarketing] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const summaryRef = useRef<HTMLDivElement>(null);
   /** Set once the details are valid; the page then shows the calendar. */
@@ -134,7 +133,6 @@ export default function Booking() {
       targetYear: service.requiresYear ? targetYear : undefined,
       focus: focus.trim(),
       gdprConsent: gdpr,
-      marketingOptIn: marketing,
       submittedAt: new Date().toISOString(),
     };
 
@@ -468,10 +466,6 @@ export default function Booking() {
               {err("gdpr") && (
                 <span className="field-error consent-err" id="gdpr-error">{err("gdpr")}</span>
               )}
-
-              <Checkbox id="marketing-optin" checked={marketing} onChange={setMarketing}>
-                <span>{t.booking.marketingOptIn}</span>
-              </Checkbox>
 
               <p className="gdpr-note">
                 <ShieldCheck size={15} strokeWidth={1.2} aria-hidden="true" />

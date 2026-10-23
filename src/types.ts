@@ -19,7 +19,6 @@ export interface IntakeData extends IntakePerson {
   /** The session time booked through Cal.com, as ISO timestamps. */
   slot?: { start: string; end: string; uid?: string };
   gdprConsent: boolean;
-  marketingOptIn: boolean;
   submittedAt: string;
 }
 
