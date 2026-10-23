@@ -167,7 +167,8 @@ the English profile.
 - `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
   is walkable. No payment is taken. The file documents the real wiring.
 - Real copy from Cristina: the About biography ("In her words") and her one
-  qualification, a graduate in astrology from Școala de Științe Spirituale.
+  qualification, shown as "Graduate, Școala de Științe Spirituale, Bucharest,
+  Romania" (she prefers plain "Graduate", without "in astrology").
   The invented FAS diploma, memberships, "fifteen years", chart counts and
   the "Marta R." testimonial were removed on 23 Oct 2026. **Never add
   credentials, statistics or client reviews she has not supplied.**

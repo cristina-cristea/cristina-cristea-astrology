@@ -17,7 +17,7 @@ export const deCH: Dict = {
     practiceTitle: "Ein Horoskop ist kein Urteil. Es ist eine Beschreibung.",
     practiceBodyA: "Hinter jeder Deutung steht eine Ausbildung in Astrologie an der Școala de Științe Spirituale. Was Ihnen das bringt, ist Zurückhaltung: keine Wahrsagerei, keine Schmeichelei und kein Rat, der als Schicksal verkleidet ist.",
     practiceBodyB: "Wir arbeiten mit Ihren exakten Geburtsdaten, in einer Live-Sitzung; Aufnahme und Horoskope werden Ihnen danach zugestellt. Schwierige Fragen sind ausdrücklich willkommen.",
-    statCertified: "Abschluss in Astrologie", statCertifiedSub: "Școala de Științe Spirituale",
+    statCertified: "Absolventin", statCertifiedSub: "Școala de Științe Spirituale, Bukarest",
     readingsEyebrow: "Deutungen", readingsTitle: "Fünf Arten, ein Leben zu lesen",
     readingsNote: "Jede Deutung wird als eigene Sitzung gebucht. Vor der Bezahlung werden Geburtsdatum, -zeit und -ort erfragt — ohne sie lässt sich kein Horoskop erstellen.",
     notSure: "Unsicher, welche?",
@@ -134,7 +134,7 @@ export const deCH: Dict = {
       "Ich wünsche mir, dass jede Begegnung ein Raum ehrlicher Erkundung ist, in dem die Astrologie zu einem Werkzeug des Verstehens und der Selbsterkenntnis wird.",
     ],
     credentials: "Qualifikationen",
-    credentialsList: ["Abschluss in Astrologie, Școala de Științe Spirituale (Schule für spirituelle Wissenschaften)"],
+    credentialsList: ["Absolventin, Școala de Științe Spirituale, Bukarest, Rumänien"],
     practice: "Praxis",
     practiceList: ["Deutungen auf Rumänisch und Englisch", "Online weltweit, Dienstag bis Freitag", "Ganzzeichen- und Placidus-Häuser"],
     values: [

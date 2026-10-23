@@ -18,7 +18,7 @@ export const frCH: Dict = {
     practiceTitle: "Un thème n'est pas un verdict. C'est une description.",
     practiceBodyA: "Chaque lecture s'appuie sur une formation en astrologie suivie à la Școala de Științe Spirituale. Ce que cela vous apporte, c'est de la retenue : pas de divination, pas de flatterie, et aucun conseil déguisé en destin.",
     practiceBodyB: "Nous travaillons à partir de vos données de naissance exactes, en séance live, avec l'enregistrement et les thèmes envoyés ensuite. Les questions difficiles sont les bienvenues.",
-    statCertified: "Diplômée en astrologie", statCertifiedSub: "Școala de Științe Spirituale",
+    statCertified: "Diplômée", statCertifiedSub: "Școala de Științe Spirituale, Bucarest",
     readingsEyebrow: "Lectures", readingsTitle: "Cinq façons de lire une vie",
     readingsNote: "Chaque lecture se réserve comme une séance à part entière. Votre date, heure et lieu de naissance vous seront demandés avant le paiement — sans eux, le thème ne peut pas être dressé.",
     notSure: "Vous hésitez ?",
@@ -135,7 +135,7 @@ export const frCH: Dict = {
       "Je souhaite que chaque rencontre soit un espace d'exploration sincère, où l'astrologie devient un outil de compréhension et de connaissance de soi.",
     ],
     credentials: "Qualifications",
-    credentialsList: ["Diplômée en astrologie, Școala de Științe Spirituale (École des sciences spirituelles)"],
+    credentialsList: ["Diplômée, Școala de Științe Spirituale, Bucarest, Roumanie"],
     practice: "Pratique",
     practiceList: ["Lectures en roumain et en anglais", "En ligne dans le monde entier, du mardi au vendredi", "Maisons en signes entiers et Placidus"],
     values: [

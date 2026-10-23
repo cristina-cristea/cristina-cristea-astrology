@@ -14,7 +14,7 @@ export const ro: Dict = {
     practiceTitle: "O hartă nu este o sentință. Este o descriere.",
     practiceBodyA: "În spatele fiecărei consultații stă formarea în astrologie de la Școala de Științe Spirituale. Ce îți aduce asta este reținerea: fără ghicit, fără măgulire și fără sfaturi deghizate în destin.",
     practiceBodyB: "Lucrăm cu datele tale exacte de naștere, într-o ședință live, iar înregistrarea și hărțile îți sunt trimise după aceea. Întrebările dificile sunt binevenite.",
-    statCertified: "Absolventă de astrologie", statCertifiedSub: "Școala de Științe Spirituale",
+    statCertified: "Absolventă", statCertifiedSub: "Școala de Științe Spirituale, București",
     readingsEyebrow: "Consultații", readingsTitle: "Cinci feluri de a citi o viață",
     readingsNote: "Fiecare consultație se rezervă ca ședință separată. Înainte de plată îți vom cere data, ora și locul nașterii — fără ele harta nu poate fi întocmită.",
     notSure: "Nu știi care?",
@@ -131,7 +131,7 @@ export const ro: Dict = {
       "Îmi doresc ca fiecare întâlnire să fie un spațiu de explorare sinceră, în care astrologia să devină un instrument de înțelegere și autocunoaștere.",
     ],
     credentials: "Calificări",
-    credentialsList: ["Absolventă de astrologie, Școala de Științe Spirituale"],
+    credentialsList: ["Absolventă, Școala de Științe Spirituale, București, România"],
     practice: "Practică",
     practiceList: ["Consultații în română și engleză", "Online în toată lumea, de marți până vineri", "Case în semne întregi și Placidus"],
     values: [

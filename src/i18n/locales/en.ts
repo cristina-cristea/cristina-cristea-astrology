@@ -12,7 +12,7 @@ export const en: Dict = {
     practiceTitle: "A chart is not a verdict. It is a description.",
     practiceBodyA: "Every reading draws on Cristina's training in astrology at Școala de Științe Spirituale. What that buys you is restraint: no fortune-telling, no flattery, and no advice dressed up as fate.",
     practiceBodyB: "We work from your exact birth data, in a live session, with the recording and the charts sent to you afterwards. You are welcome to ask hard questions.",
-    statCertified: "Astrology graduate", statCertifiedSub: "Școala de Științe Spirituale",
+    statCertified: "Graduate", statCertifiedSub: "Școala de Științe Spirituale, Bucharest",
     readingsEyebrow: "Readings", readingsTitle: "Five ways to read a life",
     readingsNote: "Each reading is booked as its own session. You will be asked for your birth date, time and place before checkout — the chart cannot be drawn without them.",
     notSure: "Not sure which?",
@@ -129,7 +129,7 @@ export const en: Dict = {
       "I want every meeting to be a space for honest exploration, where astrology becomes a tool for understanding and self-knowledge.",
     ],
     credentials: "Credentials",
-    credentialsList: ["Graduate in astrology, Școala de Științe Spirituale (School of Spiritual Sciences)"],
+    credentialsList: ["Graduate, Școala de Științe Spirituale, Bucharest, Romania"],
     practice: "Practice",
     practiceList: ["Readings in Romanian and English", "Online worldwide, Tuesday to Friday", "Whole sign and Placidus houses"],
     values: [
