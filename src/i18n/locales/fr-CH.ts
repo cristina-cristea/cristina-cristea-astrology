@@ -136,7 +136,7 @@ export const frCH: Dict = {
     credentials: "Qualifications",
     credentialsList: ["Diplômée en astrologie, Școala de Științe Spirituale (École des sciences spirituelles)"],
     practice: "Pratique",
-    practiceList: ["Lectures en anglais, français, allemand et roumain", "En ligne dans le monde entier, du mardi au vendredi", "Méthodes traditionnelles et psychologiques", "Maisons en signes entiers ou Placidus sur demande"],
+    practiceList: ["Lectures en roumain et en anglais", "En ligne dans le monde entier, du mardi au vendredi", "Maisons en signes entiers ou Placidus sur demande"],
     values: [
       ["Formée, pas intuitive", "Chaque affirmation d'une lecture peut être rattachée à une technique. Si je suppose, je le dis."],
       ["Votre thème, votre décision", "Je décris. Je ne prescris pas, et je ne vous dis pas à quoi ressemble une bonne vie."],

@@ -132,7 +132,7 @@ export const ro: Dict = {
     credentials: "Calificări",
     credentialsList: ["Absolventă de astrologie, Școala de Științe Spirituale"],
     practice: "Practică",
-    practiceList: ["Consultații în engleză, franceză, germană și română", "Online în toată lumea, de marți până vineri", "Metode tradiționale și psihologice", "Case în semne întregi sau Placidus, la cerere"],
+    practiceList: ["Consultații în română și engleză", "Online în toată lumea, de marți până vineri", "Case în semne întregi sau Placidus, la cerere"],
     values: [
       ["Formată, nu intuitivă", "Orice afirmație dintr-o consultație poate fi urmărită până la o tehnică. Dacă presupun, spun asta."],
       ["Harta ta, decizia ta", "Eu descriu. Nu dau instrucțiuni și nu îți spun cum arată o viață bună."],

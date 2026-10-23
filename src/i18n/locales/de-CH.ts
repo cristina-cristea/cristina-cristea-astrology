@@ -135,7 +135,7 @@ export const deCH: Dict = {
     credentials: "Qualifikationen",
     credentialsList: ["Abschluss in Astrologie, Școala de Științe Spirituale (Schule für spirituelle Wissenschaften)"],
     practice: "Praxis",
-    practiceList: ["Deutungen auf Englisch, Französisch, Deutsch und Rumänisch", "Online weltweit, Dienstag bis Freitag", "Traditionelle und psychologische Methoden", "Ganzzeichen- oder Placidus-Häuser auf Wunsch"],
+    practiceList: ["Deutungen auf Rumänisch und Englisch", "Online weltweit, Dienstag bis Freitag", "Ganzzeichen- oder Placidus-Häuser auf Wunsch"],
     values: [
       ["Ausgebildet, nicht intuitiv", "Jede Aussage einer Deutung lässt sich auf eine Technik zurückführen. Wenn ich rate, sage ich es."],
       ["Ihr Horoskop, Ihre Entscheidung", "Ich beschreibe. Ich weise nicht an und sage Ihnen nicht, wie ein gutes Leben auszusehen hat."],

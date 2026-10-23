@@ -130,7 +130,7 @@ export const en: Dict = {
     credentials: "Credentials",
     credentialsList: ["Graduate in astrology, Școala de Științe Spirituale (School of Spiritual Sciences)"],
     practice: "Practice",
-    practiceList: ["Readings in English, French, German and Romanian", "Online worldwide, Tuesday to Friday", "Traditional and psychological methods", "Whole sign and Placidus houses on request"],
+    practiceList: ["Readings in Romanian and English", "Online worldwide, Tuesday to Friday", "Whole sign and Placidus houses on request"],
     values: [
       ["Trained, not intuitive", "Every claim in a reading can be traced back to a technique. If I am guessing, I say so."],
       ["Your chart, your call", "I describe. I do not instruct, and I do not tell you what a good life looks like."],

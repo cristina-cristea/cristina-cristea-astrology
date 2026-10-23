@@ -171,8 +171,9 @@ the English profile.
   The invented FAS diploma, memberships, "fifteen years", chart counts and
   the "Marta R." testimonial were removed on 23 Oct 2026. **Never add
   credentials, statistics or client reviews she has not supplied.**
-- Still unconfirmed: the About "Practice" list (which languages she reads in)
-  and the four About "values". The operator details in the privacy notice
+- Cristina reads **only in Romanian and English** (she does not speak French
+  or German); the fr-CH and de-CH versions of the site exist for visitors,
+  not as session languages. Still unconfirmed: the four About "values". The operator details in the privacy notice
   are still **invented placeholder copy** (Lisbon, Portugal).
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.
