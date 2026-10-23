@@ -19,13 +19,13 @@ export const SESSION_PRICE: Record<Currency, number> = {
 
 /**
  * Cal.com booking link per currency. Each Cal.com link carries one price in
- * one currency, so once payments are switched on Cristina needs one link per
- * currency. Until those exist, every currency books through the same link.
+ * one currency (set in Cal.com once Stripe is connected). All four share the
+ * same availability, buffer and notice settings, so they cannot double-book.
  */
 export const CAL_LINK_BY_CURRENCY: Record<Currency, string> = {
-  CHF: "cristina-cristea/consultatie",
-  EUR: "cristina-cristea/consultatie",
-  USD: "cristina-cristea/consultatie",
+  CHF: "cristina-cristea/consultatie-chf",
+  EUR: "cristina-cristea/consultatie-eur",
+  USD: "cristina-cristea/consultatie-usd",
   RON: "cristina-cristea/consultatie",
 };
 

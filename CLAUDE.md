@@ -132,8 +132,10 @@ per visit and exposed as `currency` / `sessionPrice` / `price()` on the i18n
 context. Prices are shown on Services, the service pages, booking, cart and
 checkout, but **not on the home page** (it shows only "90 minutes").
 
-`CAL_LINK_BY_CURRENCY` maps each currency to a Cal.com link; when payments go
-live there must be one Cal.com link per currency, each with its own price.
+`CAL_LINK_BY_CURRENCY` maps each currency to its Cal.com link:
+`consultatie` (RON), `consultatie-chf`, `consultatie-eur`, `consultatie-usd`.
+They are duplicates with the same schedule, buffer and 48-hour notice; each
+gets its own price in Cal.com once Stripe is connected.
 
 ## Brand and social links
 
