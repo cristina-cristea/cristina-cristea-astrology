@@ -9,7 +9,8 @@ import {
 import type { ReactNode } from "react";
 import type { CartLine, IntakeData } from "../types";
 
-const STORAGE_KEY = "cs.cart.v1";
+// v2: one price per reading in the visitor's currency (v1 carts held per-reading EUR prices).
+const STORAGE_KEY = "cs.cart.v2";
 
 /**
  * Callers pass the already-localised name, so a basket built in one language
@@ -20,6 +21,7 @@ interface LineSeed {
   slug: string;
   name: string;
   price: number;
+  currency: string;
 }
 
 interface CartValue {

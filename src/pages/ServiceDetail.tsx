@@ -9,7 +9,7 @@ import NotFound from "./NotFound";
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = getService(slug);
-  const { t, price } = useI18n();
+  const { t, price, sessionPrice } = useI18n();
   useDocumentTitle(service ? t.serviceCopy[service.id].name : undefined);
 
   if (!service) return <NotFound />;
@@ -50,7 +50,7 @@ export default function ServiceDetail() {
               </dl>
 
               <div className="pd__buy">
-                <span className="pd__price">{price(service.price)}</span>
+                <span className="pd__price">{price(sessionPrice)}</span>
                 <Link to={`/services/${service.slug}/booking`} className="btn">
                   {t.services.beginBooking} <ArrowRight size={15} strokeWidth={1.4} aria-hidden="true" />
                 </Link>
@@ -102,7 +102,7 @@ export default function ServiceDetail() {
                 <span className="rel-card__art" aria-hidden="true"><Glyph name={s.glyph} /></span>
                 <span className="rel-card__cat">{s.durationMinutes} {t.common.minutes}</span>
                 <h3>{t.serviceCopy[s.id].name}</h3>
-                <span className="rel-card__price">{price(s.price)}</span>
+                <span className="rel-card__price">{price(sessionPrice)}</span>
               </Link>
             ))}
           </div>

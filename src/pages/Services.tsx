@@ -6,7 +6,7 @@ import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
 
 export default function Services() {
-  const { t, price } = useI18n();
+  const { t, price, sessionPrice } = useI18n();
   useDocumentTitle(t.services.pageTitle);
 
   return (
@@ -46,7 +46,7 @@ export default function Services() {
                 </div>
 
                 <div className="svc-row__buy">
-                  <span className="svc-row__price">{price(s.price)}</span>
+                  <span className="svc-row__price">{price(sessionPrice)}</span>
                   <span className="svc-row__meta">{s.durationMinutes} {t.common.minutes}</span>
                   <span className="svc-row__meta muted">{c.delivery}</span>
                   <Link to={`/services/${s.slug}`} className="btn btn--ghost btn--sm">

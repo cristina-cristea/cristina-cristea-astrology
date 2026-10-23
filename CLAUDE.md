@@ -123,6 +123,18 @@ should name it as a processor.
 
 Because checkout is still a stub, a client can book a time without paying.
 
+## Pricing
+
+Every reading costs the same, in the visitor's currency (`src/lib/pricing.ts`):
+CHF 180 (Switzerland), RON 350 (Romania), USD 199 (the Americas), EUR 180
+(everyone else). The currency comes from the device time zone, decided once
+per visit and exposed as `currency` / `sessionPrice` / `price()` on the i18n
+context. Prices are shown on Services, the service pages, booking, cart and
+checkout, but **not on the home page** (it shows only "90 minutes").
+
+`CAL_LINK_BY_CURRENCY` maps each currency to a Cal.com link; when payments go
+live there must be one Cal.com link per currency, each with its own price.
+
 ## Brand and social links
 
 The public brand is **Astro Kat** (`src/lib/brand.ts`), with Cristina's name

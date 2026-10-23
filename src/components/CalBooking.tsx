@@ -7,7 +7,6 @@ import Cal, { getCalApi } from "@calcom/embed-react";
  * session, minimum notice and how far ahead clients can book are all set in
  * Cal.com, not here. Cal.com also prevents overlapping bookings.
  */
-export const CAL_LINK = "cristina-cristea/consultatie";
 const NAMESPACE = "consultatie";
 
 export interface BookedSlot {
@@ -25,11 +24,14 @@ export function CalBooking({
   email,
   notes,
   onBooked,
+  calLink,
 }: {
   name: string;
   email: string;
   notes: string;
   onBooked: (slot: BookedSlot) => void;
+  /** Cal.com link for the visitor's currency (see lib/pricing). */
+  calLink: string;
 }) {
   // The Cal.com listener is registered once, so it calls through a ref to
   // always reach the latest handler.
@@ -66,7 +68,7 @@ export function CalBooking({
   return (
     <Cal
       namespace={NAMESPACE}
-      calLink={CAL_LINK}
+      calLink={calLink}
       className="cal-embed"
       config={{ layout: "month_view", theme: "light", name, email, notes }}
     />

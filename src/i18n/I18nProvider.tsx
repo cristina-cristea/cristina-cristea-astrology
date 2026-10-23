@@ -6,15 +6,23 @@ import { en } from "./locales/en";
 import { frCH } from "./locales/fr-CH";
 import { deCH } from "./locales/de-CH";
 import { ro } from "./locales/ro";
+import { SESSION_PRICE, detectCurrency, formatPrice } from "../lib/pricing";
+import type { Currency } from "../lib/pricing";
 
 const DICTS: Record<Locale, Dict> = { en, "fr-CH": frCH, "de-CH": deCH, ro };
 const STORAGE_KEY = "cs.locale.v1";
+/** Decided once per visit; the time zone does not change while the page is open. */
+const CURRENCY = detectCurrency();
 
 interface I18nValue {
   locale: Locale;
   setLocale: (l: Locale) => void;
   t: Dict;
-  /** Currency, formatted for the active locale. */
+  /** The visitor's currency, from their device's time zone (see lib/pricing). */
+  currency: Currency;
+  /** The price of one reading in the visitor's currency. */
+  sessionPrice: number;
+  /** An amount in the visitor's currency, formatted for the active locale. */
   price: (n: number) => string;
   /** Plain number, locale-grouped (Swiss locales use an apostrophe). */
   num: (n: number) => string;
@@ -67,13 +75,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       locale,
       setLocale,
       t: DICTS[locale],
-      price: (n: number) =>
-        new Intl.NumberFormat(intl, {
-          style: "currency",
-          currency: "EUR",
-          minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
-        }).format(n),
+      currency: CURRENCY,
+      sessionPrice: SESSION_PRICE[CURRENCY],
+      price: (n: number) => formatPrice(n, CURRENCY, intl),
       num: (n: number) => new Intl.NumberFormat(intl).format(n),
       dateTime: (iso: string) =>
         new Intl.DateTimeFormat(intl, {

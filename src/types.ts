@@ -29,5 +29,7 @@ export interface CartLine {
   slug: string;
   name: string;
   price: number;
+  /** Currency the price was shown in when the reading was added. */
+  currency: string;
   intake: IntakeData;
 }

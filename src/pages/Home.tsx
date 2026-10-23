@@ -10,7 +10,7 @@ import { useI18n } from "../i18n/I18nProvider";
 
 export default function Home() {
   useDocumentTitle(undefined);
-  const { t, price } = useI18n();
+  const { t } = useI18n();
 
   return (
     <>
@@ -96,7 +96,6 @@ export default function Home() {
                   <p className="svc-card__tag">{c.tagline}</p>
                   <p className="svc-card__sum">{c.summary}</p>
                   <span className="svc-card__foot">
-                    <span className="svc-card__price">{price(s.price)}</span>
                     <span className="svc-card__dur">{s.durationMinutes} {t.common.minutes}</span>
                     <ArrowRight className="svc-card__arrow" size={16} strokeWidth={1.3} aria-hidden="true" />
                   </span>

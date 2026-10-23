@@ -9,6 +9,7 @@ import { Select } from "../components/ui/Select";
 import { Checkbox } from "../components/ui/Checkbox";
 import { CalBooking } from "../components/CalBooking";
 import type { BookedSlot } from "../components/CalBooking";
+import { CAL_LINK_BY_CURRENCY } from "../lib/pricing";
 import type { IntakeData, IntakePerson } from "../types";
 import NotFound from "./NotFound";
 
@@ -52,7 +53,7 @@ export default function Booking() {
   const service = getService(slug);
   const navigate = useNavigate();
   const { addService } = useCart();
-  const { t, price } = useI18n();
+  const { t, price, currency, sessionPrice } = useI18n();
   const copy = service ? t.serviceCopy[service.id] : undefined;
   useDocumentTitle(copy?.name);
 
@@ -159,7 +160,7 @@ export default function Booking() {
   const onBooked = (slot: BookedSlot) => {
     if (!pending) return;
     addService(
-      { id: service.id, slug: service.slug, name: copy.name, price: service.price },
+      { id: service.id, slug: service.slug, name: copy.name, price: sessionPrice, currency },
       { ...pending, slot },
     );
     navigate("/checkout");
@@ -318,6 +319,7 @@ export default function Booking() {
                 <ArrowLeft size={14} strokeWidth={1.4} aria-hidden="true" /> {t.booking.editDetails}
               </button>
               <CalBooking
+                calLink={CAL_LINK_BY_CURRENCY[currency]}
                 name={pending.fullName}
                 email={pending.email}
                 notes={bookingNotes(pending)}
@@ -500,7 +502,7 @@ export default function Booking() {
               <hr className="rule" />
               <div className="summary-card__total">
                 <span>{t.common.total}</span>
-                <strong>{price(service.price)}</strong>
+                <strong>{price(sessionPrice)}</strong>
               </div>
             </div>
           </aside>
