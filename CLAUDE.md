@@ -187,8 +187,11 @@ the English profile.
   not as session languages. This is stated on every service page, in the
   booking summary and as a highlighted note on the date-and-time step.
 - Clients do **not** receive chart files (no chart PDFs, wheels or "charts
-  sent"); removed 30 Oct 2026. The forecast's dated transit timeline PDF and
-  the written summaries/notes are still listed, unconfirmed.
+  sent"); removed 30 Oct 2026. She does not send her session notes or written
+  summaries either (like a psychologist); removed 30 Oct 2026. Still listed and
+  unconfirmed: the forecast transit timeline PDF, the progressed Moon timeline,
+  the relocated solar return chart, and "two weeks of follow-up questions by
+  email".
 - Every client receives the session recording automatically (not "on
   request"), and she works with both Whole sign and Placidus houses. The About
   page has three confirmed "values" (trained, not intuitive; your chart, your
