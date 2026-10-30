@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Dialog } from "radix-ui";
-import { Menu, ShoppingBag, X } from "lucide-react";
-import { useCart } from "../../context/CartContext";
+import { Menu, X } from "lucide-react";
 import { useI18n } from "../../i18n/I18nProvider";
 import { LanguageSwitcher } from "../ui/LanguageSwitcher";
 import { BRAND } from "../../lib/brand";
@@ -10,7 +9,6 @@ import { BRAND } from "../../lib/brand";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { count } = useCart();
   const { t } = useI18n();
   const { pathname } = useLocation();
 
@@ -56,11 +54,6 @@ export function Header() {
 
         <div className="hdr__actions">
           <div className="hdr__lang"><LanguageSwitcher /></div>
-
-          <Link to="/cart" className="hdr__cart" aria-label={`${t.nav.basket} (${count})`}>
-            <ShoppingBag size={17} strokeWidth={1.2} />
-            {count > 0 && <span className="hdr__count">{count}</span>}
-          </Link>
 
           {/*
             Radix Dialog supplies the modal behaviour that was previously hand

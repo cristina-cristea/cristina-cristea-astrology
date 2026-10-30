@@ -4,9 +4,9 @@ Guidance for Claude Code when working in this repository.
 
 ## What this is
 
-A marketing and booking site for Cristina Cristea, a certified astrologer. It
-sells five chart readings as separate products. There is no backend and no
-shop — readings only.
+A marketing and booking site for Cristina Cristea (brand: Astro Kat), a
+certified astrologer. It offers five chart readings, each booked and paid
+through Cal.com. There is no backend, no cart and no shop.
 
 ## Commands
 
@@ -108,40 +108,47 @@ notice should name them as a processor.
 
 ## Booking and scheduling
 
-Booking is two steps on one page (`src/pages/Booking.tsx`): birth details,
-then a Cal.com calendar (`src/components/CalBooking.tsx`, link
-`cristina-cristea/consultatie`) prefilled with name, email and a notes block
-holding the birth data and the client's question. When Cal.com reports
-`bookingSuccessfulV2`, the slot is stored on the cart line (`intake.slot`) and
-the visitor goes to checkout; the confirmation page shows the booked time.
+Booking is three steps: birth details, then date, time and payment, both on
+one page (`src/pages/Booking.tsx`), then `/confirmation`. Step two embeds the
+Cal.com link for the visitor's currency (`src/components/CalBooking.tsx`),
+prefilled with name, email and a notes block holding the birth data and the
+client's question, above a language note and the cancellation policy. Payment
+is taken by Stripe inside the Cal.com embed; this site never sees card data.
+
+`bookingSuccessfulV2` fires when Cal.com creates the booking. If
+`paymentRequired` is set, the page stays on the calendar (the client pays
+there) and shows a "complete your payment" note with an "I have paid" button
+to the confirmation page; otherwise it goes straight to `/confirmation`,
+passing reading, email, price, start time and `paymentPending` in router
+state. The old cart, checkout and `checkout.ts` stub were removed on
+30 Oct 2026; `/cart` and `/checkout` redirect to `/services`.
 
 Availability (Tuesday–Friday 10:00–18:00 Europe/Bucharest), the 90-minute
 length, the 30-minute buffer after each session, minimum notice and the
 booking horizon live in Cal.com settings, not in this code. Every reading is
-90 minutes. Birth data now also passes through Cal.com, so the privacy notice
-should name it as a processor.
-
-Because checkout is still a stub, a client can book a time without paying.
+90 minutes. The privacy notice names Cal.com, Stripe, Google, Web3Forms,
+GitHub Pages and Google Fonts as processors.
 
 ## Pricing
 
 Every reading costs the same, in the visitor's currency (`src/lib/pricing.ts`):
-CHF 180 (Switzerland), RON 350 (Romania), USD 199 (the Americas), EUR 180
+CHF 180 (Switzerland), RON 350 (Romania), USD 200 (the Americas), EUR 190
 (everyone else). The currency comes from the device time zone, decided once
 per visit and exposed as `currency` / `sessionPrice` / `price()` on the i18n
-context. Prices are shown on Services, the service pages, booking, cart and
-checkout, but **not on the home page** (it shows only "90 minutes").
+context. Prices are shown on Services, the service pages, booking and the
+confirmation, but **not on the home page** (it shows only "90 minutes").
 
 `CAL_LINK_BY_CURRENCY` maps each currency to its Cal.com link:
-`consultatie` (RON), `consultatie-chf`, `consultatie-eur`, `consultatie-usd`.
-They are duplicates with the same schedule, buffer and 48-hour notice; each
-gets its own price in Cal.com once Stripe is connected.
+`consultatie` (RON 350), `consultatie-chf` (CHF 180), `consultatie-eur`
+(EUR 190), `consultatie-usd` (USD 200). They share one schedule, buffer and
+48-hour notice. **Prices live in two places** — Cal.com charges, the site
+displays — so change both together.
 
-## Cancellation and refund policy (agreed, not yet live)
+## Cancellation and refund policy
 
-Cristina chose this policy on 23 Oct 2026; apply it when payments go live,
-both in each Cal.com link's Stripe refund setting and as text on the booking
-page (all four locales), visible before the client pays:
+Chosen by Cristina on 23 Oct 2026. Shown on the date-and-time step in all four
+locales (`booking.policy`) and set in each Cal.com link's Stripe refund
+setting:
 
 - Cancels 48 hours or more before: full refund, or free rescheduling
 - Cancels less than 48 hours before: no refund, may reschedule once
@@ -162,13 +169,13 @@ Footer social links (`src/components/layout/Footer.tsx`): Instagram
 Romanian locale should keep this link and en / fr-CH / de-CH should point to
 the English profile.
 
-## Known stubs — not bugs
+## Content status
 
-- `src/lib/checkout.ts` is a **stub**. It resolves after a delay so the flow
-  is walkable. No payment is taken. The file documents the real wiring.
 - Real copy from Cristina: the About biography ("In her words") and her one
-  qualification, shown as "Graduate, Școala de Științe Spirituale, Bucharest,
-  Romania" (she prefers plain "Graduate", without "in astrology"). The school name is
+  qualification: certified astrologer (occupation "astrolog"), graduate of
+  Școala de Științe Spirituale, Bucharest, Romania (plain "Graduate", without
+  "in astrology"). She says the school is ministry-accredited but has not named
+  the authority, so the site does not claim any ministry. The school name is
   translated per locale: School of Spiritual Sciences / École des sciences
   spirituelles / Schule für spirituelle Wissenschaften.
   The invented FAS diploma, memberships, "fifteen years", chart counts and
@@ -179,10 +186,12 @@ the English profile.
   not as session languages. This is stated on every service page, in the
   booking summary and as a highlighted note on the date-and-time step.
 - Every client receives the session recording automatically (not "on
-  request"), and she works with both Whole sign and Placidus houses. Still unconfirmed: the four About "values". The operator details in the privacy notice
-  are still **invented placeholder copy** (Lisbon, Portugal).
+  request"), and she works with both Whole sign and Placidus houses. Still
+  unconfirmed: the four About "values".
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.
-- The newsletter opt-in was removed from booking (there is no newsletter).
-  The privacy notice still mentions a newsletter; drop that when the notice
-  is rewritten with Cristina's real details.
+- There is no newsletter; the opt-in was removed from booking.
+- The privacy notice (30 Oct 2026) uses Cristina's real details: Cristea
+  Cristina PFA, Dumbrăvița, Timiș, Romania, cristina.cristea17@gmail.com,
+  ANSPDCP as authority. The 24-month retention for birth data and notes is
+  inherited placeholder policy she has not confirmed. Not reviewed by a lawyer.

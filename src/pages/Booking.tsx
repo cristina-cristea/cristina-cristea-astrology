@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Languages, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
+import { ArrowLeft, ArrowRight, CreditCard, Languages, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
 import { getService } from "../data/services";
-import { useCart } from "../context/CartContext";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
 import { Select } from "../components/ui/Select";
@@ -10,6 +9,7 @@ import { Checkbox } from "../components/ui/Checkbox";
 import { CalBooking } from "../components/CalBooking";
 import type { BookedSlot } from "../components/CalBooking";
 import { CAL_LINK_BY_CURRENCY } from "../lib/pricing";
+import type { ConfirmationState } from "./Confirmation";
 import type { IntakeData, IntakePerson } from "../types";
 import NotFound from "./NotFound";
 
@@ -52,7 +52,6 @@ export default function Booking() {
   const { slug } = useParams();
   const service = getService(slug);
   const navigate = useNavigate();
-  const { addService } = useCart();
   const { t, price, currency, sessionPrice } = useI18n();
   const copy = service ? t.serviceCopy[service.id] : undefined;
   useDocumentTitle(copy?.name);
@@ -68,6 +67,9 @@ export default function Booking() {
   /** Set once the details are valid; the page then shows the calendar. */
   const [pending, setPending] = useState<IntakeData | null>(null);
   const timeHeadingRef = useRef<HTMLHeadingElement>(null);
+  /** Set when Cal.com created the booking but still shows its payment step. */
+  const [awaitingPayment, setAwaitingPayment] = useState<BookedSlot | null>(null);
+  const payNoteRef = useRef<HTMLDivElement>(null);
 
   // Moving between the two steps happens without a route change, so focus
   // and scroll are handled here (useDocumentTitle only covers navigation).
@@ -155,13 +157,30 @@ export default function Booking() {
     return lines.join("\n");
   };
 
-  const onBooked = (slot: BookedSlot) => {
+  const confirm = (slot: BookedSlot, paymentPending: boolean) => {
     if (!pending) return;
-    addService(
-      { id: service.id, slug: service.slug, name: copy.name, price: sessionPrice, currency },
-      { ...pending, slot },
-    );
-    navigate("/checkout");
+    const state: ConfirmationState = {
+      reading: copy.name,
+      email: pending.email,
+      price: sessionPrice,
+      start: slot.start,
+      paymentPending,
+    };
+    navigate("/confirmation", { state });
+  };
+
+  /**
+   * Cal.com reports the booking as soon as it is created. For a paid link it
+   * then shows its own card form inside the calendar, so the client must stay
+   * here to pay; only an already-settled booking moves straight on.
+   */
+  const onBooked = (slot: BookedSlot) => {
+    if (slot.paymentRequired) {
+      setAwaitingPayment(slot);
+      requestAnimationFrame(() => payNoteRef.current?.focus());
+    } else {
+      confirm(slot, false);
+    }
   };
 
   const err = (key: string) => errors[key];
@@ -302,7 +321,6 @@ export default function Booking() {
             {pending && <span className="sr-only">{t.common.currentStep}</span>}
           </li>
           <li><span aria-hidden="true">03</span> {t.booking.steps[2]}</li>
-          <li><span aria-hidden="true">04</span> {t.booking.steps[3]}</li>
         </ol>
 
         <div className="booking__grid">
@@ -316,7 +334,25 @@ export default function Booking() {
                   <Languages size={16} strokeWidth={1.3} aria-hidden="true" />
                   <strong>{t.booking.languageNote}</strong>
                 </p>
+                <div className="booking__policy">
+                  <h2>{t.booking.policyTitle}</h2>
+                  <ul>
+                    {t.booking.policy.map((line) => <li key={line}>{line}</li>)}
+                  </ul>
+                </div>
               </header>
+              {awaitingPayment && (
+                <div className="booking__pay" role="status" tabIndex={-1} ref={payNoteRef}>
+                  <CreditCard size={18} strokeWidth={1.3} aria-hidden="true" />
+                  <div>
+                    <strong>{t.booking.payTitle}</strong>
+                    <p>{t.booking.payBody}</p>
+                    <button type="button" className="btn btn--line" onClick={() => confirm(awaitingPayment, true)}>
+                      {t.booking.payDone} <ArrowRight size={14} strokeWidth={1.4} aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              )}
               <button type="button" className="btn btn--line booking__edit" onClick={() => setPending(null)}>
                 <ArrowLeft size={14} strokeWidth={1.4} aria-hidden="true" /> {t.booking.editDetails}
               </button>

@@ -12,8 +12,8 @@ export type Currency = "CHF" | "EUR" | "USD" | "RON";
 
 export const SESSION_PRICE: Record<Currency, number> = {
   CHF: 180,
-  EUR: 180,
-  USD: 199,
+  EUR: 190,
+  USD: 200,
   RON: 350,
 };
 

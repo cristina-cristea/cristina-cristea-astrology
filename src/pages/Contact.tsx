@@ -95,7 +95,7 @@ export default function Contact() {
               <p className="lead">
                 {t.contact.sentLead} <strong>{form.email}</strong>.
               </p>
-              <Link to="/services" className="btn btn--ghost">{t.cart.browse}</Link>
+              <Link to="/services" className="btn btn--ghost">{t.common.allReadings}</Link>
             </div>
           ) : (
             <form className="booking__form" onSubmit={submit} noValidate>
@@ -255,7 +255,7 @@ export default function Contact() {
               <hr className="rule" />
               <p className="field-hint">
                 {t.contact.dataNote}{" "}
-                <a href="mailto:privacy@cristinacristea.com">privacy@cristinacristea.com</a>.
+                <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>.
               </p>
             </div>
           </aside>

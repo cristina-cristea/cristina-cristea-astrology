@@ -13,6 +13,8 @@ export interface BookedSlot {
   start: string; // ISO
   end: string;   // ISO
   uid?: string;
+  /** Cal.com still has to take payment in the calendar before the booking is confirmed. */
+  paymentRequired: boolean;
 }
 
 /** Reads a design token so the embed matches the site without hardcoding colours. */
@@ -56,7 +58,7 @@ export function CalBooking({
         action: "bookingSuccessfulV2",
         callback: (e) => {
           const d = e.detail.data;
-          if (d.startTime && d.endTime) onBookedRef.current({ start: d.startTime, end: d.endTime, uid: d.uid });
+          if (d.startTime && d.endTime) onBookedRef.current({ start: d.startTime, end: d.endTime, uid: d.uid, paymentRequired: !!d.paymentRequired });
         },
       });
     })();

@@ -16,19 +16,6 @@ export interface IntakeData extends IntakePerson {
   partner?: IntakePerson;
   targetYear?: string;
   focus: string;
-  /** The session time booked through Cal.com, as ISO timestamps. */
-  slot?: { start: string; end: string; uid?: string };
   gdprConsent: boolean;
   submittedAt: string;
-}
-
-/** Only readings are sold, so a line is always one booked session. */
-export interface CartLine {
-  id: string;
-  slug: string;
-  name: string;
-  price: number;
-  /** Currency the price was shown in when the reading was added. */
-  currency: string;
-  intake: IntakeData;
 }
