@@ -1402,19 +1402,6 @@
 }
 .booking__policy ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
 .booking__policy li { font-size: 0.88rem; line-height: 1.6; color: var(--ink-soft); }
-.booking__pay {
-  display: flex;
-  gap: 0.8rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  padding: 1.1rem 1.25rem;
-  border: 2px solid var(--gold);
-  background: var(--paper-warm);
-}
-.booking__pay:focus { outline: 2px solid var(--ink); outline-offset: 2px; }
-.booking__pay svg { flex: none; color: var(--gold); margin-top: 0.15rem; }
-.booking__pay strong { display: block; margin-bottom: 0.35rem; }
-.booking__pay p { font-size: 0.92rem; line-height: 1.6; margin-bottom: 0.9rem; }
 /* Cal.com renders its own iframe; give it room so the month view never
    collapses while it loads, and let it use the full form column. */
 .cal-embed { width: 100%; min-height: 640px; overflow: auto; }

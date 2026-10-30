@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, ArrowRight, CreditCard, Languages, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
+import { ArrowLeft, ArrowRight, Languages, Lock, ShieldCheck, TriangleAlert } from "lucide-react";
 import { getService } from "../data/services";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
@@ -67,9 +67,6 @@ export default function Booking() {
   /** Set once the details are valid; the page then shows the calendar. */
   const [pending, setPending] = useState<IntakeData | null>(null);
   const timeHeadingRef = useRef<HTMLHeadingElement>(null);
-  /** Set when Cal.com created the booking but still shows its payment step. */
-  const [awaitingPayment, setAwaitingPayment] = useState<BookedSlot | null>(null);
-  const payNoteRef = useRef<HTMLDivElement>(null);
 
   // Moving between the two steps happens without a route change, so focus
   // and scroll are handled here (useDocumentTitle only covers navigation).
@@ -157,30 +154,22 @@ export default function Booking() {
     return lines.join("\n");
   };
 
-  const confirm = (slot: BookedSlot, paymentPending: boolean) => {
-    if (!pending) return;
+  /**
+   * Cal.com reports the booking as soon as it is created. For a paid link it
+   * then shows its own card form inside the calendar and, once paid, its own
+   * confirmation there too; Cal.com sends no event when payment completes, so
+   * the client simply stays on the calendar. A booking that needs no payment
+   * moves straight on to this site's confirmation page.
+   */
+  const onBooked = (slot: BookedSlot) => {
+    if (!pending || slot.paymentRequired) return;
     const state: ConfirmationState = {
       reading: copy.name,
       email: pending.email,
       price: sessionPrice,
       start: slot.start,
-      paymentPending,
     };
     navigate("/confirmation", { state });
-  };
-
-  /**
-   * Cal.com reports the booking as soon as it is created. For a paid link it
-   * then shows its own card form inside the calendar, so the client must stay
-   * here to pay; only an already-settled booking moves straight on.
-   */
-  const onBooked = (slot: BookedSlot) => {
-    if (slot.paymentRequired) {
-      setAwaitingPayment(slot);
-      requestAnimationFrame(() => payNoteRef.current?.focus());
-    } else {
-      confirm(slot, false);
-    }
   };
 
   const err = (key: string) => errors[key];
@@ -341,18 +330,7 @@ export default function Booking() {
                   </ul>
                 </div>
               </header>
-              {awaitingPayment && (
-                <div className="booking__pay" role="status" tabIndex={-1} ref={payNoteRef}>
-                  <CreditCard size={18} strokeWidth={1.3} aria-hidden="true" />
-                  <div>
-                    <strong>{t.booking.payTitle}</strong>
-                    <p>{t.booking.payBody}</p>
-                    <button type="button" className="btn btn--line" onClick={() => confirm(awaitingPayment, true)}>
-                      {t.booking.payDone} <ArrowRight size={14} strokeWidth={1.4} aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-              )}
+
               <button type="button" className="btn btn--line booking__edit" onClick={() => setPending(null)}>
                 <ArrowLeft size={14} strokeWidth={1.4} aria-hidden="true" /> {t.booking.editDetails}
               </button>

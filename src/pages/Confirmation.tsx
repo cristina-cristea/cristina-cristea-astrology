@@ -9,8 +9,6 @@ export interface ConfirmationState {
   email: string;
   price: number;
   start: string; // ISO
-  /** True when the client was sent on to pay inside the Cal.com calendar. */
-  paymentPending: boolean;
 }
 
 export default function Confirmation() {
@@ -28,7 +26,7 @@ export default function Confirmation() {
         </span>
         <h1>{t.confirmation.thanks}</h1>
         <p className="lead">
-          {state.paymentPending ? t.confirmation.leadPending : t.confirmation.lead}{" "}
+          {t.confirmation.lead}{" "}
           <strong>{state.email}</strong>.
         </p>
 

@@ -115,12 +115,13 @@ prefilled with name, email and a notes block holding the birth data and the
 client's question, above a language note and the cancellation policy. Payment
 is taken by Stripe inside the Cal.com embed; this site never sees card data.
 
-`bookingSuccessfulV2` fires when Cal.com creates the booking. If
-`paymentRequired` is set, the page stays on the calendar (the client pays
-there) and shows a "complete your payment" note with an "I have paid" button
-to the confirmation page; otherwise it goes straight to `/confirmation`,
-passing reading, email, price, start time and `paymentPending` in router
-state. The old cart, checkout and `checkout.ts` stub were removed on
+`bookingSuccessfulV2` fires when Cal.com creates the booking, before payment
+(confirmed in Cristina's live test, 30 Oct 2026). Cal.com sends no event when
+payment completes, so for a paid booking (`paymentRequired`) the site does
+nothing: the client pays in the embed and sees Cal.com's own confirmation
+there. An "I have paid" box was tried and removed because it appeared next to
+the card form. A booking without payment goes straight to `/confirmation`
+(reading, email, price, start time in router state). The old cart, checkout and `checkout.ts` stub were removed on
 30 Oct 2026; `/cart` and `/checkout` redirect to `/services`.
 
 Availability (Tuesday–Friday 10:00–18:00 Europe/Bucharest), the 90-minute
@@ -185,6 +186,9 @@ the English profile.
   or German); the fr-CH and de-CH versions of the site exist for visitors,
   not as session languages. This is stated on every service page, in the
   booking summary and as a highlighted note on the date-and-time step.
+- Clients do **not** receive chart files (no chart PDFs, wheels or "charts
+  sent"); removed 30 Oct 2026. The forecast's dated transit timeline PDF and
+  the written summaries/notes are still listed, unconfirmed.
 - Every client receives the session recording automatically (not "on
   request"), and she works with both Whole sign and Placidus houses. The About
   page has three confirmed "values" (trained, not intuitive; your chart, your
