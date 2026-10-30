@@ -123,7 +123,6 @@ export const frCH: Dict = {
     values: [
       ["Formée, pas intuitive", "Chaque affirmation d'une lecture peut être rattachée à une technique. Si je suppose, je le dis."],
       ["Votre thème, votre décision", "Je décris. Je ne prescris pas, et je ne vous dis pas à quoi ressemble une bonne vie."],
-      ["Rien de caché", "Vous recevez les thèmes eux-mêmes, pas seulement mon interprétation."],
       ["Tenu confidentiel", "Les séances et les données de naissance sont confidentielles. Rien n'est partagé, vendu ni publié."],
     ],
     beginEyebrow: "Commencer", beginTitle: "La plupart des gens commencent par le thème natal",

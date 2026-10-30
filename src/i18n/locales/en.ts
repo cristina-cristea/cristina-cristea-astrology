@@ -117,7 +117,6 @@ export const en: Dict = {
     values: [
       ["Trained, not intuitive", "Every claim in a reading can be traced back to a technique. If I am guessing, I say so."],
       ["Your chart, your call", "I describe. I do not instruct, and I do not tell you what a good life looks like."],
-      ["Nothing hidden", "You receive the charts themselves, not just my interpretation of them."],
       ["Held in confidence", "Sessions and birth data are confidential. Nothing is shared, sold or published."],
     ],
     beginEyebrow: "Begin", beginTitle: "Most people start with the natal chart",

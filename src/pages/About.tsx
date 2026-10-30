@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Award, BookOpen, GraduationCap, Users } from "lucide-react";
+import { Award, GraduationCap, Users } from "lucide-react";
 import { StarField } from "../components/ui/StarField";
 import { useDocumentTitle } from "../lib/useDocumentTitle";
 import { useI18n } from "../i18n/I18nProvider";
 import portrait from "../assets/cristina-portrait.webp";
 
-const VALUE_ICONS = [GraduationCap, Users, BookOpen, Award];
+const VALUE_ICONS = [GraduationCap, Users, Award];
 
 export default function About() {
   const { t } = useI18n();

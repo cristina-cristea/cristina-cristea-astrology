@@ -122,7 +122,6 @@ export const deCH: Dict = {
     values: [
       ["Ausgebildet, nicht intuitiv", "Jede Aussage einer Deutung lässt sich auf eine Technik zurückführen. Wenn ich rate, sage ich es."],
       ["Ihr Horoskop, Ihre Entscheidung", "Ich beschreibe. Ich weise nicht an und sage Ihnen nicht, wie ein gutes Leben auszusehen hat."],
-      ["Nichts verborgen", "Sie erhalten die Horoskope selbst, nicht nur meine Deutung davon."],
       ["Vertraulich behandelt", "Sitzungen und Geburtsdaten sind vertraulich. Nichts wird geteilt, verkauft oder veröffentlicht."],
     ],
     beginEyebrow: "Beginnen", beginTitle: "Die meisten beginnen mit dem Radix",

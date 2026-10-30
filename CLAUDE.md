@@ -186,8 +186,9 @@ the English profile.
   not as session languages. This is stated on every service page, in the
   booking summary and as a highlighted note on the date-and-time step.
 - Every client receives the session recording automatically (not "on
-  request"), and she works with both Whole sign and Placidus houses. Still
-  unconfirmed: the four About "values".
+  request"), and she works with both Whole sign and Placidus houses. The About
+  page has three confirmed "values" (trained, not intuitive; your chart, your
+  call; held in confidence); "Nothing hidden" was removed at her request.
 - Google Fonts loads from Google's CDN. Self-host if German/Swiss privacy
   exposure matters.
 - There is no newsletter; the opt-in was removed from booking.

@@ -119,7 +119,6 @@ export const ro: Dict = {
     values: [
       ["Formată, nu intuitivă", "Orice afirmație dintr-o consultație poate fi urmărită până la o tehnică. Dacă presupun, spun asta."],
       ["Harta ta, decizia ta", "Eu descriu. Nu dau instrucțiuni și nu îți spun cum arată o viață bună."],
-      ["Nimic ascuns", "Primești hărțile în sine, nu doar interpretarea mea."],
       ["Ținut confidențial", "Ședințele și datele de naștere sunt confidențiale. Nimic nu este împărtășit, vândut sau publicat."],
     ],
     beginEyebrow: "Începe", beginTitle: "Cei mai mulți încep cu harta natală",
