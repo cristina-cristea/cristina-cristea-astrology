@@ -188,10 +188,13 @@ the English profile.
   booking summary and as a highlighted note on the date-and-time step.
 - Clients do **not** receive chart files (no chart PDFs, wheels or "charts
   sent"); removed 30 Oct 2026. She does not send her session notes or written
-  summaries either (like a psychologist); removed 30 Oct 2026. Still listed and
-  unconfirmed: the forecast transit timeline PDF, the progressed Moon timeline,
-  the relocated solar return chart, and "two weeks of follow-up questions by
-  email".
+  summaries either (like a psychologist); removed 30 Oct 2026. No PDFs or documents
+  are sent after a session, and there are no follow-up emails (removed 1 Nov
+  2026). Each reading promises only the 90-minute live video session and the
+  recording; the relationship reading adds "both or one may attend", and the
+  solar return adds the relocated return chart (cast for where she spends her
+  birthday). PDFs will live in a future shop section, to be discussed
+  separately.
 - Every client receives the session recording automatically (not "on
   request"), and she works with both Whole sign and Placidus houses. The About
   page has three confirmed "values" (trained, not intuitive; your chart, your
