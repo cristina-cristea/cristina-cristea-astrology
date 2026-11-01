@@ -71,6 +71,27 @@ const maskBirthDate = (raw: string) => {
   return raw.slice(0, 10);
 };
 
+/**
+ * Birth times are typed in 24-hour form for the same reason: a native time
+ * input shows AM/PM on an English-US browser, and 7:30 PM read as 7:30 moves
+ * the Ascendant. Accepts : . h or space between hours and minutes.
+ */
+const parseBirthTime = (s: string): string | null => {
+  const m = s.trim().match(/^(\d{1,2})[:.h\s](\d{2})$/);
+  if (!m) return null;
+  const [h, min] = [Number(m[1]), Number(m[2])];
+  return h < 24 && min < 60 ? `${pad(h)}:${pad(min)}` : null;
+};
+
+/** Inserts the colon while the client types digits (1930 → 19:30). */
+const maskBirthTime = (raw: string) => {
+  if (/^\d+$/.test(raw) || /^\d{2}:\d*$/.test(raw)) {
+    const d = raw.replace(/\D/g, "").slice(0, 4);
+    return d.length > 2 ? `${d.slice(0, 2)}:${d.slice(2)}` : d;
+  }
+  return raw.slice(0, 5);
+};
+
 const thisYear = new Date().getFullYear();
 const years = Array.from({ length: 6 }, (_, i) => String(thisYear + i - 1));
 
@@ -120,7 +141,8 @@ export default function Booking() {
     if (!p.birthDate.trim()) e[`${prefix}Date`] = `${scope}: ${t.errors.date}`;
     else if (!born) e[`${prefix}Date`] = `${scope}: ${t.errors.dateInvalid}`;
     else if (born > new Date()) e[`${prefix}Date`] = `${scope}: ${t.errors.futureDate}`;
-    if (!p.timeUnknown && !p.birthTime) e[`${prefix}Time`] = `${scope}: ${t.errors.time}`;
+    if (!p.timeUnknown && !p.birthTime.trim()) e[`${prefix}Time`] = `${scope}: ${t.errors.time}`;
+    else if (!p.timeUnknown && !parseBirthTime(p.birthTime)) e[`${prefix}Time`] = `${scope}: ${t.errors.timeInvalid}`;
     if (!p.birthPlace.trim()) e[`${prefix}Place`] = `${scope}: ${t.errors.place}`;
   };
 
@@ -153,14 +175,16 @@ export default function Booking() {
 
     // Validation passed, so both dates parse; store them in one tidy form.
     const tidyDate = (p: IntakePerson) => formatBirthDate(parseBirthDate(p.birthDate)!);
+    const tidyTime = (p: IntakePerson) => (p.timeUnknown ? "" : parseBirthTime(p.birthTime)!);
     const intake: IntakeData = {
       ...you,
       fullName: you.fullName.trim(),
       birthPlace: you.birthPlace.trim(),
       birthDate: tidyDate(you),
+      birthTime: tidyTime(you),
       email: email.trim(),
       partner: service.requiresPartner
-        ? { ...partner, fullName: partner.fullName.trim(), birthDate: tidyDate(partner) }
+        ? { ...partner, fullName: partner.fullName.trim(), birthDate: tidyDate(partner), birthTime: tidyTime(partner) }
         : undefined,
       targetYear: service.requiresYear ? targetYear : undefined,
       focus: focus.trim(),
@@ -299,10 +323,14 @@ export default function Booking() {
           <label htmlFor={`${prefix}-time`}>{t.booking.timeOfBirth}</label>
           <input
             id={`${prefix}-time`}
-            type="time"
+            type="text"
+            inputMode="numeric"
+            maxLength={5}
             value={p.birthTime}
+            placeholder={t.booking.timePlaceholder}
+            autoComplete="off"
             disabled={p.timeUnknown}
-            onChange={(e) => set("birthTime", e.target.value)}
+            onChange={(e) => set("birthTime", maskBirthTime(e.target.value))}
             required={!p.timeUnknown}
             aria-invalid={err(`${prefix}Time`) ? true : undefined}
             aria-describedby={describedBy(
