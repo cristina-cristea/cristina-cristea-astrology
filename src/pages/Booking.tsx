@@ -45,6 +45,32 @@ const FIELD_ANCHORS: Record<string, string> = {
   gdpr: "gdpr-consent",
 };
 
+/**
+ * Birth dates are typed as day/month/year. A native date input would follow
+ * the browser's locale (month first on an English-US browser), which Cristina
+ * did not want. Accepts / . - or space as separators and one-digit day/month.
+ */
+const parseBirthDate = (s: string): Date | null => {
+  const m = s.trim().match(/^(\d{1,2})[/.\-\s](\d{1,2})[/.\-\s](\d{4})$/);
+  if (!m) return null;
+  const [d, mo, y] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  const dt = new Date(y, mo - 1, d);
+  if (y < 1900 || dt.getFullYear() !== y || dt.getMonth() !== mo - 1 || dt.getDate() !== d) return null;
+  return dt;
+};
+
+const pad = (n: number) => String(n).padStart(2, "0");
+const formatBirthDate = (dt: Date) => `${pad(dt.getDate())}/${pad(dt.getMonth() + 1)}/${dt.getFullYear()}`;
+
+/** Inserts the slashes while the client types digits (19051998 → 19/05/1998). */
+const maskBirthDate = (raw: string) => {
+  if (/^\d+$/.test(raw) || /^\d{2}\/\d*$/.test(raw) || /^\d{2}\/\d{2}\/\d*$/.test(raw)) {
+    const d = raw.replace(/\D/g, "").slice(0, 8);
+    return [d.slice(0, 2), d.slice(2, 4), d.slice(4)].filter(Boolean).join("/");
+  }
+  return raw.slice(0, 10);
+};
+
 const thisYear = new Date().getFullYear();
 const years = Array.from({ length: 6 }, (_, i) => String(thisYear + i - 1));
 
@@ -90,8 +116,10 @@ export default function Booking() {
    */
   const validatePerson = (p: IntakePerson, prefix: string, scope: string, e: Errors) => {
     if (!p.fullName.trim()) e[`${prefix}Name`] = `${scope}: ${t.errors.name}`;
-    if (!p.birthDate) e[`${prefix}Date`] = `${scope}: ${t.errors.date}`;
-    else if (new Date(p.birthDate) > new Date()) e[`${prefix}Date`] = `${scope}: ${t.errors.futureDate}`;
+    const born = parseBirthDate(p.birthDate);
+    if (!p.birthDate.trim()) e[`${prefix}Date`] = `${scope}: ${t.errors.date}`;
+    else if (!born) e[`${prefix}Date`] = `${scope}: ${t.errors.dateInvalid}`;
+    else if (born > new Date()) e[`${prefix}Date`] = `${scope}: ${t.errors.futureDate}`;
     if (!p.timeUnknown && !p.birthTime) e[`${prefix}Time`] = `${scope}: ${t.errors.time}`;
     if (!p.birthPlace.trim()) e[`${prefix}Place`] = `${scope}: ${t.errors.place}`;
   };
@@ -123,12 +151,17 @@ export default function Booking() {
       return;
     }
 
+    // Validation passed, so both dates parse; store them in one tidy form.
+    const tidyDate = (p: IntakePerson) => formatBirthDate(parseBirthDate(p.birthDate)!);
     const intake: IntakeData = {
       ...you,
       fullName: you.fullName.trim(),
       birthPlace: you.birthPlace.trim(),
+      birthDate: tidyDate(you),
       email: email.trim(),
-      partner: service.requiresPartner ? { ...partner, fullName: partner.fullName.trim() } : undefined,
+      partner: service.requiresPartner
+        ? { ...partner, fullName: partner.fullName.trim(), birthDate: tidyDate(partner) }
+        : undefined,
       targetYear: service.requiresYear ? targetYear : undefined,
       focus: focus.trim(),
       gdprConsent: gdpr,
@@ -238,18 +271,26 @@ export default function Booking() {
           <label htmlFor={`${prefix}-date`}>{t.booking.dateOfBirth}</label>
           <input
             id={`${prefix}-date`}
-            type="date"
+            type="text"
+            inputMode="numeric"
+            maxLength={10}
             value={p.birthDate}
-            max={new Date().toISOString().slice(0, 10)}
-            onChange={(e) => set("birthDate", e.target.value)}
-            autoComplete={isYou ? "bday" : "off"}
+            placeholder={t.booking.datePlaceholder}
+            onChange={(e) => set("birthDate", maskBirthDate(e.target.value))}
+            autoComplete="off"
             required
             aria-invalid={err(`${prefix}Date`) ? true : undefined}
-            aria-describedby={describedBy(err(`${prefix}Date`) && `${prefix}-date-error`)}
+            aria-describedby={describedBy(
+              err(`${prefix}Date`) ? `${prefix}-date-error` : `${prefix}-date-hint`
+            )}
           />
-          {err(`${prefix}Date`) && (
+          {err(`${prefix}Date`) ? (
             <span className="field-error" id={`${prefix}-date-error`}>
               {err(`${prefix}Date`)}
+            </span>
+          ) : (
+            <span className="field-hint" id={`${prefix}-date-hint`}>
+              {t.booking.dateHint}
             </span>
           )}
         </div>

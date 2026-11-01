@@ -5,7 +5,7 @@ export type Glyph =
 /** Birth data captured before checkout for any chart service. */
 export interface IntakePerson {
   fullName: string;
-  birthDate: string;   // yyyy-mm-dd
+  birthDate: string;   // dd/mm/yyyy, as typed by the client
   birthTime: string;   // HH:mm
   timeUnknown: boolean;
   birthPlace: string;  // "City, Country"
