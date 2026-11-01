@@ -204,5 +204,7 @@ the English profile.
 - There is no newsletter; the opt-in was removed from booking.
 - The privacy notice (30 Oct 2026) uses Cristina's real details: Cristea
   Cristina PFA, Dumbrăvița, Timiș, Romania, cristina.cristea17@gmail.com,
-  ANSPDCP as authority. The 24-month retention for birth data and notes is
-  inherited placeholder policy she has not confirmed. Not reviewed by a lawyer.
+  ANSPDCP as authority. Retention for birth data and notes is
+  24 months after the (last) session, confirmed by Cristina on 1 Nov 2026; her
+  private Excel client register (never in this repo) flags rows past that date.
+  Not reviewed by a lawyer.
