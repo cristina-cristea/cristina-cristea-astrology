@@ -10,7 +10,7 @@ export const en: Dict = {
     bookCta: "Book a reading", meetCta: "Meet Cristina",
     practiceEyebrow: "The practice",
     practiceTitle: "A chart is not a verdict. It is a description.",
-    practiceBodyA: "Every reading begins with a conversation; then, alongside your chart, we work step by step through your patterns, your strengths and the challenges that need attention. What that buys you is restraint: no fortune-telling, no flattery, and no advice dressed up as fate.",
+    practiceBodyA: "Every reading begins with a conversation; then, alongside your chart, we work step by step through your patterns, your strengths and the challenges that need attention.",
     practiceBodyB: "We work from your exact birth data, in a live session, with the recording sent to you afterwards. You are welcome to ask hard questions.",
     statCertified: "Certified astrologer", statCertifiedSub: "School of Spiritual Sciences, Bucharest",
     readingsEyebrow: "Readings", readingsTitle: "Five ways to read a life",

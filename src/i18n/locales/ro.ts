@@ -12,7 +12,7 @@ export const ro: Dict = {
     bookCta: "Programează o consultație", meetCta: "Cunoaște-o pe Cristina",
     practiceEyebrow: "Practica",
     practiceTitle: "O hartă nu este o sentință. Este o descriere.",
-    practiceBodyA: "Fiecare consultație pornește cu o discuție, iar alături de harta ta, pas cu pas, putem stabili patternurile, punctele forte și provocările care necesită atenție. Ce îți aduce asta este reținerea: fără ghicit, fără măgulire și fără sfaturi deghizate în destin.",
+    practiceBodyA: "Fiecare consultație pornește cu o discuție, iar alături de harta ta, pas cu pas, putem stabili patternurile, punctele forte și provocările care necesită atenție.",
     practiceBodyB: "Lucrăm cu datele tale exacte de naștere, într-o ședință live, iar înregistrarea îți este trimisă după aceea. Întrebările dificile sunt binevenite.",
     statCertified: "Astrolog certificat", statCertifiedSub: "Școala de Științe Spirituale, București",
     readingsEyebrow: "Consultații", readingsTitle: "Cinci feluri de a citi o viață",
