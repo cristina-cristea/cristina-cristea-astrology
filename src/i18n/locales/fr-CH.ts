@@ -169,7 +169,7 @@ export const frCH: Dict = {
     ],
     updated: "Dernière mise à jour : 30 octobre 2026.", ask: "Poser une question",
   },
-  shop: { eyebrow: "Boutique", title: "Bientôt disponible", lead: "Les prévisions 2027, signe par signe : vidéos et guides PDF par Cristina." },
+  shop: { eyebrow: "Boutique", title: "Bientôt disponible", lead: "Prévisions 2027 pour chaque signe." },
   notFound: { eyebrow: "Erreur 404", title: "Rien à ce degré", lead: "La page que vous cherchiez est sortie d'orbe.", home: "Retour à l'accueil", browse: "Parcourir les lectures" },
   footer: {
     tagline: "Astrologue conseil certifiée. Lectures de thème sur rendez-vous, en ligne, dans le monde entier.",

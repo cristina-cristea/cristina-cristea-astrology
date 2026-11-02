@@ -165,7 +165,7 @@ export const ro: Dict = {
     ],
     updated: "Ultima actualizare: 30 octombrie 2026.", ask: "Pune o întrebare",
   },
-  shop: { eyebrow: "Shop", title: "În curând", lead: "Previziuni pentru 2027, pentru fiecare zodie: videoclipuri și ghiduri PDF realizate de Cristina." },
+  shop: { eyebrow: "Shop", title: "În curând", lead: "Previziuni pentru 2027 pentru fiecare zodie." },
   notFound: { eyebrow: "Eroare 404", title: "Nimic la acest grad", lead: "Pagina căutată a ieșit din orb.", home: "Înapoi acasă", browse: "Vezi consultațiile" },
   footer: {
     tagline: "Astrolog consultant certificat. Consultații pe bază de programare, online, în toată lumea.",

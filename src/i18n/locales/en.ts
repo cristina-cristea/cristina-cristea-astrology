@@ -163,7 +163,7 @@ export const en: Dict = {
     ],
     updated: "Last updated 30 October 2026.", ask: "Ask a question",
   },
-  shop: { eyebrow: "Shop", title: "Coming soon", lead: "Forecasts for 2027, sign by sign: videos and PDF guides by Cristina." },
+  shop: { eyebrow: "Shop", title: "Coming soon", lead: "Forecasts for 2027 for every sign." },
   notFound: { eyebrow: "Error 404", title: "Nothing at this degree", lead: "The page you were looking for has moved out of orb.", home: "Return home", browse: "Browse readings" },
   footer: {
     tagline: "Certified consulting astrologer. Chart readings by appointment, online, worldwide.",

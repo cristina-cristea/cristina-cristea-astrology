@@ -168,7 +168,7 @@ export const deCH: Dict = {
     ],
     updated: "Zuletzt aktualisiert: 30. Oktober 2026.", ask: "Eine Frage stellen",
   },
-  shop: { eyebrow: "Shop", title: "Demnächst", lead: "Die Prognosen für 2027, Zeichen für Zeichen: Videos und PDF-Leitfäden von Cristina." },
+  shop: { eyebrow: "Shop", title: "Demnächst", lead: "Prognosen 2027 für jedes Sternzeichen." },
   notFound: { eyebrow: "Fehler 404", title: "Nichts auf diesem Grad", lead: "Die gesuchte Seite ist aus dem Orbis gewandert.", home: "Zur Startseite", browse: "Deutungen ansehen" },
   footer: {
     tagline: "Zertifizierte beratende Astrologin. Horoskopdeutungen nach Vereinbarung, online, weltweit.",
