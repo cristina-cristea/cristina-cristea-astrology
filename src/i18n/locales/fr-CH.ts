@@ -16,7 +16,7 @@ export const frCH: Dict = {
     bookCta: "Réserver une lecture", meetCta: "Rencontrer Cristina",
     practiceEyebrow: "La pratique",
     practiceTitle: "Un thème n'est pas un verdict. C'est une description.",
-    practiceBodyA: "Chaque lecture part de votre thème, lu avec méthode, pas à pas. Ce que cela vous apporte, c'est de la retenue : pas de divination, pas de flatterie, et aucun conseil déguisé en destin.",
+    practiceBodyA: "Chaque lecture commence par une discussion ; puis, à partir de votre thème, nous dégageons pas à pas vos schémas, vos forces et les défis qui demandent de l'attention. Ce que cela vous apporte, c'est de la retenue : pas de divination, pas de flatterie, et aucun conseil déguisé en destin.",
     practiceBodyB: "Nous travaillons à partir de vos données de naissance exactes, en séance live, avec l'enregistrement envoyé ensuite. Les questions difficiles sont les bienvenues.",
     statCertified: "Astrologue certifiée", statCertifiedSub: "École des sciences spirituelles, Bucarest",
     readingsEyebrow: "Lectures", readingsTitle: "Cinq façons de lire une vie",
