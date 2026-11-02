@@ -15,7 +15,7 @@ export const deCH: Dict = {
     bookCta: "Deutung buchen", meetCta: "Cristina kennenlernen",
     practiceEyebrow: "Die Praxis",
     practiceTitle: "Ein Horoskop ist kein Urteil. Es ist eine Beschreibung.",
-    practiceBodyA: "Hinter jeder Deutung steht eine Ausbildung in Astrologie an der Schule für spirituelle Wissenschaften. Was Ihnen das bringt, ist Zurückhaltung: keine Wahrsagerei, keine Schmeichelei und kein Rat, der als Schicksal verkleidet ist.",
+    practiceBodyA: "Jede Deutung geht von Ihrem Horoskop aus, methodisch und Schritt für Schritt gelesen. Was Ihnen das bringt, ist Zurückhaltung: keine Wahrsagerei, keine Schmeichelei und kein Rat, der als Schicksal verkleidet ist.",
     practiceBodyB: "Wir arbeiten mit Ihren exakten Geburtsdaten, in einer Live-Sitzung; die Aufnahme wird Ihnen danach zugestellt. Schwierige Fragen sind ausdrücklich willkommen.",
     statCertified: "Zertifizierte Astrologin", statCertifiedSub: "Schule für spirituelle Wissenschaften, Bukarest",
     readingsEyebrow: "Deutungen", readingsTitle: "Fünf Arten, ein Leben zu lesen",
