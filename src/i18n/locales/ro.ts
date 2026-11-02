@@ -32,7 +32,7 @@ export const ro: Dict = {
     pageEyebrow: "Consultații", pageTitle: "Servicii",
     pageLead: "Cinci consultații distincte, fiecare rezervată separat. Fiecare serviciu cere data, ora și locul nașterii înainte de plată — fără ele nu există hartă de citit.",
     giftEyebrow: "Cadou", giftTitle: "O consultație poate fi dăruită",
-    giftBody: "Cumperi consultația, iar noi trimitem o felicitare cu un link de rezervare, în loc să cerem datele de naștere la plată. Menționează asta în câmpul liber din formular sau scrie-ne direct.",
+    giftBody: "Vrei să faci un cadou unei persoane dragi pasionate de astrologie? Alege consultația potrivită și menționează în rezervare că este un cadou.",
     giftCta: "Dăruiește o consultație",
     viewReading: "Vezi consultația", readingLabel: "Consultație",
     session: "Ședință", deliveryLabel: "Livrare", availability: "Disponibilitate", languageLabel: "Limba", languageValue: "Română sau engleză",

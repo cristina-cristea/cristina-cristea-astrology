@@ -34,8 +34,8 @@ export const deCH: Dict = {
   services: {
     pageEyebrow: "Deutungen", pageTitle: "Leistungen",
     pageLead: "Fünf eigenständige Deutungen, jede einzeln buchbar. Jede Leistung fragt vor der Zahlung nach Geburtsdatum, -zeit und -ort — ohne sie gibt es kein Horoskop zu lesen.",
-    giftEyebrow: "Verschenken", giftTitle: "Deutungen lassen sich verschenken",
-    giftBody: "Kaufen Sie die Deutung, und wir senden eine Karte mit Buchungslink, statt beim Bezahlen nach Geburtsdaten zu fragen. Vermerken Sie es im Freitextfeld des Formulars oder schreiben Sie uns direkt.",
+    giftEyebrow: "Verschenken", giftTitle: "Eine Deutung lässt sich verschenken",
+    giftBody: "Möchten Sie einem lieben Menschen, der sich für Astrologie begeistert, eine Freude machen? Wählen Sie die passende Deutung und vermerken Sie bei der Buchung, dass es ein Geschenk ist.",
     giftCta: "Deutung verschenken",
     viewReading: "Deutung ansehen", readingLabel: "Deutung",
     session: "Sitzung", deliveryLabel: "Zustellung", availability: "Verfügbarkeit", languageLabel: "Sprache", languageValue: "Rumänisch oder Englisch",

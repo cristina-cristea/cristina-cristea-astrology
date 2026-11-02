@@ -1668,3 +1668,8 @@ fieldset { min-width: 0; }
   from { transform: translateY(-6px) rotate(-3deg); }
   to   { transform: translateY(6px) rotate(3deg); }
 }
+
+/* the gift button scrolls here; clear the fixed header, and no ring on the
+   programmatically focused section itself */
+.svc-list-section .svc-row { scroll-margin-top: 7rem; }
+.svc-list-section:focus { outline: none; }

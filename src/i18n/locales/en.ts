@@ -29,9 +29,9 @@ export const en: Dict = {
   services: {
     pageEyebrow: "Readings", pageTitle: "Services",
     pageLead: "Five separate readings, each booked on its own. Every chart service asks for your birth date, time and place before payment — without them there is no chart to read.",
-    giftEyebrow: "Gift", giftTitle: "Readings can be bought for someone else",
-    giftBody: "Buy the reading, and we will send a card with a booking link instead of asking for birth data at checkout. Say so in the notes field on the intake form, or write to us directly.",
-    giftCta: "Arrange a gift reading",
+    giftEyebrow: "Gift", giftTitle: "A reading can be a gift",
+    giftBody: "Would you like to surprise someone you love who is drawn to astrology? Choose the reading that suits them and mention in your booking that it is a gift.",
+    giftCta: "Give a reading",
     viewReading: "View reading", readingLabel: "Reading",
     session: "Session", deliveryLabel: "Delivery", availability: "Availability", languageLabel: "Language", languageValue: "Romanian or English",
     whatThisIs: "What this reading is", whatYouReceive: "What you receive", suitedTo: "Suited to",

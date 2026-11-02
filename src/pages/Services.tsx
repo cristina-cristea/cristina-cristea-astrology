@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import { services } from "../data/services";
@@ -8,6 +9,13 @@ import { useI18n } from "../i18n/I18nProvider";
 export default function Services() {
   const { t, price, sessionPrice } = useI18n();
   useDocumentTitle(t.services.pageTitle);
+  const listRef = useRef<HTMLElement>(null);
+
+  /** The gift button leads back up to the readings; focus follows for keyboard users. */
+  const toReadings = () => {
+    listRef.current?.focus({ preventScroll: true });
+    listRef.current?.querySelector(".svc-row")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <>
@@ -21,7 +29,7 @@ export default function Services() {
 
       <div className="wrap"><hr className="rule" /></div>
 
-      <section className="section--tight">
+      <section className="section--tight svc-list-section" ref={listRef} tabIndex={-1} aria-label={t.footer.readings}>
         <div className="wrap svc-list">
           {services.map((s, i) => {
             const c = t.serviceCopy[s.id];
@@ -64,9 +72,9 @@ export default function Services() {
           <p className="eyebrow eyebrow--center">{t.services.giftEyebrow}</p>
           <h2>{t.services.giftTitle}</h2>
           <p className="lead" style={{ marginTop: "1.25rem" }}>{t.services.giftBody}</p>
-          <Link to="/contact" className="btn btn--ghost" style={{ marginTop: "2rem" }}>
+          <button type="button" className="btn btn--ghost" style={{ marginTop: "2rem" }} onClick={toReadings}>
             {t.services.giftCta}
-          </Link>
+          </button>
         </div>
       </section>
     </>

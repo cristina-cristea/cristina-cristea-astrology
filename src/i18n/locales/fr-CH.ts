@@ -36,7 +36,7 @@ export const frCH: Dict = {
     pageEyebrow: "Lectures", pageTitle: "Prestations",
     pageLead: "Cinq lectures distinctes, chacune réservée séparément. Chaque prestation demande votre date, heure et lieu de naissance avant le paiement — sans eux, il n'y a pas de thème à lire.",
     giftEyebrow: "Offrir", giftTitle: "Une lecture peut être offerte",
-    giftBody: "Achetez la lecture et nous enverrons une carte avec un lien de réservation, sans demander les données de naissance au moment du paiement. Précisez-le dans le champ libre du formulaire, ou écrivez-nous directement.",
+    giftBody: "Vous souhaitez faire plaisir à un proche passionné d'astrologie ? Choisissez la lecture qui lui convient et précisez dans votre réservation qu'il s'agit d'un cadeau.",
     giftCta: "Offrir une lecture",
     viewReading: "Voir la lecture", readingLabel: "Lecture",
     session: "Séance", deliveryLabel: "Remise", availability: "Disponibilité", languageLabel: "Langue", languageValue: "Roumain ou anglais",
