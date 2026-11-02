@@ -120,7 +120,7 @@ export const frCH: Dict = {
     credentials: "Qualifications",
     credentialsList: ["Astrologue certifiée", "Diplômée, École des sciences spirituelles, Bucarest, Roumanie"],
     practice: "Pratique",
-    practiceList: ["Lectures en roumain et en anglais", "En ligne dans le monde entier, du mardi au vendredi", "Maisons en signes entiers et Placidus"],
+    practiceList: ["Lectures en roumain et en anglais", "En ligne dans le monde entier, du mardi au vendredi", "Membre active de l'Association des astrologues professionnels de Roumanie"],
     values: [
       ["Formée, pas intuitive", "Chaque affirmation d'une lecture peut être rattachée à une technique. Si je suppose, je le dis."],
       ["Votre thème, votre décision", "Je décris. Je ne prescris pas, et je ne vous dis pas à quoi ressemble une bonne vie."],

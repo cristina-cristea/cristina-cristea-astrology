@@ -175,7 +175,9 @@ the English profile.
 - Real copy from Cristina: the About biography ("In her words") and her one
   qualification: certified astrologer (occupation "astrolog"), graduate of
   Școala de Științe Spirituale, Bucharest, Romania (plain "Graduate", without
-  "in astrology"). She says the school is ministry-accredited but has not named
+  "in astrology"), and active member of the Asociația Astrologilor Profesioniști
+  din România (supplied 2 Nov 2026; shown in the About "Practice" list, which
+  no longer mentions Whole sign / Placidus houses). She says the school is ministry-accredited but has not named
   the authority, so the site does not claim any ministry. The school name is
   translated per locale: School of Spiritual Sciences / École des sciences
   spirituelles / Schule für spirituelle Wissenschaften.

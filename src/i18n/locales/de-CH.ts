@@ -119,7 +119,7 @@ export const deCH: Dict = {
     credentials: "Qualifikationen",
     credentialsList: ["Zertifizierte Astrologin", "Absolventin, Schule für spirituelle Wissenschaften, Bukarest, Rumänien"],
     practice: "Praxis",
-    practiceList: ["Deutungen auf Rumänisch und Englisch", "Online weltweit, Dienstag bis Freitag", "Ganzzeichen- und Placidus-Häuser"],
+    practiceList: ["Deutungen auf Rumänisch und Englisch", "Online weltweit, Dienstag bis Freitag", "Aktives Mitglied der Vereinigung professioneller Astrologen Rumäniens"],
     values: [
       ["Ausgebildet, nicht intuitiv", "Jede Aussage einer Deutung lässt sich auf eine Technik zurückführen. Wenn ich rate, sage ich es."],
       ["Ihr Horoskop, Ihre Entscheidung", "Ich beschreibe. Ich weise nicht an und sage Ihnen nicht, wie ein gutes Leben auszusehen hat."],

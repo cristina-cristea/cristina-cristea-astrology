@@ -116,7 +116,7 @@ export const ro: Dict = {
     credentials: "Calificări",
     credentialsList: ["Astrolog certificat", "Absolventă, Școala de Științe Spirituale, București, România"],
     practice: "Practică",
-    practiceList: ["Consultații în română și engleză", "Online în toată lumea, de marți până vineri", "Case în semne întregi și Placidus"],
+    practiceList: ["Consultații în română și engleză", "Online în toată lumea, de marți până vineri", "Membru activ al Asociației Astrologilor Profesioniști din România"],
     values: [
       ["Formată, nu intuitivă", "Orice afirmație dintr-o consultație poate fi urmărită până la o tehnică. Dacă presupun, spun asta."],
       ["Harta ta, decizia ta", "Eu descriu. Nu dau instrucțiuni și nu îți spun cum arată o viață bună."],
