@@ -254,7 +254,7 @@ export default function Booking() {
             id={`${prefix}-name`}
             value={p.fullName}
             onChange={(e) => set("fullName", e.target.value)}
-            placeholder="First and last name"
+            placeholder={t.booking.namePlaceholder}
             autoComplete={isYou ? "name" : "off"}
             required
             aria-invalid={err(`${prefix}Name`) ? true : undefined}
@@ -273,7 +273,7 @@ export default function Booking() {
             id={`${prefix}-place`}
             value={p.birthPlace}
             onChange={(e) => set("birthPlace", e.target.value)}
-            placeholder="Town or city, country"
+            placeholder={t.booking.placePlaceholder}
             required
             aria-invalid={err(`${prefix}Place`) ? true : undefined}
             aria-describedby={describedBy(

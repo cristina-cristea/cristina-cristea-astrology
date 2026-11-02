@@ -46,7 +46,7 @@ export const en: Dict = {
     secondChartHint: "A relationship reading needs both charts. If you do not have the other person's birth time, tick unknown — the reading still works, with less detail on the houses.",
     contact: "Contact", consent: "Consent",
     fullNameAtBirth: "Full name at birth", theirFullName: "Their full name",
-    placeOfBirth: "Place of birth", placeHint: "The town, not the region — it sets the chart's coordinates.",
+    placeOfBirth: "Place of birth", namePlaceholder: "First and last name", placePlaceholder: "Town or city, country", placeHint: "The town, not the region — it sets the chart's coordinates.",
     dateOfBirth: "Date of birth", datePlaceholder: "DD/MM/YYYY", dateHint: "Day, month, year, for example 19/05/1998.", timeOfBirth: "Time of birth",
     timePlaceholder: "HH:MM",
     timeHint: "In 24-hour time, for example 19:30. As written on the birth certificate. Minutes matter — they set the Ascendant.",

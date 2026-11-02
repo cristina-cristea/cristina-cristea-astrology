@@ -52,7 +52,7 @@ export const frCH: Dict = {
     secondChartHint: "Une lecture de couple exige les deux thèmes. Si vous ne connaissez pas l'heure de naissance de l'autre personne, cochez « inconnue » — la lecture reste possible, avec moins de détail sur les maisons.",
     contact: "Contact", consent: "Consentement",
     fullNameAtBirth: "Nom complet à la naissance", theirFullName: "Son nom complet",
-    placeOfBirth: "Lieu de naissance", placeHint: "La ville, pas la région — elle détermine les coordonnées du thème.",
+    placeOfBirth: "Lieu de naissance", namePlaceholder: "Prénom et nom", placePlaceholder: "Ville ou localité, pays", placeHint: "La ville, pas la région — elle détermine les coordonnées du thème.",
     dateOfBirth: "Date de naissance", datePlaceholder: "JJ/MM/AAAA", dateHint: "Jour, mois, année, par exemple 19/05/1998.", timeOfBirth: "Heure de naissance",
     timePlaceholder: "HH:MM",
     timeHint: "Au format 24 heures, par exemple 19:30. Telle qu'inscrite à l'état civil. Les minutes comptent — elles fixent l'Ascendant.",

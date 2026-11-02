@@ -1,5 +1,5 @@
 /**
- * Four locales. French and German are the Swiss standard variants, which are
+ * Five locales (es is neutral international Spanish). French and German are the Swiss standard variants, which are
  * not cosmetic relabels of fr/de — they differ in orthography and numerals:
  *
  *  - de-CH never uses ß. It is always "ss" (Strasse, nicht Straße). This is
@@ -10,7 +10,7 @@
  *    so it is avoided here.)
  *  - Both Swiss locales group thousands with an apostrophe: 1'234.
  */
-export const LOCALES = ["en", "fr-CH", "de-CH", "ro"] as const;
+export const LOCALES = ["en", "es", "fr-CH", "de-CH", "ro"] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const LOCALE_META: Record<
@@ -18,6 +18,7 @@ export const LOCALE_META: Record<
   { label: string; short: string; htmlLang: string; intl: string }
 > = {
   en:      { label: "English",  short: "EN", htmlLang: "en",    intl: "en-GB" },
+  es:      { label: "Español",  short: "ES", htmlLang: "es",    intl: "es-ES" },
   "fr-CH": { label: "Français", short: "FR", htmlLang: "fr-CH", intl: "fr-CH" },
   "de-CH": { label: "Deutsch",  short: "DE", htmlLang: "de-CH", intl: "de-CH" },
   ro:      { label: "Română",   short: "RO", htmlLang: "ro",    intl: "ro-RO" },
@@ -39,7 +40,7 @@ export interface Dict {
   common: { minutes: string; from: string; total: string; subtotal: string; shipping: string; free: string; required: string; optional: string; email: string; back: string; allReadings: string; allProducts: string; continueShopping: string; remove: string; quantity: string; increase: string; decrease: string; currentStep: string; completed: string };
   home: { eyebrow: string; titleA: string; titleB: string; lead: string; bookCta: string; meetCta: string; practiceEyebrow: string; practiceTitle: string; practiceBodyA: string; practiceBodyB: string; statCertified: string; statCertifiedSub: string; readingsEyebrow: string; readingsTitle: string; readingsNote: string; notSure: string; notSureBody: string; askCristina: string; stepsEyebrow: string; stepsTitle: string; steps: [string, string][]; };
   services: { pageEyebrow: string; pageTitle: string; pageLead: string; giftEyebrow: string; giftTitle: string; giftBody: string; giftCta: string; viewReading: string; readingLabel: string; session: string; deliveryLabel: string; availability: string; languageLabel: string; languageValue: string; whatThisIs: string; whatYouReceive: string; suitedTo: string; alsoConsider: string; otherReadings: string; beginBooking: string; bookingNote: string };
-  booking: { step: string; title: string; lead: string; yourChart: string; secondChart: string; secondChartHint: string; contact: string; consent: string; fullNameAtBirth: string; theirFullName: string; placeOfBirth: string; placeHint: string; dateOfBirth: string; datePlaceholder: string; dateHint: string; timeOfBirth: string; timePlaceholder: string; timeHint: string; timeUnknown: string; emailLabel: string; emailHint: string; solarYear: string; forecastYear: string; solarYearHint: string; forecastYearHint: string; focusLabel: string; focusPlaceholder: string; gdprConsent: string; privacyNotice: string; dataNote: string; submit: string; reviewNote: string; yourBooking: string; problemsOne: string; problemsMany: string; steps: [string, string, string]; timeStep: string; timeTitle: string; timeLead: string; editDetails: string; languageNote: string; policyTitle: string; policy: string[] };
+  booking: { step: string; title: string; lead: string; yourChart: string; secondChart: string; secondChartHint: string; contact: string; consent: string; fullNameAtBirth: string; theirFullName: string; placeOfBirth: string; namePlaceholder: string; placePlaceholder: string; placeHint: string; dateOfBirth: string; datePlaceholder: string; dateHint: string; timeOfBirth: string; timePlaceholder: string; timeHint: string; timeUnknown: string; emailLabel: string; emailHint: string; solarYear: string; forecastYear: string; solarYearHint: string; forecastYearHint: string; focusLabel: string; focusPlaceholder: string; gdprConsent: string; privacyNotice: string; dataNote: string; submit: string; reviewNote: string; yourBooking: string; problemsOne: string; problemsMany: string; steps: [string, string, string]; timeStep: string; timeTitle: string; timeLead: string; editDetails: string; languageNote: string; policyTitle: string; policy: string[] };
   errors: { name: string; date: string; futureDate: string; dateInvalid: string; timeInvalid: string; time: string; place: string; emailRequired: string; emailInvalid: string; gdpr: string; terms: string; address: string; city: string; postcode: string; message: string; contactConsent: string; nameShort: string; focus: string };
   confirmation: { thanks: string; lead: string; chooseSlot: string; chooseSlotBody: string; nothing: string; nothingBody: string; backHome: string };
   about: { eyebrow: string; title: string; lead: string; portraitAlt: string; wordsEyebrow: string; words: string[]; credentials: string; credentialsList: string[]; practice: string; practiceList: string[]; values: [string, string][]; beginEyebrow: string; beginTitle: string; beginLead: string; natalCta: string; allCta: string };

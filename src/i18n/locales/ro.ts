@@ -48,7 +48,7 @@ export const ro: Dict = {
     secondChartHint: "O consultație de relație are nevoie de ambele hărți. Dacă nu ai ora de naștere a celeilalte persoane, bifează „necunoscută” — consultația rămâne posibilă, cu mai puțin detaliu pe case.",
     contact: "Contact", consent: "Consimțământ",
     fullNameAtBirth: "Numele complet la naștere", theirFullName: "Numele complet al persoanei",
-    placeOfBirth: "Locul nașterii", placeHint: "Localitatea, nu regiunea — ea stabilește coordonatele hărții.",
+    placeOfBirth: "Locul nașterii", namePlaceholder: "Prenume și nume", placePlaceholder: "Localitate, țară", placeHint: "Localitatea, nu regiunea — ea stabilește coordonatele hărții.",
     dateOfBirth: "Data nașterii", datePlaceholder: "ZZ/LL/AAAA", dateHint: "Zi, lună, an, de exemplu 19/05/1998.", timeOfBirth: "Ora nașterii",
     timePlaceholder: "HH:MM",
     timeHint: "În format de 24 de ore, de exemplu 19:30. Așa cum este trecută în certificatul de naștere. Minutele contează — ele fixează Ascendentul.",

@@ -71,9 +71,11 @@ Other rules that are easy to break:
 
 ## i18n
 
-Four locales: `en`, `fr-CH`, `de-CH`, `ro`, in `src/i18n/locales/`. The `Dict`
+Five locales: `en`, `es`, `fr-CH`, `de-CH`, `ro`, in `src/i18n/locales/`. `es`
+(added 2 Nov 2026) is neutral international Spanish using "tú"; like fr/de it
+exists for visitors, not as a session language. The `Dict`
 interface in `src/i18n/types.ts` is the contract — adding a key there breaks
-the build until all four locales define it, which is intentional. Never add
+the build until all five locales define it, which is intentional. Never add
 user-visible English directly in a component; add a key.
 
 The Swiss variants are not relabelled fr/de:

@@ -3,13 +3,14 @@ import type { ReactNode } from "react";
 import { LOCALES, LOCALE_META } from "./types";
 import type { Dict, Locale } from "./types";
 import { en } from "./locales/en";
+import { es } from "./locales/es";
 import { frCH } from "./locales/fr-CH";
 import { deCH } from "./locales/de-CH";
 import { ro } from "./locales/ro";
 import { SESSION_PRICE, detectCurrency, formatPrice } from "../lib/pricing";
 import type { Currency } from "../lib/pricing";
 
-const DICTS: Record<Locale, Dict> = { en, "fr-CH": frCH, "de-CH": deCH, ro };
+const DICTS: Record<Locale, Dict> = { en, es, "fr-CH": frCH, "de-CH": deCH, ro };
 const STORAGE_KEY = "cs.locale.v1";
 /** Decided once per visit; the time zone does not change while the page is open. */
 const CURRENCY = detectCurrency();

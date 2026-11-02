@@ -51,7 +51,7 @@ export const deCH: Dict = {
     secondChartHint: "Eine Partnerdeutung braucht beide Horoskope. Falls Ihnen die Geburtszeit der anderen Person fehlt, kreuzen Sie «unbekannt» an — die Deutung funktioniert weiterhin, mit weniger Detail bei den Häusern.",
     contact: "Kontakt", consent: "Einwilligung",
     fullNameAtBirth: "Vollständiger Geburtsname", theirFullName: "Vollständiger Name der Person",
-    placeOfBirth: "Geburtsort", placeHint: "Die Ortschaft, nicht die Region — sie bestimmt die Koordinaten des Horoskops.",
+    placeOfBirth: "Geburtsort", namePlaceholder: "Vor- und Nachname", placePlaceholder: "Ort oder Stadt, Land", placeHint: "Die Ortschaft, nicht die Region — sie bestimmt die Koordinaten des Horoskops.",
     dateOfBirth: "Geburtsdatum", datePlaceholder: "TT/MM/JJJJ", dateHint: "Tag, Monat, Jahr, zum Beispiel 19/05/1998.", timeOfBirth: "Geburtszeit",
     timePlaceholder: "HH:MM",
     timeHint: "Im 24-Stunden-Format, zum Beispiel 19:30. Wie in der Geburtsurkunde vermerkt. Minuten zählen — sie bestimmen den Aszendenten.",
