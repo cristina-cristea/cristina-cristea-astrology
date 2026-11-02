@@ -142,7 +142,7 @@ export const en: Dict = {
     eyebrow: "Legal", title: "Privacy & GDPR",
     lead: "Birth data is personal. This page sets out what is collected, why, who helps process it, how long it is kept, and how to have it removed.",
     sections: [
-      { h: "Who is responsible for your data", p: ["Cristea Cristina PFA (sole trader), Dumbrăvița, Timiș County, Romania, is the data controller for everything collected through this website. For any question about your data, write to cristina.cristea17@gmail.com."] },
+      { h: "Who is responsible for your data", p: ["Cristea Cristina PFA (sole trader), Dumbrăvița, Timiș County, Romania, is the data controller for everything collected through this website. For any question about your data, write to astrokat.official@gmail.com."] },
       { h: "What is collected, and why", p: [
         "When you book a reading we collect your full name, email address, date, time and place of birth, and the question you would like to explore. Relationship readings also collect the birth details of the second person, and some readings ask for the year to be read. This information is used for one purpose: to prepare and deliver your reading.",
         "When you write through the contact form we collect your name, email address and message, in order to reply to you.",
@@ -157,7 +157,7 @@ export const en: Dict = {
       ] },
       { h: "Your rights", p: [
         "Under the GDPR you have the right to access the data held about you, to have it corrected or erased, to restrict or object to its processing, to receive a copy in a portable format, and to withdraw consent at any time without affecting processing carried out before.",
-        "To exercise any of these rights, write to cristina.cristea17@gmail.com. You will receive an answer within one month. If you are not satisfied, you may complain to Romania's data protection authority, the Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), or to the supervisory authority in your own country.",
+        "To exercise any of these rights, write to astrokat.official@gmail.com. You will receive an answer within one month. If you are not satisfied, you may complain to Romania's data protection authority, the Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), or to the supervisory authority in your own country.",
       ] },
       { h: "Cookies and local storage", p: ["This website sets no advertising or analytics cookies. Your language choice is kept in your browser's local storage so it survives a refresh; it never leaves your device, and clearing your browser data removes it. The booking calendar (Cal.com) and the payment form (Stripe) may use their own cookies needed for them to work."] },
     ],

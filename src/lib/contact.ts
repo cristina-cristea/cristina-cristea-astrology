@@ -1,7 +1,8 @@
 /**
  * Sends the contact form through Web3Forms (https://web3forms.com), which
  * emails each message to the address the access key was created for
- * (cristina.cristea17@gmail.com). The site is static, so there is no server
+ * (still cristina.cristea17@gmail.com: replace the key with one issued for
+ * astrokat.official@gmail.com). The site is static, so there is no server
  * of our own to send mail from.
  *
  * The access key is public by design: it is meant to sit in client code and

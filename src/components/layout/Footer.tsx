@@ -23,7 +23,7 @@ export function Footer() {
               <a href="https://www.tiktok.com/@astrokat.official" aria-label={t.footer.tiktok} target="_blank" rel="noreferrer noopener">
                 <Music2 size={16} strokeWidth={1.2} aria-hidden="true" />
               </a>
-              <a href="mailto:cristina.cristea17@gmail.com" aria-label={t.common.email}>
+              <a href="mailto:astrokat.official@gmail.com" aria-label={t.common.email}>
                 <Mail size={16} strokeWidth={1.2} aria-hidden="true" />
               </a>
             </div>

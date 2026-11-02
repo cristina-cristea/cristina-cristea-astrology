@@ -100,7 +100,8 @@ repository is renamed, `VITE_BASE` must be updated to match.
 ## Contact form
 
 `src/lib/contact.ts` posts the contact form to Web3Forms, which emails it to
-cristina.cristea17@gmail.com (the address the access key was issued for).
+cristina.cristea17@gmail.com (the address the current access key was issued for;
+replace it with a key for astrokat.official@gmail.com when Cristina sends one).
 The key is public by design. The visitor's email is sent as `email`, so
 replying to the notification replies to the visitor. A hidden `botcheck`
 honeypot filters basic spam. Messages pass through Web3Forms, so the privacy
@@ -205,7 +206,8 @@ the English profile.
   exposure matters.
 - There is no newsletter; the opt-in was removed from booking.
 - The privacy notice (30 Oct 2026) uses Cristina's real details: Cristea
-  Cristina PFA, Dumbrăvița, Timiș, Romania, cristina.cristea17@gmail.com,
+  Cristina PFA, Dumbrăvița, Timiș, Romania, astrokat.official@gmail.com (public
+  address everywhere on the site since 2 Nov 2026),
   ANSPDCP as authority. Retention for birth data and notes is
   24 months after the (last) session, confirmed by Cristina on 1 Nov 2026; her
   private Excel client register (never in this repo) flags rows past that date.

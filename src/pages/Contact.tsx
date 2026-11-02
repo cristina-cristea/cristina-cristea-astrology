@@ -214,7 +214,7 @@ export default function Contact() {
                     <TriangleAlert size={16} strokeWidth={1.4} aria-hidden="true" />
                     <span>
                       {t.contact.sendFailed}{" "}
-                      <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>.
+                      <a href="mailto:astrokat.official@gmail.com">astrokat.official@gmail.com</a>.
                     </span>
                   </div>
                 )}
@@ -234,7 +234,7 @@ export default function Contact() {
                   <Mail size={15} strokeWidth={1.2} />
                   <div>
                     <strong>{t.contact.emailLabel}</strong>
-                    <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>
+                    <a href="mailto:astrokat.official@gmail.com">astrokat.official@gmail.com</a>
                   </div>
                 </li>
                 <li>
@@ -255,7 +255,7 @@ export default function Contact() {
               <hr className="rule" />
               <p className="field-hint">
                 {t.contact.dataNote}{" "}
-                <a href="mailto:cristina.cristea17@gmail.com">cristina.cristea17@gmail.com</a>.
+                <a href="mailto:astrokat.official@gmail.com">astrokat.official@gmail.com</a>.
               </p>
             </div>
           </aside>

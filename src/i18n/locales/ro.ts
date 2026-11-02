@@ -144,7 +144,7 @@ export const ro: Dict = {
     eyebrow: "Legal", title: "Confidențialitate și GDPR",
     lead: "Datele de naștere sunt personale. Această pagină explică ce date sunt colectate, de ce, cine ajută la prelucrarea lor, cât timp sunt păstrate și cum poți cere ștergerea lor.",
     sections: [
-      { h: "Cine răspunde de datele tale", p: ["Cristea Cristina PFA, din Dumbrăvița, județul Timiș, România, este operatorul de date pentru tot ce se colectează prin acest site. Pentru orice întrebare despre datele tale, scrie la cristina.cristea17@gmail.com."] },
+      { h: "Cine răspunde de datele tale", p: ["Cristea Cristina PFA, din Dumbrăvița, județul Timiș, România, este operatorul de date pentru tot ce se colectează prin acest site. Pentru orice întrebare despre datele tale, scrie la astrokat.official@gmail.com."] },
       { h: "Ce date se colectează și de ce", p: [
         "Când rezervi o consultație, colectăm numele complet, adresa de e-mail, data, ora și locul nașterii, precum și întrebarea pe care vrei să o explorezi. La hărțile de relație colectăm și datele de naștere ale celei de-a doua persoane, iar unele consultații cer anul pentru care se face lectura. Aceste informații au un singur scop: pregătirea și susținerea consultației tale.",
         "Când scrii prin formularul de contact, colectăm numele, adresa de e-mail și mesajul tău, ca să îți putem răspunde.",
@@ -159,7 +159,7 @@ export const ro: Dict = {
       ] },
       { h: "Drepturile tale", p: [
         "Conform GDPR, ai dreptul să afli ce date deținem despre tine, să ceri corectarea sau ștergerea lor, să restricționezi prelucrarea sau să te opui acesteia, să primești o copie într-un format portabil și să îți retragi consimțământul oricând, fără a afecta prelucrarea făcută înainte.",
-        "Pentru a-ți exercita oricare dintre aceste drepturi, scrie la cristina.cristea17@gmail.com. Vei primi un răspuns în cel mult o lună. Dacă nu ești mulțumit(ă), poți depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) sau la autoritatea de supraveghere din țara ta.",
+        "Pentru a-ți exercita oricare dintre aceste drepturi, scrie la astrokat.official@gmail.com. Vei primi un răspuns în cel mult o lună. Dacă nu ești mulțumit(ă), poți depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) sau la autoritatea de supraveghere din țara ta.",
       ] },
       { h: "Cookie-uri și stocare locală", p: ["Acest site nu folosește cookie-uri de publicitate sau de analiză. Limba aleasă este păstrată în memoria locală a browserului, ca să rămână după reîncărcarea paginii; nu părăsește niciodată dispozitivul tău și se șterge odată cu datele browserului. Calendarul de rezervare (Cal.com) și formularul de plată (Stripe) pot folosi propriile cookie-uri, necesare pentru a funcționa."] },
     ],

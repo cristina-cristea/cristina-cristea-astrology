@@ -53,8 +53,8 @@ export default function Confirmation() {
             <h3>{t.confirmation.nothing}</h3>
             <p className="muted">
               {t.confirmation.nothingBody}{" "}
-              <a href="mailto:cristina.cristea17@gmail.com" className="ftr-link">
-                cristina.cristea17@gmail.com
+              <a href="mailto:astrokat.official@gmail.com" className="ftr-link">
+                astrokat.official@gmail.com
               </a>
               .
             </p>

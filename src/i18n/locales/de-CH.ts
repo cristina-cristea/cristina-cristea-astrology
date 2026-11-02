@@ -147,7 +147,7 @@ export const deCH: Dict = {
     eyebrow: "Rechtliches", title: "Datenschutz und DSGVO",
     lead: "Geburtsdaten sind persönlich. Diese Seite erklärt, was erhoben wird, warum, wer bei der Verarbeitung hilft, wie lange es aufbewahrt wird und wie Sie es löschen lassen können.",
     sections: [
-      { h: "Wer für Ihre Daten verantwortlich ist", p: ["Cristea Cristina PFA (Einzelunternehmen), Dumbrăvița, Kreis Timiș, Rumänien, ist Verantwortliche für alle über diese Website erhobenen Daten. Bei Fragen zu Ihren Daten schreiben Sie an cristina.cristea17@gmail.com."] },
+      { h: "Wer für Ihre Daten verantwortlich ist", p: ["Cristea Cristina PFA (Einzelunternehmen), Dumbrăvița, Kreis Timiș, Rumänien, ist Verantwortliche für alle über diese Website erhobenen Daten. Bei Fragen zu Ihren Daten schreiben Sie an astrokat.official@gmail.com."] },
       { h: "Was erhoben wird, und warum", p: [
         "Wenn Sie eine Deutung buchen, erheben wir Ihren vollständigen Namen, Ihre E-Mail-Adresse, Datum, Uhrzeit und Ort Ihrer Geburt sowie die Frage, die Sie anschauen möchten. Bei Partnerhoroskopen werden zusätzlich die Geburtsdaten der zweiten Person erhoben, und einige Deutungen fragen nach dem zu deutenden Jahr. Diese Angaben dienen einem einzigen Zweck: Ihre Deutung vorzubereiten und durchzuführen.",
         "Wenn Sie über das Kontaktformular schreiben, erheben wir Ihren Namen, Ihre E-Mail-Adresse und Ihre Nachricht, um Ihnen zu antworten.",
@@ -162,7 +162,7 @@ export const deCH: Dict = {
       ] },
       { h: "Ihre Rechte", p: [
         "Nach der DSGVO haben Sie das Recht, Auskunft über die zu Ihnen gespeicherten Daten zu erhalten, sie berichtigen oder löschen zu lassen, ihre Verarbeitung einzuschränken oder ihr zu widersprechen, eine Kopie in einem übertragbaren Format zu erhalten und Ihre Einwilligung jederzeit zu widerrufen, ohne dass dies frühere Verarbeitungen berührt.",
-        "Um diese Rechte auszuüben, schreiben Sie an cristina.cristea17@gmail.com. Sie erhalten innert eines Monats eine Antwort. Sind Sie nicht zufrieden, können Sie sich an die rumänische Datenschutzbehörde, die Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), oder an die Aufsichtsbehörde Ihres eigenen Landes wenden, in der Schweiz an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB).",
+        "Um diese Rechte auszuüben, schreiben Sie an astrokat.official@gmail.com. Sie erhalten innert eines Monats eine Antwort. Sind Sie nicht zufrieden, können Sie sich an die rumänische Datenschutzbehörde, die Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), oder an die Aufsichtsbehörde Ihres eigenen Landes wenden, in der Schweiz an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB).",
       ] },
       { h: "Cookies und lokaler Speicher", p: ["Diese Website setzt keine Werbe- oder Analyse-Cookies. Ihre Sprachwahl wird im lokalen Speicher Ihres Browsers abgelegt, damit sie ein Neuladen übersteht; sie verlässt Ihr Gerät nie und wird beim Löschen der Browserdaten entfernt. Der Buchungskalender (Cal.com) und das Zahlungsformular (Stripe) können eigene Cookies verwenden, die für ihren Betrieb nötig sind."] },
     ],

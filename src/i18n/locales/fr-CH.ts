@@ -148,7 +148,7 @@ export const frCH: Dict = {
     eyebrow: "Mentions légales", title: "Confidentialité et RGPD",
     lead: "Les données de naissance sont personnelles. Cette page explique ce qui est collecté, pourquoi, qui aide à le traiter, combien de temps c'est conservé et comment le faire supprimer.",
     sections: [
-      { h: "Qui est responsable de vos données", p: ["Cristea Cristina PFA (entreprise individuelle), Dumbrăvița, département de Timiș, Roumanie, est responsable du traitement de tout ce qui est collecté via ce site. Pour toute question sur vos données, écrivez à cristina.cristea17@gmail.com."] },
+      { h: "Qui est responsable de vos données", p: ["Cristea Cristina PFA (entreprise individuelle), Dumbrăvița, département de Timiș, Roumanie, est responsable du traitement de tout ce qui est collecté via ce site. Pour toute question sur vos données, écrivez à astrokat.official@gmail.com."] },
       { h: "Ce qui est collecté, et pourquoi", p: [
         "Lorsque vous réservez une lecture, nous collectons votre nom complet, votre adresse e-mail, vos date, heure et lieu de naissance, ainsi que la question que vous souhaitez explorer. Les lectures de relation collectent aussi les données de naissance de la seconde personne, et certaines lectures demandent l'année à lire. Ces informations servent à un seul but : préparer et donner votre lecture.",
         "Lorsque vous écrivez via le formulaire de contact, nous collectons votre nom, votre adresse e-mail et votre message, afin de vous répondre.",
@@ -163,7 +163,7 @@ export const frCH: Dict = {
       ] },
       { h: "Vos droits", p: [
         "En vertu du RGPD, vous avez le droit d'accéder aux données vous concernant, de les faire rectifier ou effacer, d'en limiter le traitement ou de vous y opposer, d'en recevoir une copie dans un format portable, et de retirer votre consentement à tout moment, sans effet sur les traitements effectués auparavant.",
-        "Pour exercer ces droits, écrivez à cristina.cristea17@gmail.com. Vous recevrez une réponse dans un délai d'un mois. Si vous n'êtes pas satisfait·e, vous pouvez vous adresser à l'autorité roumaine de protection des données, l'Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), ou à l'autorité de contrôle de votre propre pays, en Suisse le Préposé fédéral à la protection des données et à la transparence (PFPDT).",
+        "Pour exercer ces droits, écrivez à astrokat.official@gmail.com. Vous recevrez une réponse dans un délai d'un mois. Si vous n'êtes pas satisfait·e, vous pouvez vous adresser à l'autorité roumaine de protection des données, l'Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), ou à l'autorité de contrôle de votre propre pays, en Suisse le Préposé fédéral à la protection des données et à la transparence (PFPDT).",
       ] },
       { h: "Cookies et stockage local", p: ["Ce site ne dépose aucun cookie publicitaire ou de mesure d'audience. Votre choix de langue est conservé dans le stockage local de votre navigateur pour survivre à un rafraîchissement ; il ne quitte jamais votre appareil et disparaît si vous effacez les données du navigateur. Le calendrier de réservation (Cal.com) et le formulaire de paiement (Stripe) peuvent utiliser leurs propres cookies, nécessaires à leur fonctionnement."] },
     ],
