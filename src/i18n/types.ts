@@ -35,7 +35,7 @@ export interface ServiceCopy {
 }
 
 export interface Dict {
-  nav: { services: string; about: string; contact: string; home: string; menuOpen: string; menuClose: string; skip: string; primary: string; mobile: string };
+  nav: { services: string; shop: string; about: string; contact: string; home: string; menuOpen: string; menuClose: string; skip: string; primary: string; mobile: string };
   common: { minutes: string; from: string; total: string; subtotal: string; shipping: string; free: string; required: string; optional: string; email: string; back: string; allReadings: string; allProducts: string; continueShopping: string; remove: string; quantity: string; increase: string; decrease: string; currentStep: string; completed: string };
   home: { eyebrow: string; titleA: string; titleB: string; lead: string; bookCta: string; meetCta: string; practiceEyebrow: string; practiceTitle: string; practiceBodyA: string; practiceBodyB: string; statCertified: string; statCertifiedSub: string; readingsEyebrow: string; readingsTitle: string; readingsNote: string; notSure: string; notSureBody: string; askCristina: string; stepsEyebrow: string; stepsTitle: string; steps: [string, string][]; };
   services: { pageEyebrow: string; pageTitle: string; pageLead: string; giftEyebrow: string; giftTitle: string; giftBody: string; giftCta: string; viewReading: string; readingLabel: string; session: string; deliveryLabel: string; availability: string; languageLabel: string; languageValue: string; whatThisIs: string; whatYouReceive: string; suitedTo: string; alsoConsider: string; otherReadings: string; beginBooking: string; bookingNote: string };
@@ -45,6 +45,7 @@ export interface Dict {
   about: { eyebrow: string; title: string; lead: string; portraitAlt: string; wordsEyebrow: string; words: string[]; credentials: string; credentialsList: string[]; practice: string; practiceList: string[]; values: [string, string][]; beginEyebrow: string; beginTitle: string; beginLead: string; natalCta: string; allCta: string };
   contact: { eyebrow: string; title: string; lead: string; yourMessage: string; name: string; subject: string; subjects: string[]; message: string; messagePlaceholder: string; consent: string; send: string; sending: string; sendFailed: string; sent: string; sentLead: string; direct: string; emailLabel: string; sessions: string; sessionsValue: string; location: string; locationValue: string; dataNote: string };
   privacy: { eyebrow: string; title: string; lead: string; sections: { h: string; p: string[] }[]; updated: string; ask: string };
+  shop: { eyebrow: string; title: string; lead: string };
   notFound: { eyebrow: string; title: string; lead: string; home: string; browse: string };
   footer: { tagline: string; readings: string; studio: string; privacy: string; disclaimer: string; instagram: string; tiktok: string };
   serviceCopy: Record<string, ServiceCopy>;

@@ -7,6 +7,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Booking from "./pages/Booking";
 import Confirmation from "./pages/Confirmation";
 import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ export default function App() {
         {/* Payment now happens inside the Cal.com calendar; old links land on the readings. */}
         <Route path="cart" element={<Navigate to="/services" replace />} />
         <Route path="checkout" element={<Navigate to="/services" replace />} />
+        <Route path="shop" element={<Shop />} />
         <Route path="confirmation" element={<Confirmation />} />
         <Route path="contact" element={<Contact />} />
         <Route path="privacy" element={<Privacy />} />

@@ -1,7 +1,7 @@
 import type { Dict } from "../types";
 
 export const en: Dict = {
-  nav: { services: "Services", about: "About", contact: "Contact", home: "Cristina Cristea — home", menuOpen: "Open menu", menuClose: "Close menu", skip: "Skip to content", primary: "Primary", mobile: "Mobile" },
+  nav: { services: "Services", shop: "Shop", about: "About", contact: "Contact", home: "Cristina Cristea — home", menuOpen: "Open menu", menuClose: "Close menu", skip: "Skip to content", primary: "Primary", mobile: "Mobile" },
   common: { minutes: "minutes", from: "from", total: "Total", subtotal: "Subtotal", shipping: "Shipping", free: "Free", required: "Required", optional: "optional", email: "Email", back: "Back to", allReadings: "All readings", allProducts: "All products", continueShopping: "Continue shopping", remove: "Remove", quantity: "Quantity", increase: "Increase", decrease: "Decrease", currentStep: "(current step)", completed: "(completed)" },
   home: {
     eyebrow: "Certified Consulting Astrologer",
@@ -163,6 +163,7 @@ export const en: Dict = {
     ],
     updated: "Last updated 30 October 2026.", ask: "Ask a question",
   },
+  shop: { eyebrow: "Shop", title: "Coming soon", lead: "Forecasts for 2027, sign by sign: videos and PDF guides by Cristina." },
   notFound: { eyebrow: "Error 404", title: "Nothing at this degree", lead: "The page you were looking for has moved out of orb.", home: "Return home", browse: "Browse readings" },
   footer: {
     tagline: "Certified consulting astrologer. Chart readings by appointment, online, worldwide.",

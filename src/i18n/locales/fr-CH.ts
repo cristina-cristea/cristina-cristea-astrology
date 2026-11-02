@@ -7,7 +7,7 @@ import type { Dict } from "../types";
  * (huitante for 80 is Vaud/Valais/Fribourg only, so it is not used.)
  */
 export const frCH: Dict = {
-  nav: { services: "Prestations", about: "À propos", contact: "Contact", home: "Cristina Cristea — accueil", menuOpen: "Ouvrir le menu", menuClose: "Fermer le menu", skip: "Aller au contenu", primary: "Principale", mobile: "Mobile" },
+  nav: { services: "Prestations", shop: "Boutique", about: "À propos", contact: "Contact", home: "Cristina Cristea — accueil", menuOpen: "Ouvrir le menu", menuClose: "Fermer le menu", skip: "Aller au contenu", primary: "Principale", mobile: "Mobile" },
   common: { minutes: "minutes", from: "dès", total: "Total", subtotal: "Sous-total", shipping: "Livraison", free: "Offerte", required: "Obligatoire", optional: "facultatif", email: "E-mail", back: "Retour à", allReadings: "Toutes les lectures", allProducts: "Tous les produits", continueShopping: "Poursuivre mes achats", remove: "Retirer", quantity: "Quantité", increase: "Augmenter", decrease: "Diminuer", currentStep: "(étape en cours)", completed: "(terminée)" },
   home: {
     eyebrow: "Astrologue conseil certifiée",
@@ -169,6 +169,7 @@ export const frCH: Dict = {
     ],
     updated: "Dernière mise à jour : 30 octobre 2026.", ask: "Poser une question",
   },
+  shop: { eyebrow: "Boutique", title: "Bientôt disponible", lead: "Les prévisions 2027, signe par signe : vidéos et guides PDF par Cristina." },
   notFound: { eyebrow: "Erreur 404", title: "Rien à ce degré", lead: "La page que vous cherchiez est sortie d'orbe.", home: "Retour à l'accueil", browse: "Parcourir les lectures" },
   footer: {
     tagline: "Astrologue conseil certifiée. Lectures de thème sur rendez-vous, en ligne, dans le monde entier.",

@@ -3,7 +3,7 @@ import type { Dict } from "../types";
 /** Romanian. Uses the comma-below diacritics ș and ț (U+0219, U+021B), which
  *  are the correct Romanian letters — not the Turkish cedilla forms ş and ţ. */
 export const ro: Dict = {
-  nav: { services: "Servicii", about: "Despre", contact: "Contact", home: "Cristina Cristea — acasă", menuOpen: "Deschide meniul", menuClose: "Închide meniul", skip: "Sari la conținut", primary: "Principal", mobile: "Mobil" },
+  nav: { services: "Servicii", shop: "Shop", about: "Despre", contact: "Contact", home: "Cristina Cristea — acasă", menuOpen: "Deschide meniul", menuClose: "Închide meniul", skip: "Sari la conținut", primary: "Principal", mobile: "Mobil" },
   common: { minutes: "minute", from: "de la", total: "Total", subtotal: "Subtotal", shipping: "Livrare", free: "Gratuită", required: "Obligatoriu", optional: "opțional", email: "E-mail", back: "Înapoi la", allReadings: "Toate consultațiile", allProducts: "Toate produsele", continueShopping: "Continuă cumpărăturile", remove: "Elimină", quantity: "Cantitate", increase: "Crește", decrease: "Scade", currentStep: "(pasul curent)", completed: "(finalizat)" },
   home: {
     eyebrow: "Astrolog consultant certificat",
@@ -165,6 +165,7 @@ export const ro: Dict = {
     ],
     updated: "Ultima actualizare: 30 octombrie 2026.", ask: "Pune o întrebare",
   },
+  shop: { eyebrow: "Shop", title: "În curând", lead: "Previziuni pentru 2027, pentru fiecare zodie: videoclipuri și ghiduri PDF realizate de Cristina." },
   notFound: { eyebrow: "Eroare 404", title: "Nimic la acest grad", lead: "Pagina căutată a ieșit din orb.", home: "Înapoi acasă", browse: "Vezi consultațiile" },
   footer: {
     tagline: "Astrolog consultant certificat. Consultații pe bază de programare, online, în toată lumea.",

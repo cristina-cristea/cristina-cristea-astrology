@@ -1650,3 +1650,21 @@ fieldset { min-width: 0; }
 /* The whole option shows the ring, not just the 18px dot. */
 .pay__opt:has(.pay__dot:focus-visible) { outline: 2px solid var(--gold); outline-offset: 3px; }
 .pay__opt:has([data-state="checked"]) { border-color: var(--ink); background: var(--paper-warm); }
+
+/* ---------- shop (coming soon) ---------- */
+
+.shop__planet {
+  display: block;
+  width: clamp(200px, 55vw, 300px);
+  aspect-ratio: 1;
+  margin: 0 auto 2rem;
+  color: var(--gold);
+  animation: shop-float 9s var(--ease) infinite alternate;
+}
+.shop__planet svg { width: 100%; height: 100%; }
+.shop__body { fill: var(--paper-warm); }
+.shop.empty { padding-block-start: clamp(2.5rem, 6vw, 4.5rem); }
+@keyframes shop-float {
+  from { transform: translateY(-6px) rotate(-3deg); }
+  to   { transform: translateY(6px) rotate(3deg); }
+}

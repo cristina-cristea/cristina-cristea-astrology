@@ -6,7 +6,7 @@ import type { Dict } from "../types";
  * heisst, weiss. A build check greps this file to keep it that way.
  */
 export const deCH: Dict = {
-  nav: { services: "Leistungen", about: "Über mich", contact: "Kontakt", home: "Cristina Cristea — Startseite", menuOpen: "Menü öffnen", menuClose: "Menü schliessen", skip: "Zum Inhalt springen", primary: "Hauptnavigation", mobile: "Mobil" },
+  nav: { services: "Leistungen", shop: "Shop", about: "Über mich", contact: "Kontakt", home: "Cristina Cristea — Startseite", menuOpen: "Menü öffnen", menuClose: "Menü schliessen", skip: "Zum Inhalt springen", primary: "Hauptnavigation", mobile: "Mobil" },
   common: { minutes: "Minuten", from: "ab", total: "Total", subtotal: "Zwischentotal", shipping: "Versand", free: "Gratis", required: "Pflichtfeld", optional: "optional", email: "E-Mail", back: "Zurück zu", allReadings: "Alle Deutungen", allProducts: "Alle Produkte", continueShopping: "Weiter einkaufen", remove: "Entfernen", quantity: "Anzahl", increase: "Erhöhen", decrease: "Verringern", currentStep: "(aktueller Schritt)", completed: "(abgeschlossen)" },
   home: {
     eyebrow: "Zertifizierte beratende Astrologin",
@@ -168,6 +168,7 @@ export const deCH: Dict = {
     ],
     updated: "Zuletzt aktualisiert: 30. Oktober 2026.", ask: "Eine Frage stellen",
   },
+  shop: { eyebrow: "Shop", title: "Demnächst", lead: "Die Prognosen für 2027, Zeichen für Zeichen: Videos und PDF-Leitfäden von Cristina." },
   notFound: { eyebrow: "Fehler 404", title: "Nichts auf diesem Grad", lead: "Die gesuchte Seite ist aus dem Orbis gewandert.", home: "Zur Startseite", browse: "Deutungen ansehen" },
   footer: {
     tagline: "Zertifizierte beratende Astrologin. Horoskopdeutungen nach Vereinbarung, online, weltweit.",
